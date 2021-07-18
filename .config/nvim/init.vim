@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 
 call plug#end()
