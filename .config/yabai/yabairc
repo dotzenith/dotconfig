@@ -56,7 +56,7 @@ yabai -m rule --add app="^FaceTime$" manage=off border=off
 yabai -m rule --add app="^System Preferences$" manage=off border=off
 yabai -m rule --add app="Code" opacity=0.90
 yabai -m rule --add app="^Rectangle$" manage=off
-yabai -m rule --add app="Spotify" 
+yabai -m rule --add app="Spotify" manage=off border=off 
 yabai -m rule --add app="Discord"
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="zoom.us" manage=off border=off
