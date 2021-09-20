@@ -4,10 +4,11 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/Library/Python/3.9/bin
+PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/sharmdanshu/.oh-my-zsh"
+export ZSH="/Users/sharmadanshu/.oh-my-zsh"
 
 # Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"

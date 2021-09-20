@@ -4,8 +4,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'wlangstroth/vim-racket'
 Plug 'ap/vim-css-color'
+
+"Nerd Tree Stuff
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -20,7 +25,7 @@ set noerrorbells tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent nowr
 "Keybindings
 let mapleader=" "
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
-nnoremap <leader><ENTER> :CocCommand prettier.formatFile<CR>
+nnoremap <leader><ENTER> :NERDTree<CR>
 nnoremap <leader><Space> :Goyo<CR>
 
 "Status-line
