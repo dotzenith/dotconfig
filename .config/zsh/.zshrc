@@ -14,7 +14,7 @@ export ZSH="/Users/sharmadanshu/.oh-my-zsh"
 DISABLE_AUTO_TITLE="true"
 
 # oh my zsh plugins
-plugins=(git zsh-autosuggestions zsh-completions)
+plugins=(git zsh-autosuggestions zsh-completions vi-mode)
 autoload -U compinit && compinit
 
 # spaceship zsh theme
@@ -44,6 +44,8 @@ alias ra='source ranger'
 alias al="vim ~/.config/alacritty/alacritty.yml"
 alias skstop='brew services stop skhd'
 alias skstart='brew services start skhd'
+alias pipes='pipes.sh -t 4'
+alias z='zathura'
 
 # ls Aliases
 alias ls='lsd'

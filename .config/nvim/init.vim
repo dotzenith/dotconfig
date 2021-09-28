@@ -12,6 +12,9 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+"LaTeX Stuff
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 "Enable Backspace
