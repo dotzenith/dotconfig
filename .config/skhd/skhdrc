@@ -34,8 +34,8 @@ hyper - 1 : yabai -m display --focus prev
 hyper - 2 : yabai -m display --focus next
 
 # send window to monitor and follow focus
-hyper - k : yabai -m window --display prev; yabai -m display --focus prev
-hyper - l  : yabai -m window --display next; yabai -m display --focus next
+hyper - l : yabai -m window --display prev; yabai -m display --focus prev
+hyper - k : yabai -m window --display next; yabai -m display --focus next
 
 # toggle window split type
 hyper - e : yabai -m window --toggle split

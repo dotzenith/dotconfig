@@ -3,8 +3,9 @@ set statusbar-h-padding 5
 set statusbar-v-padding 5
 set statusbar-bg "#282a36"
 set statusbar-fg "#ffb86c"
-set page-padding 1
 set selection-clipboard clipboard
+set page-padding 1
+set smooth-scroll "true"
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode

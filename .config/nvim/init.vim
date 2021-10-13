@@ -22,7 +22,7 @@ call plug#end()
 
 "Quality of life 
 syntax on
-set encoding=UTF-8 clipboard=unnamedplus nobackup nowritebackup nocursorline wildmode=longest,list,full
+set encoding=UTF-8 clipboard=unnamedplus paste nobackup nowritebackup nocursorline wildmode=longest,list,full
 set noerrorbells tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent nowrap smartcase incsearch
 
 "Keybindings
