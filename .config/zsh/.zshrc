@@ -11,10 +11,6 @@ export PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sharmadanshu/.oh-my-zsh"
 
-# Source aliases
-[ -f ~/.config/zsh/.aliases ] && source ~/.config/zsh/.aliases
-alias ali="source ~/.config/zsh/.aliases"
-
 # Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
@@ -38,6 +34,10 @@ export BROWSER='brave'
 
 # lovesay 
 python3 git_folders/lovesay/lovesay.py
+
+# Source aliases
+[ -f ~/.config/zsh/.aliases ] && source ~/.config/zsh/.aliases
+alias ali="source ~/.config/zsh/.aliases"
 
 # Starship
 eval "$(starship init zsh)"
