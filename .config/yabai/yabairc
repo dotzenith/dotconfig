@@ -45,9 +45,13 @@ yabai -m config left_padding                 10
 yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
-# Make windows stack by default on space 4 and 5
-yabai -m config --space 5 layout stack
-yabai -m config --space 4 layout stack
+# Renaming the spaces
+yabai -m space 1 --label I
+yabai -m space 2 --label II
+yabai -m space 3 --label III
+yabai -m space 4 --label IV
+yabai -m space 5 --label V
+yabai -m space 6 --label VI
 
 # Turn off management for certain apps
 # yabai -m rule --add app="Alacritty" 

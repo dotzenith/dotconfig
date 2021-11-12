@@ -15,6 +15,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "LaTeX Stuff
 Plug 'lervag/vimtex'
 
+"racket tingz
+Plug 'wlangstroth/vim-racket'
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 "Enable Backspace

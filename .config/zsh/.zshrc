@@ -4,11 +4,16 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/Library/Python/3.9/bin
-PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+PATH="/usr/local/opt/util-linux/bin:$PATH"
+PATH="/usr/local/opt/util-linux/sbin:$PATH"
 export PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sharmadanshu/.oh-my-zsh"
+
+# Source aliases
+[ -f ~/.config/zsh/.aliases ] && source ~/.config/zsh/.aliases
+alias ali="source ~/.config/zsh/.aliases"
 
 # Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -30,35 +35,6 @@ bindkey -s '^c' 'clear ^M'
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='brave'
-
-# Aliases
-alias python='python3'
-alias v='vim'
-alias vim='nvim'
-alias wisecow='fortune | cowsay'
-alias mirrorscreen='scrcpy'
-alias top='bpytop'
-alias psp='ppsspp'
-alias s='source ~/.config/zsh/.zshrc'
-alias ra='source ranger'
-alias al="vim ~/.config/alacritty/alacritty.yml"
-alias skstop='brew services stop skhd'
-alias skstart='brew services start skhd'
-alias pipes='pipes.sh -t 4'
-alias z='zathura'
-
-# ls Aliases
-alias ls='lsd'
-alias l='lsd -l'
-alias la='lsd -a'
-alias lla='lsd -la'
-
-# tmux aliases
-alias tkm="tmux kill-session -t Main"
-alias t="tmux new-session -A -s Main -n Fun -f ~/.config/tmux/.tmux.conf"
-alias tnew='tmux new -s '
-alias tkill='tmux kill-session -t '
-alias tatt='tmux a -t '
 
 # lovesay 
 python3 git_folders/lovesay/lovesay.py
