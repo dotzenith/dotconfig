@@ -6,6 +6,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'wlangstroth/vim-racket'
 Plug 'ap/vim-css-color'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'catppuccin/nvim'
 
 "Nerd Tree Stuff
 Plug 'preservim/nerdtree'
@@ -17,7 +19,6 @@ Plug 'lervag/vimtex'
 
 "racket tingz
 Plug 'wlangstroth/vim-racket'
-Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -26,7 +27,7 @@ call plug#end()
 
 "Quality of life 
 syntax on
-set encoding=UTF-8 clipboard=unnamedplus paste nobackup nowritebackup nocursorline wildmode=longest,list,full
+set encoding=UTF-8 clipboard=unnamedplus paste nobackup nowritebackup nocursorline completeopt
 set noerrorbells tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent nowrap smartcase incsearch
 
 "Keybindings
@@ -48,16 +49,13 @@ set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
 "color scheme
-colorscheme dracula
+colorscheme catppuccin
 set background=dark
 set termguicolors
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-
-"prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 "Goyo
 function! s:goyo_enter()
