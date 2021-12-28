@@ -4,25 +4,29 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/Library/Python/3.9/bin
-PATH="/usr/local/opt/util-linux/bin:$PATH"
-PATH="/usr/local/opt/util-linux/sbin:$PATH"
 export PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/sharmadanshu/.oh-my-zsh"
-
-# Disable auto-setting terminal title.
+# Setting some options for quality-of-life improvements
+zle_highlight=('paste:none')
 DISABLE_AUTO_TITLE="true"
+setopt appendhistory
+setopt autocd extendedglob nomatch menucomplete
+setopt interactive_comments
+unsetopt BEEP
 
-# oh my zsh plugins
-plugins=(git zsh-autosuggestions zsh-completions vi-mode)
+# Completions
 autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zmodload zsh/complist
+_comp_options+=(globdots)
 
-# spaceship zsh theme
-# ZSH_THEME="spaceship"
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
-# Sourcing oh my zsh
-source $ZSH/oh-my-zsh.sh
+# Colors
+autoload -Uz colors && colors
 
 # User configuration
 bindkey -s '^c' 'clear ^M'
@@ -32,12 +36,19 @@ export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='brave'
 
+# Sourcing functions
+source "$ZDOTDIR/zsh-functions"
+
+# Sourcing aliases 
+zsh_add_file "zsh-aliases"
+
+#Sourcing plugins
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "hlissner/zsh-autopair"
+
 # lovesay 
 python3 git_folders/lovesay/lovesay.py
-
-# Source aliases
-[ -f ~/.config/zsh/.aliases ] && source ~/.config/zsh/.aliases
-alias ali="source ~/.config/zsh/.aliases"
 
 # Starship
 eval "$(starship init zsh)"
