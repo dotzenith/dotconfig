@@ -63,6 +63,7 @@ return packer.startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin"
   })
+  use "norcalli/nvim-colorizer.lua"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
