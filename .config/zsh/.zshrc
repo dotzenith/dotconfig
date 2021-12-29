@@ -19,6 +19,7 @@ autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zmodload zsh/complist
 _comp_options+=(globdots)
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
