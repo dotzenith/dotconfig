@@ -18,7 +18,7 @@ As someone who recently got into customizing MacOS beyond just the basics, I fig
 - Shell: Zsh
 - MOTD: [lovesay](https://github.com/ZenithDS/lovesay)
 - Prompt: [starship](https://starship.rs/)
-- Themes: [Dracula](https://draculatheme.com/) and [NightShift](https://github.com/Jean-Tinland/vscode-theme-night-shift)
+- Themes: [Catppuccin](https://github.com/catppuccin) and [NightShift](https://github.com/Jean-Tinland/vscode-theme-night-shift)
 - CLI Text Editor: [Neovim](https://github.com/neovim/neovim)
 - GUI Text Editor: [VScodium](https://vscodium.com/)
 - Browser: [brave](https://brave.com/) with [nightTab](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki?hl=en-GB)
