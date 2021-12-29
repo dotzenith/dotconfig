@@ -15,8 +15,8 @@ As someone who recently got into customizing MacOS beyond just the basics, I fig
 - WM: [yabai](https://github.com/koekeishiya/yabai)
 - Bar: [simple-bar](https://www.simple-bar.com/en/)
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty)
-- Shell: Zsh with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-- MOTD: [lovesay]()
+- Shell: Zsh
+- MOTD: [lovesay](https://github.com/ZenithDS/lovesay)
 - Prompt: [starship](https://starship.rs/)
 - Themes: [Dracula](https://draculatheme.com/) and [NightShift](https://github.com/Jean-Tinland/vscode-theme-night-shift)
 - CLI Text Editor: [Neovim](https://github.com/neovim/neovim)
