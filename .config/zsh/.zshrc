@@ -43,10 +43,15 @@ source "$ZDOTDIR/zsh-functions"
 # Sourcing aliases 
 zsh_add_file "zsh-aliases"
 
-#Sourcing plugins
+# Sourcing plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
+
+# removing underlines from zsh-syntax-highlighting 
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # lovesay 
 python3 git_folders/lovesay/lovesay.py
