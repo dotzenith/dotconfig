@@ -41,7 +41,7 @@ catppuccin.setup(
 				enabled = false,
 				show_root = false,
 			},
-			which_key = false,
+			which_key = true,
 			indent_blankline = {
 				enabled = false,
 				colored_indent_levels = false,

@@ -53,6 +53,9 @@ zsh_add_plugin "hlissner/zsh-autopair"
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # lovesay 
 python3 git_folders/lovesay/lovesay.py
 

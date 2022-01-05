@@ -63,136 +63,36 @@ draw_bold_text_with_bright_colors: false
 colors:
   # Default colors
   primary:
-    background: '0x1E1E28'
-    foreground: '0xD7DAE0'
+    background: '#1E1E28'
+    foreground: '#DADAE8'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1E1E28'
-    cursor: '0xB3E1A3'
+    text: '#1E1E28'
+    cursor: '#B1E3AD'
 
   # Normal colors
   normal:
-    black:   '0x6E6C7C'
-    red:     '0xE28C8C'
-    green:   '0xB3E1A3'
-    yellow:  '0xEADDA0'
-    blue:    '0xA4B9EF'
-    magenta: '0xC6AAE8'
-    cyan:    '0xF0AFE1'
-    white:   '0xD7DAE0'
+    black:   '#6E6C7E'
+    red:     '#E38C8F'
+    green:   '#B1E3AD'
+    yellow:  '#EBDDAA'
+    blue:    '#A4B9EF'
+    magenta: '#C6AAE8'
+    cyan:    '#E5B4E2'
+    white:   '#DADAE8'
 
   # Bright colors
   bright:
-    black:   '0x6E6C7C'
-    red:     '0xE28C8C'
-    green:   '0xB3E1A3'
-    yellow:  '0xEADDA0'
-    blue:    '0xA4B9EF'
-    magenta: '0xC6AAE8'
-    cyan:    '0xF0AFE1'
-    white:   '0xD7DAE0'
+    black:   '#6E6C7E'
+    red:     '#E38C8F'
+    green:   '#B1E3AD'
+    yellow:  '#EBDDAA'
+    blue:    '#A4B9EF'
+    magenta: '#C6AAE8'
+    cyan:    '#E5B4E2'
+    white:   '#DADAE8'
 
   indexed_colors:
-    - { index: 16, color: '0xECBFBD' }
-    - { index: 17, color: '0x3E4058' }
-## Colors (Dracula)
-#colors:
-#  primary:
-#    background: '0x282a36'
-#    foreground: '0xf8f8f2'
-#  cursor:
-#    text: CellBackground
-#    cursor: CellForeground
-#  vi_mode_cursor:
-#    text: CellBackground
-#    cursor: CellForeground
-#  search:
-#    matches:
-#      foreground: '0x44475a'
-#      background: '0x50fa7b'
-#    focused_match:
-#      foreground: '0x44475a'
-#      background: '0xffb86c'
-#    bar:
-#      background: '0x282a36'
-#      foreground: '0xf8f8f2'
-#  line_indicator:
-#    foreground: None
-#    background: None
-#  selection:
-#    text: CellForeground
-#    background: '0x44475a'
-#  normal:
-#    black:   '0x000000'
-#    red:     '0xff5555'
-#    green:   '0x50fa7b'
-#    yellow:  '0xf1fa8c'
-#    blue:    '0xbd93f9'
-#    magenta: '0xff79c6'
-#    cyan:    '0x8be9fd'
-#    white:   '0xbfbfbf'
-#  bright:
-#    black:   '0x4d4d4d'
-#    red:     '0xff6e67'
-#    green:   '0x5af78e'
-#    yellow:  '0xf4f99d'
-#    blue:    '0xcaa9fa'
-#    magenta: '0xff92d0'
-#    cyan:    '0x9aedfe'
-#    white:   '0xe6e6e6'
-#  dim:
-#    black:   '0x14151b'
-#    red:     '0xff2222'
-#    green:   '0x1ef956'
-#    yellow:  '0xebf85b'
-#    blue:    '0x4d5b86'
-#    magenta: '0xff46b0'
-#    cyan:    '0x59dffc'
-#    white:   '0xe6e6d1'
-
-# Colors (Night Shift)
-#colors:
-#  primary:
-#    background: "#1b222d"
-#    foreground: "#fff9ee"
-#  search:
-#    matches:
-#      foreground: "#1b222d"
-#      background: "#fff9ee"
-#    focused_match:
-#      foreground: "#1b222d"
-#      background: "#7eddde"
-#    bar:
-#      background: "#ffd484"
-#      foreground: "#1b222d"
-#  hints:
-#    start:
-#      foreground: "#1b222d"
-#      background: "#fff9ee"
-#    end:
-#      foreground: "#fff9ee"
-#      background: "#1b222d"
-#  normal:
-#    black: "#1b222d"
-#    red: "#e78482"
-#    green: "#8fc8bb"
-#    yellow: "#ffd484"
-#    blue: "#6db3ce"
-#    magenta: "#ad82cb"
-#    cyan: "#7eddde"
-#    white: "#fff9ee"
-#  bright:
-#    black: "#1b222d"
-#    red: "#e78482"
-#    green: "#8fc8bb"
-#    yellow: "#ffd484"
-#    blue: "#6db3ce"
-#    magenta: "#ad82cb"
-#    cyan: "#7eddde"
-#    white: "#fff9ee"
-# This string contains all characters that are used as separators for "semantic words" in Alacritty.
-#semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-
-# When set to `true`, selected text will be copied to the primary clipboard.
-#save_to_clipboard: false
+    - { index: 16, color: '#F2CECF' }
+    - { index: 17, color: '#3E4058' }
