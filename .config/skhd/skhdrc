@@ -14,8 +14,8 @@ ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Yabai Settings 
 # focus window
-hyper - h : yabai -m window --focus prev
-hyper - j : yabai -m window --focus next
+hyper - j : yabai -m window --focus prev
+hyper - k : yabai -m window --focus next
 
 # Rotate Window Tree
 hyper - space : yabai -m space --rotate 90
@@ -26,16 +26,16 @@ hyper - a : yabai -m space --focus prev
 hyper - d : yabai -m space --focus next
 
 # send window to desktop and follow focus
-hyper - left : yabai -m window --space  prev; yabai -m space --focus prev
-hyper - right : yabai -m window --space next; yabai -m space --focus next
+hyper - h : yabai -m window --space  prev; yabai -m space --focus prev
+hyper - l : yabai -m window --space next; yabai -m space --focus next
 
 # focus monitor using left and right arrow keys, respectively
 hyper - 1 : yabai -m display --focus prev
 hyper - 2 : yabai -m display --focus next
 
 # send window to monitor and follow focus
-hyper - l : yabai -m window --display prev; yabai -m display --focus prev
-hyper - k : yabai -m window --display next; yabai -m display --focus next
+hyper - right : yabai -m window --display prev; yabai -m display --focus prev
+hyper - left : yabai -m window --display next; yabai -m display --focus next
 
 # toggle window split type
 hyper - e : yabai -m window --toggle split
