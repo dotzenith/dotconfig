@@ -39,12 +39,12 @@ catppuccin.setup(
 			telescope = false,
 			nvimtree = {
 				enabled = false,
-				show_root = false,
+				show_root = true,
 			},
 			which_key = true,
 			indent_blankline = {
-				enabled = false,
-				colored_indent_levels = false,
+				enabled = true,
+				colored_indent_levels = true,
 			},
 			dashboard = false,
 			neogit = false,
