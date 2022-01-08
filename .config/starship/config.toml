@@ -1,0 +1,17 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[directory]
+style = "#F8BD96"
+
+[cmd_duration]
+style = "#F2CECF"
+
+[git_branch]
+style = '#C6AAE8'
+
+[git_state]
+style = '#EBDDAA'
+
+[lua]
+disabled = true

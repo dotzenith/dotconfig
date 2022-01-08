@@ -6,6 +6,9 @@ PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH
 
+# For the starship config
+export STARSHIP_CONFIG=~/.config/starship/config.toml
+
 # Setting some options for quality-of-life improvements
 zle_highlight=('paste:none')
 DISABLE_AUTO_TITLE="true"
