@@ -1,11 +1,16 @@
-set sandbox none
-set statusbar-h-padding 5
-set statusbar-v-padding 5
-set statusbar-bg "#282a36"
-set statusbar-fg "#ffb86c"
-set selection-clipboard clipboard
-set page-padding 1
-set smooth-scroll "true"
+set font "monospace 12"
+set selection-notification	"true"
+set selection-clipboard	"clipboard"
+set guioptions "sv"
+set scroll-page-aware "true"
+set statusbar-home-tilde "true"
+set recolor "true"
+set adjust-open	"width"
+set statusbar-h-padding	10
+set statusbar-v-padding	10
+include catppuccin
+
+
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode
