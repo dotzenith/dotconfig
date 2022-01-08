@@ -20,7 +20,7 @@ window:
     x: 550
     y: 302
 
-  decorations: buttonless
+  decorations: none
 
 
 scrolling:
