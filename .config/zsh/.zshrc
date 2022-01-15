@@ -19,15 +19,10 @@ unsetopt BEEP
 
 # Completions
 autoload -U compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
 
 # Colors
 autoload -Uz colors && colors
