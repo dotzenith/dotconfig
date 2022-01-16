@@ -6,18 +6,18 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'catppuccin',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    theme = require('user.luacat').theme(),
+    component_separators = '',
+    section_separators = '',
     disabled_filetypes = {"NvimTree", "alpha"},
     always_divide_middle = true,
   },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'}, 
-    lualine_x = {'filetype'}, 
-    lualine_y = {'progress'},
+    lualine_c = {'filename'},
+    lualine_x = {'filetype'},
+    lualine_y = {''},
     lualine_z = {'location'}
   },
   inactive_sections = {
