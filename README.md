@@ -1,4 +1,4 @@
-# MacOS dotfiles
+# dotconfig
 
 As someone who recently got into customizing MacOS beyond just the basics, I figured I could share my config files to others out there trying to do the same. Feel free to take inspiration or give me recommendations, but remember that these files are configured with my OS and use-case in mind. So, some edits are likely necessary before they are ready to work on another machine. 
 
