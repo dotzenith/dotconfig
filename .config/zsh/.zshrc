@@ -18,11 +18,12 @@ setopt interactive_comments
 unsetopt BEEP
 
 # Completions
-autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -U compinit && compinit
 
 # Colors
 autoload -Uz colors && colors
