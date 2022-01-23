@@ -109,7 +109,7 @@ bufferline.setup {
     },
 
     separator = {
-      guifg = { attribute = "bg", highlight = "TabLine" },
+      guifg = "NONE",
       guibg = "NONE",
     },
     separator_selected = {

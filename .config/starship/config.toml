@@ -8,10 +8,13 @@ style = "#F8BD96"
 style = "#F2CECF"
 
 [git_branch]
-style = '#C6AAE8'
+style = "#C6AAE8"
 
 [git_state]
-style = '#EBDDAA'
+style = "#EBDDAA"
 
 [lua]
 disabled = true
+
+[python]
+python_binary = "python3"
