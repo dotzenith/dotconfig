@@ -8,7 +8,7 @@ cmd - 0x33 : open -na /Applications/"Visual Studio Code.app"
 # open notion
 cmd + shift - n : open -na /Applications/Notion.app
 # open brave
-cmd - 0x2A : open /Applications/kitty.app
+cmd - 0x2A : open /Applications/KeyCastr.app
 # Restart Yabai
 ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
