@@ -50,6 +50,11 @@ hyper - return : yabai -m window --resize abs:1000:600
 # Center a floating window
 hyper - c : yabai -m window --grid 4:4:1:1:2:2
 
+# Switch to floating systemwide and disable borders
+hyper - f: yabai -m config layout float; yabai -m config window_border off
+
+# Switch back to bsp and turn on window borders again
+hyper - b: yabai -m config layout bsp; yabai -m config window_border on
 
 #### Some settings I don't use but might need later ####
 

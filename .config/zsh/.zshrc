@@ -53,8 +53,8 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# lovesay
-[ -f git_folders/lovesay/lovesay.py ] && python3 git_folders/lovesay/lovesay.py
+# motd
+zsh_add_file "zsh-lovesay"
 
 # Starship
 eval "$(starship init zsh)"

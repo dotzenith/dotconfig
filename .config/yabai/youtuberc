@@ -39,10 +39,10 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  20
-yabai -m config bottom_padding               20
-yabai -m config left_padding                 20
-yabai -m config right_padding                20
+yabai -m config top_padding                  10
+yabai -m config bottom_padding               10
+yabai -m config left_padding                 10
+yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
 # Renaming the spaces
@@ -58,7 +58,6 @@ yabai -m space 6 --label VI
 # yabai -m rule --add app="^Brave Browser$" opacity=0.98
 yabai -m rule --add app="^FaceTime$" manage=off border=off
 yabai -m rule --add app="^System Preferences$" manage=off border=off
-yabai -m rule --add app="^QuickTime Player$" manage=off border=off
 yabai -m rule --add app="Code" opacity=0.90
 yabai -m rule --add app="^Rectangle$" manage=off
 yabai -m rule --add app="Spotify" manage=off
