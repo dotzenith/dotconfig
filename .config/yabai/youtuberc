@@ -27,7 +27,7 @@ yabai -m config normal_window_opacity        1.0
 yabai -m config window_border                on
 yabai -m config window_border_width          6
 yabai -m config active_window_border_color   0xFFF8BD96
-yabai -m config normal_window_border_color   0xff555555
+yabai -m config normal_window_border_color   0xFF000000
 yabai -m config insert_feedback_color        ff8474
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
@@ -58,7 +58,7 @@ yabai -m space 6 --label VI
 # yabai -m rule --add app="^Brave Browser$" opacity=0.98
 yabai -m rule --add app="^FaceTime$" manage=off border=off
 yabai -m rule --add app="^System Preferences$" manage=off border=off
-yabai -m rule --add app="^QuickTime Player$" manage=off border=off
+yabai -m rule --add app="^QuickTime Player$" manage=off border=on
 yabai -m rule --add app="Code" opacity=0.90
 yabai -m rule --add app="^Rectangle$" manage=off
 yabai -m rule --add app="Spotify" manage=off
