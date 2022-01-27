@@ -16,6 +16,8 @@ window:
     x: 10
     y: 10
 
+  opacity: 0.92
+
   position:
     x: 550
     y: 302
@@ -26,8 +28,6 @@ window:
 scrolling:
   history: 10000
   multiplier: 5
-
-background_opacity: 0.92
 
 # Font configuration
 font:
