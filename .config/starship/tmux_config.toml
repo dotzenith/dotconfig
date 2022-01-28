@@ -1,0 +1,45 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = "${custom.window}$all$fill${custom.session}$line_break$character"
+
+# format = """
+# ${custom.window}$shlvl$directory$git_branch$git_commit$git_state$git_metrics$git_status$fill${custom.session}
+# $character"""
+
+[fill]
+symbol = " "
+
+[custom.session]
+command = """ tmux display-message -p "#S" """
+style = "#F8BD96"
+when = "true"
+format = "[\\[$output\\]]($style)"
+
+[custom.window]
+command = """ tmux display-message -p "#W" """
+when = "true"
+style = "#96CDFB"
+format = "[\\[$output\\]]($style) "
+
+[directory]
+style = "#F8BD96"
+
+[cmd_duration]
+style = "#F2CECF"
+
+[git_branch]
+style = "#C6AAE8"
+
+[git_state]
+style = "#EBDDAA"
+
+[lua]
+disabled = true
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+
+[python]
+python_binary = "python3"

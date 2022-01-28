@@ -4,10 +4,6 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 export PATH
 
-# Cava
-export LIBTOOL=`which glibtool`
-export LIBTOOLIZE=`which glibtoolize`
-
 # For the starship config
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
@@ -59,6 +55,11 @@ eval "$(zoxide init zsh)"
 
 # motd
 zsh_add_file "zsh-lovesay"
+
+# Different prompts for starship depending on tmux session or not
+if ! [ -z "${TMUX}" ]; then
+  export STARSHIP_CONFIG=~/.config/starship/tmux_config.toml
+fi
 
 # Starship
 eval "$(starship init zsh)"
