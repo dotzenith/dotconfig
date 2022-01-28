@@ -37,13 +37,15 @@ export BROWSER='brave'
 # Sourcing functions
 source "$ZDOTDIR/zsh-functions"
 
-# Sourcing aliases 
-zsh_add_file "zsh-aliases"
-
 # Sourcing plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
+zsh_add_plugin "olets/zsh-abbr"
+
+# Sourcing aliases 
+zsh_add_file "zsh-aliases"
+abbr import-aliases --quiet
 
 # removing underlines from zsh-syntax-highlighting 
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
