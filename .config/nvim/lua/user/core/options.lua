@@ -39,3 +39,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set fillchars+=eob:\ ]]
 vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
+vim.cmd([[
+  hi StatusLine guibg=NONE
+  hi StatusLineNC guibg=NONE guifg=NONE
+]])

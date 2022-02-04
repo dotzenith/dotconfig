@@ -2,6 +2,7 @@
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
+PATH=$PATH:$HOME/.cargo/bin
 export PATH
 
 # For the starship config
@@ -49,6 +50,16 @@ zsh_add_file "zsh-aliases"
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 # Zoxide
 eval "$(zoxide init zsh)"

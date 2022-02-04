@@ -6,7 +6,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = require('user.luacat').theme(),
+    theme = require('user.colors.luacat').theme(),
     component_separators = '',
     section_separators = '',
     disabled_filetypes = {"NvimTree", "alpha"},
@@ -32,8 +32,3 @@ lualine.setup {
   extensions = {}
 }
 
--- Hide statusline when disabled
-vim.cmd([[
-  hi StatusLine guibg=NONE
-  hi StatusLineNC guibg=NONE guifg=NONE
-]])

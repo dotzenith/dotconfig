@@ -72,6 +72,8 @@ vim.cmd [[
     hi VertSplit guibg=none ctermbg=none
     hi SignColumn guibg=none ctermbg=none
     hi EndOfBuffer guibg=none ctermbg=none
+    hi StatusLine guibg=NONE
+    hi StatusLineNC guibg=NONE guifg=NONE
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark
