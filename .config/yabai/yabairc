@@ -61,7 +61,7 @@ yabai -m rule --add app="^System Preferences$" manage=off border=off
 yabai -m rule --add app="^QuickTime Player$" manage=off border=on
 yabai -m rule --add app="Code" opacity=0.90
 yabai -m rule --add app="^Rectangle$" manage=off
-yabai -m rule --add app="Spotify" manage=off
+yabai -m rule --add app="Spotify" border=off manage=off
 yabai -m rule --add app="VSCodium" opacity=0.98
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="zoom.us" manage=off border=off
