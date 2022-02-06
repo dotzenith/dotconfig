@@ -4,11 +4,11 @@ As someone who recently got into customizing MacOS beyond just the basics, I fig
 
 ### Screenshots
 
-![screenshot displaying vs-code on virtual desktop space 1](images/spaceOne.png)
+![pfetch](assets/spaceOne.png)
 
-![screenshot displaying multiple terminal windows on virtual desktop space 2](images/spaceTwo.png)
+![vim](assets/spaceTwo.png)
 
-![screenshot displaying brave browser with a custom start-up page on virtual desktop space 3](images/spaceThree.png)
+![spotify](assets/spaceThree.png)
 
 ### What I use
 
