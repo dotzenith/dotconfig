@@ -43,6 +43,11 @@
    - **Browser Startup:** [nightTab](https://github.com/zombieFox/nightTab)
    - **PDF Viewer:** [zathura](https://github.com/pwmt/zathura)
    - **Application Launcher:** [Alfred](https://www.alfredapp.com/)
+   
+   </br>
+   </br>
+   </br>
+   </br>
 
 ---
 
