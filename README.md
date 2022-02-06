@@ -20,8 +20,10 @@
 
 <!-- INFORMATION -->
 ### ❖ Information 
+   </br>
    <img src="assets/Full_Rice.jpeg" alt="Repo Preview" align="right" width="400px">
 
+   </br>
    Hello gamers and gamern'ts! Looks like you've stumbled upon my dotfiles, have fun exploring!.
 
    Here is (almost) everything I use:
@@ -45,8 +47,11 @@
    - **Application Launcher:** [Alfred](https://www.alfredapp.com/)
    
    </br>
-   </br>
-   </br>
+
+### ❖ Nothing of Importance 
+   - You might be wondering, "What is this section for?"
+   - The simple answer is, this section serves no real purpose, this is just here for the aesthetics.
+   - Some call it weird, others call it weirder. Beauty is truly in the eyes of the beholder :)
    </br>
 
 ---
