@@ -46,9 +46,7 @@
    
 
 ### ❖ Nothing of Importance 
-   - You might be wondering, "What is this section for?"
-   - The simple answer is, this section serves no real purpose, this is just here for the aesthetics.
-   - Some call it weird, others call it weirder. Beauty is truly in the eyes of the beholder :)
+   - You might be wondering, "What is this section for?" Well, keep wondering :)
 
 ---
 
