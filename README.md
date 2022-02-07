@@ -45,7 +45,7 @@
    - **Application Launcher:** [Alfred](https://www.alfredapp.com/)
    
 
-### ❖ Nothing of Importance 
+### ❖ Filler-Bar 
    - You might be wondering, "What is this section for?" Well, keep wondering :)
 
 ---
