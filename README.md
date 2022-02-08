@@ -20,7 +20,7 @@
 
 <!-- INFORMATION -->
 ### ❖ Information 
-   <img src=".git/assets/Full_Rice.jpeg" alt="Repo Preview" align="right" width="400px">
+   <img src="assets/Full_Rice.jpeg" alt="Repo Preview" align="right" width="400px">
 
    Hello gamers and gamern'ts! Looks like you've stumbled upon my dotfiles, have fun exploring!.
 
