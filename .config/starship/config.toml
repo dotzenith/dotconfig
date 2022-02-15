@@ -21,4 +21,5 @@ success_symbol = "[ﬦ](bold green)"
 error_symbol = "[ﬦ](bold red)"
 
 [python]
+disabled = true
 python_binary = "python3"
