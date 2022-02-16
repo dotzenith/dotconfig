@@ -14,7 +14,7 @@
    <br>
 </div>
 
-<p/>
+</p>
 
 ---
 
@@ -50,6 +50,7 @@
    - I could just tell you, but what's the fun in that!
    - Keep wondering :)
 
+<p></p>
 ---
 
 <!-- SETUP -->
