@@ -3,6 +3,7 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH
 
 # For the starship config

@@ -24,7 +24,6 @@ window:
 
   decorations: none
 
-
 scrolling:
   history: 10000
   multiplier: 5
