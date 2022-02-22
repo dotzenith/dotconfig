@@ -38,7 +38,7 @@
    - **Multiplexer:** [tmux](https://github.com/tmux/tmux)
    - **Top:** [bpytop](https://github.com/aristocratos/bpytop)
    - **Theme:** [catppuccin](https://github.com/catppuccin)
-   - **Spotify:** [spicetify](https://github.com/zombieFox/nightTab)
+   - **Spotify:** [spicetify](https://github.com/khanhas/spicetify-cli)
    - **Browser:** [brave](https://brave.com/)
    - **Browser Startup:** [nightTab](https://github.com/zombieFox/nightTab)
    - **PDF Viewer:** [zathura](https://github.com/pwmt/zathura)
