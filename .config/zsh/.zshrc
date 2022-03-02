@@ -1,14 +1,3 @@
-# Just the normal path stuff
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
-PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$PATH:$HOME/.scripts
-PATH=$PATH:$HOME/.cargo/bin
-PATH=$PATH:$HOME/Library/Python/3.9/bin
-export PATH
-
-# For the starship config
-export STARSHIP_CONFIG=~/.config/starship/config.toml
-
 # Setting some options for quality-of-life improvements
 zle_highlight=('paste:none')
 DISABLE_AUTO_TITLE="true"
@@ -31,11 +20,6 @@ autoload -Uz colors && colors
 # User configuration
 bindkey -s '^c' 'clear ^M'
 
-# Defaults
-export EDITOR='nvim'
-export TERMINAL='alacritty'
-export BROWSER='brave'
-
 # Sourcing functions
 source "$ZDOTDIR/zsh-functions"
 
@@ -47,23 +31,13 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # Sourcing aliases 
 zsh_add_file "zsh-aliases"
 
-# removing underlines from zsh-syntax-highlighting 
+# removing underlines from zsh-syntax-highlighting
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# Setup fzf
-# ---------
-if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
-fi
-
-# Auto-completion
-# ---------------
-[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
-
-# Zoxide
-eval "$(zoxide init zsh)"
+# vim mode
+bindkey -v
 
 # motd
 zsh_add_file "zsh-lovesay"
@@ -73,5 +47,4 @@ if ! [ -z "${TMUX}" ]; then
   export STARSHIP_CONFIG=~/.config/starship/tmux_config.toml
 fi
 
-# Starship
-eval "$(starship init zsh)"
+zsh_add_file "zsh-exports"
