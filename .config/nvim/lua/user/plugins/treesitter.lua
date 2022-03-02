@@ -31,4 +31,20 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  rainbow = {
+    enable = true,
+    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+    max_file_lines = nil, -- Do not enable for files with more than n lines, int
+    colors = {
+      "#DDB6F2",
+      "#F2CDCD",
+      "#C9CBFF",
+      "#ABE9B3",
+      "#FAE3B0",
+      "#F8BD96",
+      "#F5E0DC",
+    }, -- table of hex strings
+    -- termcolors = {} -- table of colour name strings
+  },
 }

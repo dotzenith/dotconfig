@@ -38,9 +38,10 @@ packer.init {
   },
 }
 
--- Install your plugins here
+-- Install plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  
+  -- Misc plugins
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -59,6 +60,8 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "akinsho/toggleterm.nvim"
   use "Pocco81/AutoSave.nvim"
+  use "p00f/nvim-ts-rainbow"
+  use "andweeb/presence.nvim"
 
   -- Colorschemes
   use({
