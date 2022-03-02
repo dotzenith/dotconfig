@@ -74,6 +74,8 @@ vim.cmd [[
     hi EndOfBuffer guibg=none ctermbg=none
     hi StatusLine guibg=NONE
     hi StatusLineNC guibg=NONE guifg=NONE
+    hi Pmenu guibg=NONE ctermbg=none
+    hi NormalFloat guibg=NONE ctermbg=NONE
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark
