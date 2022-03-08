@@ -2,7 +2,7 @@
 # Some general settings
 
 # open terminal
-cmd - return : open -na /Applications/Alacritty.app
+cmd - return : open -na /Applications/WezTerm.app
 # open vscode
 cmd - 0x33 : open -na /Applications/"Visual Studio Code.app"
 # open notion
