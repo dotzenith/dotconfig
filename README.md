@@ -76,7 +76,7 @@
    > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
    $ brew tap homebrew/cask-fonts
-   $ brew install --cask font-jetbrains-mono-nerd-font
+   $ brew install --cask font-sauce-code-pro-nerd-font
    ```
 
    </details>
