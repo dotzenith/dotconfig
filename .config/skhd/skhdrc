@@ -2,7 +2,8 @@
 # Some general settings
 
 # open terminal
-cmd - return : open -na /Applications/WezTerm.app
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
 # open vscode
 cmd - 0x33 : open -na /Applications/"Visual Studio Code.app"
 # open notion
