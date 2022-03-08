@@ -48,3 +48,4 @@ if ! [ -z "${TMUX}" ]; then
 fi
 
 zsh_add_file "zsh-exports"
+zsh_add_file "zsh-spotify"

@@ -26,7 +26,7 @@ configs.setup {
     disable = { "lua" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  indent = { enable = true, disable = { "yaml" } },
+  indent = { enable = true, disable = { "yaml", "python"} },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
