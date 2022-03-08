@@ -30,7 +30,7 @@
    - **WM:** [yabai](https://github.com/koekeishiya/yabai)
    - **Hotkeys:** [skhd](https://github.com/koekeishiya/skhd)
    - **Panel:** [simple-bar](https://github.com/Jean-Tinland/simple-bar)
-   - **Terminal:** [WezTerm](https://github.com/wez/wezterm)
+   - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty/)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
    - **Greeting:** [lovesay](https://github.com/ZenithDS/lovesay)
@@ -76,7 +76,7 @@
    > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
    $ brew tap homebrew/cask-fonts
-   $ brew install --cask font-fira-code-nerd-font
+   $ brew install --cask font-jetbrains-mono-nerd-font
    ```
 
    </details>
