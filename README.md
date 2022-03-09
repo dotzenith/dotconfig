@@ -91,9 +91,9 @@
    <details open>
    <summary><strong>Zsh</strong></summary>
    
-   > The Zsh config has a few dependecies. You can install them by running the following command.
+   > The Zsh config uses starship as it's prompt.
    ```sh
-   $ brew install starship zoxide fzf
+   $ brew install starship
    ```
  
   > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
