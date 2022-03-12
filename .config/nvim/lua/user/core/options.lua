@@ -29,6 +29,16 @@ local options = {
   number = true
 }
 
+-- makes things faster I guess?
+vim.g.loaded_gzip = false
+vim.g.loaded_matchit = false
+vim.g.loaded_netrwPlugin = false
+vim.g.loaded_tarPlugin = false
+vim.g.loaded_zipPlugin = false
+vim.g.loaded_man = false
+vim.g.loaded_2html_plugin = false
+vim.g.loaded_remote_plugins = false
+
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
@@ -39,7 +49,3 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set fillchars+=eob:\ ]]
 vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
-vim.cmd([[
-  hi StatusLine guibg=NONE
-  hi StatusLineNC guibg=NONE guifg=NONE
-]])

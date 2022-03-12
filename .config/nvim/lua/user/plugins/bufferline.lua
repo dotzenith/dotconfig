@@ -23,7 +23,7 @@ bufferline.setup {
     max_name_length = 30,
     max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
     tab_size = 21,
-    diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
+    diagnostics = false, -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = false,
 
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
