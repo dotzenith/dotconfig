@@ -13,6 +13,12 @@ style = "#C6AAE8"
 [git_state]
 style = "#EBDDAA"
 
+[username]
+disabled = true
+
+[hostname]
+disabled = true
+
 [lua]
 disabled = true
 

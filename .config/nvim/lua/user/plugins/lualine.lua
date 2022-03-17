@@ -19,12 +19,27 @@ lualine.setup {
                     'diff',
                     colored = true, 
                     diff_color = {
-                      added    = { fg = "#ABE9B3"}, 
-                      modified = { fg = "#FAE3B0"},
-                      removed  = { fg = "#F27FAD"},
+                      added    = 'DiffAdd', 
+                      modified = 'DiffChange',
+                      removed  = 'DiffDelete',
                     },
-                }, 
-                'diagnostics'},
+                },
+                {
+                    'diagnostics',
+
+                    sources = { 'nvim_lsp' },
+                    sections = { 'error', 'warn', 'info' },
+
+                    diagnostics_color = {
+                      error = 'DiagnosticError', 
+                      warn  = 'DiagnosticWarn',  
+                      info  = 'DiagnosticInfo',  
+                    },
+                    colored = true,           
+                    update_in_insert = false, 
+                    always_visible = false,   
+                },
+    },
     lualine_c = {'filename'},
     lualine_x = {'filetype'},
     lualine_y = {''},
