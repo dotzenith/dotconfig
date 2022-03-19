@@ -35,7 +35,7 @@
    - **Prompt:** [starship](https://starship.rs/)
    - **Greeting:** [lovesay](https://github.com/ZenithDS/lovesay)
    - **Editor:** [neovim](https://github.com/neovim/neovim/)
-   - **Multiplexer:** [tmux](https://github.com/tmux/tmux)
+   - **Multiplexer:** [tmux](https://github.com/tmux/tmux) (not in active use anymore because of kitty)
    - **Top:** [bpytop](https://github.com/aristocratos/bpytop)
    - **Theme:** [catppuccin](https://github.com/catppuccin)
    - **Spotify:** [spicetify](https://github.com/khanhas/spicetify-cli)
