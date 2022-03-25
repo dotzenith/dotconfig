@@ -46,9 +46,7 @@
    
 
 ### ❖ Mystery-Section 
-   - You might be wondering, "What is this section for?"
-   - I could just tell you, but what's the fun in that!
-   - Keep wondering :)
+   - You might be wondering, "What is this section for?" I'm afraid you'll have to keep wondering :)
 
 <br>
 
