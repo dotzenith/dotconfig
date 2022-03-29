@@ -3,8 +3,11 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.cargo/bin
-PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH
+
+# Python bug
+unset PYTHONPATH
+unset PYTHONHOME
 
 # For the starship config
 export STARSHIP_CONFIG=~/.config/starship/config.toml

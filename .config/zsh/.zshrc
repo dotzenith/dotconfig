@@ -1,3 +1,7 @@
+# Sourcing functions
+source "$ZDOTDIR/zsh-functions"
+zsh_add_file "zsh-exports"
+
 # Setting some options for quality-of-life improvements
 zle_highlight=('paste:none')
 DISABLE_AUTO_TITLE="true"
@@ -46,5 +50,4 @@ if ! [ -z "${TMUX}" ]; then
   export STARSHIP_CONFIG=~/.config/starship/tmux_config.toml
 fi
 
-zsh_add_file "zsh-exports"
 zsh_add_file "zsh-spotify"
