@@ -23,9 +23,6 @@ autoload -Uz colors && colors
 # User configuration
 bindkey -s '^c' 'clear ^M'
 
-# Sourcing functions
-source "$ZDOTDIR/zsh-functions"
-
 # Sourcing plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -45,9 +42,5 @@ bindkey -v
 # motd
 zsh_add_file "zsh-lovesay"
 
-# Different prompts for starship depending on tmux session or not
-if ! [ -z "${TMUX}" ]; then
-  export STARSHIP_CONFIG=~/.config/starship/tmux_config.toml
-fi
-
+# Spotify
 zsh_add_file "zsh-spotify"
