@@ -7,7 +7,7 @@ end
 catppuccin.setup(
   {  
     transparent_background = true,
-    term_colors = false,
+    term_colors = true,
     styles = {
       comments = "italic",
       functions = "italic",

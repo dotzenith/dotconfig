@@ -1,1 +1,0 @@
-require "user.colors.colorscheme"

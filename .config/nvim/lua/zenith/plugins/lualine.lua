@@ -6,11 +6,12 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = require('user.colors.luacat').theme(),
+    theme = require('zenith.colors.luacat').theme(),
     component_separators = '',
     section_separators = '',
-    disabled_filetypes = {"NvimTree", "alpha"},
+    disabled_filetypes = {"alpha"},
     always_divide_middle = true,
+    globalstatus = true
   },
   sections = {
     lualine_a = {'mode'},

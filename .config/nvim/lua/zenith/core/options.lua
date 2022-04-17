@@ -26,7 +26,8 @@ local options = {
   signcolumn = "yes:1",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  number = true
+  number = true,
+  laststatus = 3
 }
 
 -- makes things faster I guess?
