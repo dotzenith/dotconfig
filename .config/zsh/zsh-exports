@@ -17,6 +17,3 @@ export STARSHIP_CONFIG=~/.config/starship/config.toml
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='brave'
-
-# Starship
-eval "$(starship init zsh)"

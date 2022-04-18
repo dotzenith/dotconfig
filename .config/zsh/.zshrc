@@ -44,3 +44,7 @@ zsh_add_file "zsh-lovesay"
 
 # Spotify
 zsh_add_file "zsh-spotify"
+
+
+# Starship
+eval "$(starship init zsh)"
