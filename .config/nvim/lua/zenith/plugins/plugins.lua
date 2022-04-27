@@ -62,6 +62,7 @@ return packer.startup(function(use)
   use "Pocco81/AutoSave.nvim"
   use "p00f/nvim-ts-rainbow"
   use "andweeb/presence.nvim"
+  use 'karb94/neoscroll.nvim'
 
   -- Colorschemes
   use({

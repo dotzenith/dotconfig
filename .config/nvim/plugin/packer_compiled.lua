@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/sharmadanshu/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/Users/sharmadanshu/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/Users/sharmadanshu/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",

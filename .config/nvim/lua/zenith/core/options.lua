@@ -27,6 +27,8 @@ local options = {
   wrap = false,                            -- display lines as one long line
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   number = true,
+  scrolloff = 8,
+  sidescrolloff = 8,
   laststatus = 3
 }
 
