@@ -5,6 +5,9 @@ zsh_add_file "zsh-exports"
 # Setting some options for quality-of-life improvements
 zle_highlight=('paste:none')
 DISABLE_AUTO_TITLE="true"
+HISTFILE=~/.config/zsh/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
 setopt appendhistory
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments

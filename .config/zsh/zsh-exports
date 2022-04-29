@@ -4,13 +4,7 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.cargo/bin
 PATH="/usr/local/opt/python@3.10/bin:$PATH"
-PATH="/usr/local/opt/lua@5.3/bin:$PATH"
 export PATH
-
-# lua
-export LDFLAGS="-L/usr/local/opt/lua@5.3/lib"
-export CPPFLAGS="-I/usr/local/opt/lua@5.3/include"
-export PKG_CONFIG_PATH="/usr/local/opt/lua@5.3/lib/pkgconfig"
 
 # Python bug
 unset PYTHONPATH
