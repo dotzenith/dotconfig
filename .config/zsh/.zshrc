@@ -33,6 +33,7 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # Sourcing aliases 
 zsh_add_file "zsh-aliases"
+zsh_add_file "zsh-secrets"
 
 # removing underlines from zsh-syntax-highlighting
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
@@ -47,7 +48,6 @@ zsh_add_file "zsh-lovesay"
 
 # Spotify
 zsh_add_file "zsh-spotify"
-
 
 # Starship
 eval "$(starship init zsh)"

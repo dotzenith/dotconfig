@@ -127,6 +127,11 @@
   
   > Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
 
+  > if you're using the vscode-neovim plugin for vscodium, the key repeat can be turned on by using the following command on MacOS
+  ```sh
+  defaults write -app VSCodium ApplePressAndHoldEnabled -bool false
+  ```
+
    </details>
       
    <details open>
