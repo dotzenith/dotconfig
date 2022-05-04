@@ -59,7 +59,7 @@
   
    > I will however, leave a few helpful tips if you deem my config worthy of copying anyways.
 
-   <details open>
+   <details>
    <summary><strong>WM and Hotkeys</strong></summary>
    
    > Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
@@ -68,26 +68,25 @@
 
    </details>
 
-   <details open>
+   <details>
    <summary><strong>Nerd Fonts</strong></summary>
    
    > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
    brew tap homebrew/cask-fonts
-
    brew install --cask font-jetbrains-mono-nerd-font
    ```
 
    </details>
    
-   <details open>
+   <details>
    <summary><strong>Kitty</strong></summary>
    
    > Window decorations for Kitty are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
 
    </details>
    
-   <details open>
+   <details>
    <summary><strong>Zsh</strong></summary>
    
    > The Zsh config uses starship as it's prompt.
@@ -109,7 +108,7 @@
 
    </details>
    
-   <details open>
+   <details>
    <summary><strong>Neovim</strong></summary>
    
    > The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
@@ -135,7 +134,7 @@
 
    </details>
       
-   <details open>
+   <details>
    <summary><strong>Misc</strong></summary>
    
    > Everything else should be fairly easy to configure, but feel free to open an issue if that's not the case.
