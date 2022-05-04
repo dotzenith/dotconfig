@@ -55,23 +55,23 @@
 <!-- SETUP -->
 ### ❖ Installation and Setup
 
-   > There is no real way to easily replicate this setup. As such, I've decided not to include any install scripts or detailed instructions on how to get my config working on your machine.
+   There is no real way to easily replicate this setup. As such, I've decided not to include any install scripts or detailed instructions on how to get my config working on your machine.
   
-   > I will however, leave a few helpful tips if you deem my config worthy of copying anyways.
+   I will however, leave a few helpful tips if you deem my config worthy of copying anyways.
 
    <details>
    <summary><strong>WM and Hotkeys</strong></summary>
    
-   > Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
+   Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
 
-   > I also have caps-lock bound as my **hyper** key. On MacOS, you can do the same by using [karabiner](https://karabiner-elements.pqrs.org/).
+   I also have caps-lock bound as my **hyper** key. On MacOS, you can do the same by using [karabiner](https://karabiner-elements.pqrs.org/).
 
    </details>
 
    <details>
    <summary><strong>Nerd Fonts</strong></summary>
    
-   > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
+   A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
    brew tap homebrew/cask-fonts
    brew install --cask font-jetbrains-mono-nerd-font
@@ -82,26 +82,26 @@
    <details>
    <summary><strong>Kitty</strong></summary>
    
-   > Window decorations for Kitty are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
+   Window decorations for Kitty are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
 
    </details>
    
    <details>
    <summary><strong>Zsh</strong></summary>
    
-   > The Zsh config uses starship as it's prompt.
+   The Zsh config uses starship as it's prompt.
    ```sh
    brew install starship
    ```
  
-  > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
+   A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
    ```sh
    ZDOTDIR=$HOME/.config/zsh
    ```
 
-   > The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
+   The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
 
-   > Zsh might throw a warning about insecure directories, this can be resolved by running the following command.
+   Zsh might throw a warning about insecure directories, this can be resolved by running the following command.
    ```sh
    compaudit | xargs chmod g-w
    ```
@@ -111,7 +111,7 @@
    <details>
    <summary><strong>Neovim</strong></summary>
    
-   > The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
+   The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
    ```sh
    # Remove old nvim data
    rm -rf ~/.local/share/nvim
@@ -123,11 +123,11 @@
    # Copy new config
    cp -R ~/dotconfig/.config/nvim ~/.config 
    ```
-  > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
+   Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
-  > Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
+   Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
 
-  > if you're using the vscode-neovim plugin for vscodium, the key repeat can be turned on by using the following command on MacOS
+   if you're using the vscode-neovim plugin for vscodium, the key repeat can be turned on by using the following command on MacOS
   ```sh
   defaults write -app VSCodium ApplePressAndHoldEnabled -bool false
   ```
@@ -137,7 +137,7 @@
    <details>
    <summary><strong>Misc</strong></summary>
    
-   > Everything else should be fairly easy to configure, but feel free to open an issue if that's not the case.
+   Everything else should be fairly easy to configure, but feel free to open an issue if that's not the case.
 
    </details>
 
