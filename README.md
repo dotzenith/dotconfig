@@ -73,8 +73,9 @@
    
    > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
-   $ brew tap homebrew/cask-fonts
-   $ brew install --cask font-jetbrains-mono-nerd-font
+   brew tap homebrew/cask-fonts
+
+   brew install --cask font-jetbrains-mono-nerd-font
    ```
 
    </details>
@@ -91,7 +92,7 @@
    
    > The Zsh config uses starship as it's prompt.
    ```sh
-   $ brew install starship
+   brew install starship
    ```
  
   > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
@@ -103,7 +104,7 @@
 
    > Zsh might throw a warning about insecure directories, this can be resolved by running the following command.
    ```sh
-   $ compaudit | xargs chmod g-w
+   compaudit | xargs chmod g-w
    ```
 
    </details>
@@ -114,14 +115,14 @@
    > The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
    ```sh
    # Remove old nvim data
-   $ rm -rf ~/.local/share/nvim
-   $ rm -rf ~/.cache/nvim
+   rm -rf ~/.local/share/nvim
+   rm -rf ~/.cache/nvim
    
    # Backup old nvim config
-   $ mv ~/.config/nvim ~/.config/old_nvim
+   mv ~/.config/nvim ~/.config/old_nvim
 
    # Copy new config
-   $ cp -R ~/dotconfig/.config/nvim ~/.config 
+   cp -R ~/dotconfig/.config/nvim ~/.config 
    ```
   > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
