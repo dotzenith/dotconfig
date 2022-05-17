@@ -33,7 +33,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
   auto_reload_on_write = true,
-  disable_netrw = true,
+  disable_netrw = false,
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
@@ -80,7 +80,7 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable = false,
-    update_cwd = false,
+    update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {
@@ -116,7 +116,7 @@ nvim_tree.setup {
     use_system_clipboard = true,
     change_dir = {
       enable = true,
-      global = false,
+      global = true,
       restrict_above_cwd = false,
     },
     open_file = {

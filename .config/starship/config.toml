@@ -22,11 +22,13 @@ disabled = true
 [lua]
 disabled = true
 
+[nodejs]
+disabled = true
+
 [character]
 success_symbol = "[ﬦ](bold green)"
 error_symbol = "[ﬦ](bold red)"
 vicmd_symbol = "[y](green)"
 
 [python]
-disabled = true
 python_binary = "python3"

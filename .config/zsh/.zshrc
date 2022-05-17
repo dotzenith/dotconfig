@@ -40,6 +40,9 @@ zsh_add_file "zsh-secrets"
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
+# Adding fzf
+[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
+
 # vim mode
 bindkey -v
 

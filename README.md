@@ -88,20 +88,23 @@
    
    <details>
    <summary><strong>Zsh</strong></summary>
-   
-   > The Zsh config uses starship as it's prompt.
-   ```sh
-   brew install starship
-   ```
- 
-  > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
+
+   > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
    ```sh
    ZDOTDIR=$HOME/.config/zsh
    ```
+   
+   > The zsh config uses starship and fzf
+   ```sh
+   brew install starship fzf
+   ```
+
+   > The config also assumes that the `.fzf.zsh` file is in `~/.config/fzf/`
+
 
    > The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
 
-   > Zsh might throw a warning about insecure directories, this can be resolved by running the following command.
+   > zsh might throw a warning about insecure directories, this can be resolved by running the following command.
    ```sh
    compaudit | xargs chmod g-w
    ```
@@ -127,9 +130,10 @@
   
    > Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
 
-   > if you're using the vscode-neovim plugin for vscodium, the key repeat can be turned on by using the following command on MacOS
+   > if you're using the vscode-neovim plugin for vscodium/vscode, the key repeat can be turned on by using the following command on MacOS
    ```sh
-   defaults write -app VSCodium ApplePressAndHoldEnabled -bool false
+   defaults write -app VSCodium ApplePressAndHoldEnabled -bool false # VSCodium
+   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false # VSCode 
    ```
 
    </details>
