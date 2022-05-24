@@ -112,6 +112,16 @@
    </details>
    
    <details>
+   <summary><strong>Replacements for common *nix commands</strong></summary>
+   
+   > I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
+   ```sh
+   brew install ripgrep fd sd
+   ```
+
+   </details>
+
+   <details>
    <summary><strong>Neovim</strong></summary>
    
    > The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
