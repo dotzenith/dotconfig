@@ -45,6 +45,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # vim mode
 bindkey -v
+bindkey "^?" backward-delete-char
 
 # motd
 zsh_add_file "lovesay"

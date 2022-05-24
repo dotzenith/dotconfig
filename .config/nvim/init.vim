@@ -1,4 +1,4 @@
-if exists('g:vscodium')
+if exists('g:vscodium') || exists('g:vscode')
   lua require("zenith.core")
 else
   lua require("zenith.core")

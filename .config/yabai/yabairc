@@ -59,10 +59,10 @@ yabai -m space 6 --label VI
 yabai -m rule --add app="^FaceTime$" manage=off border=off
 yabai -m rule --add app="^System Preferences$" manage=off border=off
 yabai -m rule --add app="QuickTime Player" manage=off border=on layer=below
-yabai -m rule --add app="Code" opacity=0.90
+yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="^Rectangle$" manage=off
 yabai -m rule --add app="Spotify" manage=off border=off 
-yabai -m rule --add app="^VSCodium$" opacity=0.92
+yabai -m rule --add app="^VSCodium$" opacity=0.95
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="zoom.us" manage=off border=off
 yabai -m rule --add app="^Messages$" manage=off
