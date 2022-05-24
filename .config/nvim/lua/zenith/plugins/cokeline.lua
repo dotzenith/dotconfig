@@ -16,6 +16,18 @@ cokeline.setup {
     bg = 'NONE',
   },
 
+  sidebar = {
+    filetype = 'NvimTree',
+    components = {
+      {
+        text = '  NvimTree',
+        fg = get_hex('Normal', 'fg'),
+        bg = 'NONE',
+        style = 'bold',
+      },
+    }
+  },
+
   components = {
     {
       text = function(buffer) return (buffer.index ~= 1) and '▏' or '' end,

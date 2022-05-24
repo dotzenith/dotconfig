@@ -1,6 +1,6 @@
 # Sourcing functions
-source "$ZDOTDIR/zsh-functions"
-zsh_add_file "zsh-exports"
+source "$ZDOTDIR/functions"
+zsh_add_file "exports"
 
 # Setting some options for quality-of-life improvements
 zle_highlight=('paste:none')
@@ -32,8 +32,8 @@ zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 
 # Sourcing aliases 
-zsh_add_file "zsh-aliases"
-zsh_add_file "zsh-secrets"
+zsh_add_file "aliases"
+zsh_add_file "secrets"
 
 # removing underlines from zsh-syntax-highlighting
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
@@ -47,10 +47,10 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 bindkey -v
 
 # motd
-zsh_add_file "zsh-lovesay"
+zsh_add_file "lovesay"
 
 # Spotify
-zsh_add_file "zsh-spotify"
+zsh_add_file "spotify"
 
 # Starship
 eval "$(starship init zsh)"
