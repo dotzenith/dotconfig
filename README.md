@@ -116,7 +116,7 @@
    
    > I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
    ```sh
-   brew install ripgrep fd sd
+   brew install bat ripgrep fd sd
    ```
 
    </details>
