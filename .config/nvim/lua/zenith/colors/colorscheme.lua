@@ -3,7 +3,8 @@ if not status_ok then
 	return
 end
 
--- configure it
+vim.g.catppuccin_flavor = "original"
+
 catppuccin.setup(
   {  
     transparent_background = true,

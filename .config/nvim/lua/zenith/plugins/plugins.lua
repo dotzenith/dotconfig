@@ -66,7 +66,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use({
-    "catppuccin/nvim",
+    "zenithds/nvimcat",
     as = "catppuccin"
   })
   use "norcalli/nvim-colorizer.lua"
