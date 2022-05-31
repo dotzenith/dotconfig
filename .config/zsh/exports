@@ -8,6 +8,9 @@ PATH=$PATH:$HOME/.cargo/bin
 PATH="$HOME/Library/Python/3.10/bin:$PATH"
 export PATH
 
+# bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # Python bug
 unset PYTHONPATH
 unset PYTHONHOME

@@ -35,3 +35,7 @@ function mach_java_mode() {
     export SDKMAN_DIR="$HOME/.sdkman"
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 }
+
+help() {
+    "$@" --help 2>&1 | bathelp
+}

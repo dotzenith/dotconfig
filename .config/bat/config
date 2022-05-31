@@ -1,0 +1,7 @@
+--theme="Catppuccin"
+
+--italic-text=always
+
+--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+
+--map-syntax ".ignore:Git Ignore"

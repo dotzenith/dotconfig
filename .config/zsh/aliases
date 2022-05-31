@@ -8,6 +8,11 @@ alias vim='nvim'
 alias vi='\vim'
 alias v='\vi'
 
+# bat
+alias batview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias batdiff="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
+alias bathelp='bat --plain --language=help'
+
 # others
 alias kit='nvim ~/.config/kitty/kitty.conf'
 alias lg='lazygit'
