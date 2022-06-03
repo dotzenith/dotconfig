@@ -147,7 +147,7 @@
    ```
 
    > copy/paste support on linux
-   ```
+   ```sh
    # Debian  
    sudo apt install xsel
 
