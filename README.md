@@ -112,7 +112,7 @@
    </details>
    
    <details>
-   <summary><strong>Replacements for common *nix commands</strong></summary>
+   <summary><strong>Replace common *nix commands</strong></summary>
    
    > I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
    ```sh
@@ -134,8 +134,23 @@
    mv ~/.config/nvim ~/.config/old_nvim
 
    # Copy new config
-   cp -R ~/dotconfig/.config/nvim ~/.config 
+   cp -R ~/dotconfig/.config/nvim ~/.config
    ```
+  
+   > Get python and node support for nvim
+   ```sh
+   pip3 install pynvim
+
+   npm i -g neovim
+   ```
+
+   > copy/paste support on linux
+   ```
+   sudo apt install xsel    # Debian
+
+   sudo pacman -S xsel      # Arch
+   ```
+
    > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
    > Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
