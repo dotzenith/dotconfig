@@ -139,16 +139,20 @@
   
    > Get python and node support for nvim
    ```sh
+   # python
    pip3 install pynvim
-
+    
+   # node 
    npm i -g neovim
    ```
 
    > copy/paste support on linux
    ```
-   sudo apt install xsel    # Debian
+   # Debian  
+   sudo apt install xsel
 
-   sudo pacman -S xsel      # Arch
+   # Arch 
+   sudo pacman -S xsel
    ```
 
    > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
