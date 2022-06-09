@@ -1,6 +1,7 @@
 # vim
 alias ls='lsd'
 alias la='lsd -a'
+alias lt='lsd --tree'
 alias lla='lsd -la'
 
 # vim

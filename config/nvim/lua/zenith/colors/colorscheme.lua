@@ -70,23 +70,36 @@ catppuccin.setup(
   }
 )
 
+-- Setting the colorscheme
 vim.cmd [[
   try
     colorscheme catppuccin
-    hi Normal guibg=none ctermbg=none
-    hi LineNr guibg=none ctermbg=none
-    hi Folded guibg=none ctermbg=none
-    hi NonText guibg=none ctermbg=none
-    hi SpecialKey guibg=none ctermbg=none
-    hi VertSplit guibg=none ctermbg=none
-    hi SignColumn guibg=none ctermbg=none
-    hi EndOfBuffer guibg=none ctermbg=none
-    hi StatusLine guibg=NONE
-    hi StatusLineNC guibg=NONE guifg=NONE
-    hi Pmenu guibg=NONE ctermbg=none
-    hi NormalFloat guibg=NONE ctermbg=NONE
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark
   endtry
+]]
+
+-- Turning off bg color for a lot of components
+vim.cmd [[
+  hi Normal guibg=none ctermbg=none
+  hi LineNr guibg=none ctermbg=none
+  hi Folded guibg=none ctermbg=none
+  hi NonText guibg=none ctermbg=none
+  hi SpecialKey guibg=none ctermbg=none
+  hi VertSplit guibg=none ctermbg=none
+  hi SignColumn guibg=none ctermbg=none
+  hi EndOfBuffer guibg=none ctermbg=none
+  hi StatusLine guibg=NONE
+  hi StatusLineNC guibg=NONE guifg=NONE
+  hi Pmenu guibg=NONE ctermbg=none
+  hi NormalFloat guibg=NONE ctermbg=NONE
+]]
+
+-- Turning off bg for lsp diagnostics
+vim.cmd [[
+  hi DiagnosticError guibg=none ctermbg=none
+  hi DiagnosticWarn guibg=none ctermbg=none 
+  hi DiagnosticHint guibg=none ctermbg=none 
+  hi DiagnosticInfo guibg=none ctermbg=none 
 ]]
