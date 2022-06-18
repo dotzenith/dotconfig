@@ -157,7 +157,14 @@
 
    > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
-   > Once packer is done installing all the plugins, simply exit nvim and open it again. Voila! you now have a baller nvim config. 
+   > Once packer is done installing all the plugins, simply exit nvim and open it again. 
+
+   > update tree-sitter grammars
+   ```
+   :TSUpdate
+   ```
+
+   Voila! you now have a baller nvim config. 
 
    > if you're using the vscode-neovim plugin for vscodium/vscode, the key repeat can be turned on by using the following command on MacOS
    ```sh

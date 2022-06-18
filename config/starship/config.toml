@@ -1,5 +1,6 @@
 # Inserts a blank line between shell prompts
 add_newline = false
+command_timeout = 10000
 
 [directory]
 style = "#F8BD96"
@@ -31,4 +32,5 @@ error_symbol = "[ﬦ](bold red)"
 vicmd_symbol = "[y](green)"
 
 [python]
+disabled = true
 python_binary = "python3"
