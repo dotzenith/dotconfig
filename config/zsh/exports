@@ -5,6 +5,7 @@ PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/Library/Python/3.10/bin
 PATH="$HOME/Library/Python/3.10/bin:$PATH"
 export PATH
 

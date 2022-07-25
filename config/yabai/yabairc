@@ -59,6 +59,7 @@ yabai -m space 6 --label VI
 yabai -m rule --add app="^FaceTime$" manage=off border=off
 yabai -m rule --add app="^System Preferences$" manage=off border=off
 yabai -m rule --add app="QuickTime Player" manage=off border=on layer=below
+yabai -m rule --add app="Quick Camera" manage=off border=on layer=below
 yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="^Rectangle$" manage=off
 yabai -m rule --add app="Spotify" manage=off border=off 

@@ -1,4 +1,4 @@
 .DS_Store
 images/.DS_Store
-.config/bpytop/error.log
+config/bpytop/error.log
 packer_compiled.lua
