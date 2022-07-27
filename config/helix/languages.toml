@@ -1,0 +1,23 @@
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rust-analyzer" }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py"]
+shebangs = ["python"]
+roots = ["pyproject.toml", "setup.py", "Poetry.lock"]
+comment-token = "#"
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+config = {}
