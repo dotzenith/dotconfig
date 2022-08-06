@@ -26,6 +26,9 @@ disabled = true
 [nodejs]
 disabled = true
 
+[c]
+style = "#f5e0dc"
+
 [character]
 success_symbol = "[ﬦ](bold green)"
 error_symbol = "[ﬦ](bold red)"

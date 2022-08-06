@@ -17,38 +17,40 @@ POPUP_CORNER_RADIUS=11
 SHADOW=off
 
 # Setting up the general bar appearance and default values
-sketchybar --bar     height=35                                           \
-                     corner_radius=6                                    \
+sketchybar --bar                                                         \
+                     color=color=0x00000000                              \
+                     height=35                                           \
+                     corner_radius=6                                     \
                      border_width=0                                      \
-                     margin=10                                            \
+                     margin=10                                           \
                      blur_radius=50                                      \
                      position=top                                        \
                      padding_left=10                                     \
                      padding_right=10                                    \
-                     color=$BAR_COLOR                                    \
-                     topmost=on                                         \
+                     topmost=on                                          \
                      font_smoothing=off                                  \
                      y_offset=5                                          \
                      shadow=$SHADOW                                      \
                      notch_width=200                                     \
                                                                          \
-           --default drawing=on                                          \
-                     updates=when_shown                                  \
-                     label.font="$FONT:Semibold:13.0"                    \
-                     icon.font="$FONT:Bold:14.0"                         \
-                     icon.color=$ICON_COLOR                              \
-                     label.color=$LABEL_COLOR                            \
-                     icon.padding_left=$PADDINGS                         \
-                     icon.padding_right=$PADDINGS                        \
-                     label.padding_left=$PADDINGS                        \
-                     label.padding_right=$PADDINGS                       \
-                     background.padding_right=$PADDINGS                  \
-                     background.padding_left=$PADDINGS                   \
-                     popup.background.border_width=$POPUP_BORDER_WIDTH   \
-                     popup.background.corner_radius=$POPUP_CORNER_RADIUS \
-                     popup.background.border_color=$POPUP_BORDER_COLOR   \
-                     popup.background.color=$POPUP_BACKGROUND_COLOR      \
-                     popup.background.shadow.drawing=$SHADOW             \
+           # --default                                                     \
+           #           drawing=on                                          \
+           #           updates=when_shown                                  \
+           #           label.font="$FONT:Semibold:13.0"                    \
+           #           icon.font="$FONT:Bold:14.0"                         \
+           #           icon.color=$ICON_COLOR                              \
+           #           label.color=$LABEL_COLOR                            \
+           #           icon.padding_left=$PADDINGS                         \
+           #           icon.padding_right=$PADDINGS                        \
+           #           label.padding_left=$PADDINGS                        \
+           #           label.padding_right=$PADDINGS                       \
+           #           background.padding_right=$PADDINGS                  \
+           #           background.padding_left=$PADDINGS                   \
+           #           popup.background.border_width=$POPUP_BORDER_WIDTH   \
+           #           popup.background.corner_radius=$POPUP_CORNER_RADIUS \
+           #           popup.background.border_color=$POPUP_BORDER_COLOR   \
+           #           popup.background.color=$POPUP_BACKGROUND_COLOR      \
+           #           popup.background.shadow.drawing=$SHADOW             \
 
 # Left
 source "$ITEM_DIR/apple.sh"
@@ -58,6 +60,30 @@ source "$ITEM_DIR/front_app.sh"
 # Right
 source "$ITEM_DIR/github.sh"
 source "$ITEM_DIR/calendar.sh"
+
+ITEMS=$(sketchybar --query bar | jq -r '.items | .[]')
+
+LEFT_ITEMS=()
+RIGHT_ITEMS=()
+for item in $ITEMS
+do
+  POS=$(sketchybar --query ${item} | jq -r '.geometry.position')
+  if [ "$POS" = "left" ]; then
+    LEFT_ITEMS+=(${item})
+  elif [ "$POS" = "right" ]; then
+    RIGHT_ITEMS+=(${item})
+  fi
+done
+
+sketchybar --add braket left_items ${LEFT_ITEMS[@]} \
+           --set left_items background.color=0xff000000 \
+                            background.height=39 \
+                            background.corner_radius=11 \
+
+sketchybar --add braket right_items ${RIGHT_ITEMS[@]} \
+           --set right_items background.color=0xff000000 \
+                             background.height=39 \
+                             background.corner_radius=11 \
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update

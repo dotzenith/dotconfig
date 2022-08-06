@@ -5,7 +5,7 @@
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # open vscode
-cmd - 0x33 : open -na /Applications/"Visual Studio Code.app"
+cmd - 0x33 : /Applications/kitty.app/Contents/MacOS/kitty --single-instance --hold sh -c "tmux attach-session -t Zenith || tmux new-session -s Zenith"
 # open notion
 cmd + shift - n : open -na /Applications/Notion.app
 # open brave
