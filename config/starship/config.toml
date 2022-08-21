@@ -35,5 +35,5 @@ error_symbol = "[ﬦ](bold red)"
 vicmd_symbol = "[y](green)"
 
 [python]
-disabled = true
+# disabled = true
 python_binary = "python3"

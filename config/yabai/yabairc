@@ -39,7 +39,7 @@ yabai -m config external_bar                 all:35:00
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10 
+yabai -m config top_padding                  10
 yabai -m config bottom_padding               10 
 yabai -m config left_padding                 10  
 yabai -m config right_padding                10  
@@ -68,7 +68,7 @@ yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="zoom.us" manage=off border=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
-yabai -m rule --add app="Notion" opacity=0.97 
+# yabai -m rule --add app="Notion" opacity=0.97 
 yabai -m rule --add app="Numi" manage=off border=off 
 
 # Sketchybar

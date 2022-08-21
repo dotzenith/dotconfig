@@ -14,6 +14,9 @@ alias batview="fzf --preview 'bat --color=always --style=numbers --line-range=:5
 alias batdiff="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
 alias bathelp='bat --plain --language=help'
 
+# tmux
+alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
+
 # others
 alias kit='nvim ~/.config/kitty/kitty.conf'
 alias lg='lazygit'

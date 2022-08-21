@@ -4,8 +4,7 @@ PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.cargo/bin
-PATH=$PATH:$HOME/Library/Python/3.10/bin
-PATH="$HOME/Library/Python/3.10/bin:$PATH"
+PATH=$PATH:$HOME/.poetry/bin
 export PATH
 
 # bat
@@ -28,4 +27,4 @@ export C_INCLUDE_PATH=/usr/local/include
 # Defaults
 export EDITOR='nvim'
 export TERMINAL='kitty'
-export BROWSER='brave'
+export BROWSER='firefox'
