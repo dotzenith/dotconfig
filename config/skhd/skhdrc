@@ -2,7 +2,7 @@
 # Some general settings
 
 # open terminal
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+cmd - return : open -na /Applications/WezTerm.app
 
 # open vscode
 cmd - 0x33 : /Applications/kitty.app/Contents/MacOS/kitty --single-instance --hold sh -c "tmux attach-session -t Zenith || tmux new-session -s Zenith"

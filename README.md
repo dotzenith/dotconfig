@@ -30,7 +30,7 @@
    - **WM:** [yabai](https://github.com/koekeishiya/yabai)
    - **Hotkeys:** [skhd](https://github.com/koekeishiya/skhd)
    - **Panel:** [simple-bar](https://github.com/Jean-Tinland/simple-bar)
-   - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty/)
+   - **Terminal:** [wezterm](https://github.com/wez/wezterm)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
    - **Greeting:** [lovesay](https://github.com/ZenithDS/lovesay)
