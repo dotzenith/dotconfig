@@ -37,7 +37,7 @@ label = "peach"
 "diff.minus" = "#f22c86"
 "diff.delta" = "#6f44f0"
 
-"ui.background" = { bg = "black_2" }
+"ui.background" = { bg = "none" }
 "ui.linenr" = { fg = "gray_0" }
 "ui.linenr.selected" = { fg = "mauve" }
 "ui.statusline" = { fg = "black_2", bg = "none" }

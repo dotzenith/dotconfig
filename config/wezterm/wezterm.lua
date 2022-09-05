@@ -1,18 +1,24 @@
 local wezterm = require 'wezterm';
 
 return {
-  font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Medium"}),
 
-  -- font_rules = {
-  --   {
-  --     italic = true,
-  --     font = wezterm.font("JetBrainsMono Nerd Font Mono Bold Italic", {weight="Italic", italic=false}),
-  --   },
-  --   {
-  --     intensity = "Bold",
-  --     font = wezterm.font("JetBrainsMono Nerd Font Mono Extra Bold", {weight="Bold", italic=false}),
-  --   },
-  -- },
+  font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Normal"}),  
+
+  font_rules = {
+    {
+      italic = true,
+      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Italic"}), 
+    },
+    {
+      intensity = "Bold",
+      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Normal"}),
+    },
+    {
+      intensity = "Bold",
+      italic = true,
+      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Italic"})
+    },
+  },
   
   font_size = 20.0,
   
@@ -31,13 +37,10 @@ return {
   },
   
   window_background_opacity = 0.92,
-
   window_decorations = "RESIZE",
-  
   enable_tab_bar = false,
-
   scrollback_lines = 5000,
-
   enable_scroll_bar = false,
+  check_for_updates = false,
 }
 

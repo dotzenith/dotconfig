@@ -3,70 +3,69 @@ if not status_ok then
 	return
 end
 
-vim.g.catppuccin_flavor = "original"
+vim.g.catppuccin_flavour = "original"
 
 catppuccin.setup(
-  {  
+  {
     transparent_background = true,
     term_colors = true,
+    compile = {
+      enabled = false,
+      path = vim.fn.stdpath("cache") .. "/catppuccin",
+    },
+    dim_inactive = {
+      enabled = false,
+      shade = "dark",
+      percentage = 0.15,
+    },
     styles = {
-      comments = "italic",
-      functions = "italic",
-      keywords = "italic",
-      strings = "NONE",
-      variables = "italic",
+      comments = { "italic" },
+      conditionals = { "italic" },
+      loops = {},
+      functions = { "bold" },
+      keywords = {},
+      strings = {},
+      variables = {},
+      numbers = {},
+      booleans = {},
+      properties = {},
+      types = {},
+      operators = {},
     },
     integrations = {
       treesitter = true,
       native_lsp = {
         enabled = true,
         virtual_text = {
-          errors = "italic",
-          hints = "italic",
-          warnings = "italic",
-          information = "italic",
+          errors = { "italic" },
+          hints = { "italic" },
+          warnings = { "italic" },
+          information = { "italic" },
         },
         underlines = {
-          errors = "underline",
-          hints = "underline",
-          warnings = "underline",
-          information = "underline",
+          errors = { "underline" },
+          hints = { "underline" },
+          warnings = { "underline" },
+          information = { "underline" },
         },
       },
-      lsp_trouble = false,
       cmp = true,
-      lsp_saga = false,
-      gitgutter = false,
       gitsigns = false,
-      telescope = false,
-      nvimtree = {
-        enabled = false,
-        show_root = false,
-        transparent_panel = false,
-      },
-      neotree = {
-        enabled = false,
-        show_root = false,
-        transparent_panel = false,
-      },
+      telescope = true,
+      nvimtree = true,
       which_key = false,
       indent_blankline = {
         enabled = true,
-        colored_indent_levels = false,
+        colored_indent_levels = true,
       },
-      dashboard = false,
-      neogit = false,
-      vim_sneak = false,
-      fern = false,
-      barbar = false,
-      bufferline = true,
+      dashboard = true,
       markdown = true,
-      lightspeed = false,
+      leap = true,
       ts_rainbow = true,
-      hop = false,
-      notify = false,
-      telekasten = false,
+      lualine = false,
     },
+    color_overrides = {},
+    highlight_overrides = {},
   }
 )
 
@@ -102,4 +101,11 @@ vim.cmd [[
   hi DiagnosticWarn guibg=none ctermbg=none 
   hi DiagnosticHint guibg=none ctermbg=none 
   hi DiagnosticInfo guibg=none ctermbg=none 
+]]
+
+-- Turning off git diff bg
+vim.cmd [[
+  hi DiffAdd guifg=#a6e3a1 guibg=none ctermbg=none
+  hi DiffChange guifg=#fab387 guibg=none ctermbg=none
+  hi DiffDelete guifg=#f38ba8 guibg=none ctermbg=none
 ]]
