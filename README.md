@@ -80,9 +80,9 @@
    </details>
    
    <details>
-   <summary><strong>Kitty</strong></summary>
+   <summary><strong>WezTerm</strong></summary>
    
-   > Window decorations for Kitty are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
+   > Window decorations for WezTerm are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
 
    </details>
    
