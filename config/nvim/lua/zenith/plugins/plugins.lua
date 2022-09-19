@@ -63,10 +63,7 @@ return packer.startup(function(use)
   use 'karb94/neoscroll.nvim'
 
   -- Colorschemes
-  use({
-    "dotzenith/nvimcat",
-    as = "catppuccin"
-  })
+  use { "catppuccin/nvim", as = "catppuccin" }
   use "norcalli/nvim-colorizer.lua"
 
   -- cmp plugins

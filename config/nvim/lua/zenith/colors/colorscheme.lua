@@ -3,14 +3,14 @@ if not status_ok then
 	return
 end
 
-vim.g.catppuccin_flavour = "original"
+vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup(
   {
     transparent_background = true,
     term_colors = true,
     compile = {
-      enabled = false,
+      enabled = true,
       path = vim.fn.stdpath("cache") .. "/catppuccin",
     },
     dim_inactive = {
@@ -64,7 +64,16 @@ catppuccin.setup(
       ts_rainbow = true,
       lualine = false,
     },
-    color_overrides = {},
+    color_overrides = {
+        mocha = {
+            mauve = "#DDB6F2",
+            red = "#F28FAD",
+            maroon = "#E8A2AF",
+            green = "#ABE9B3",
+            blue = "#96CDFB",
+            lavender = "#C9CBFF",
+        },
+    },
     highlight_overrides = {},
   }
 )
