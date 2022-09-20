@@ -1,0 +1,26 @@
+# config
+--column
+--smart-case
+--line-number
+--hidden
+--follow
+--no-heading
+--max-columns=150
+--max-columns-preview
+--colors=line:none
+--colors=line:style:bold
+
+# ignores, etc
+--glob=!.git
+--glob=!node_modules
+--glob=!yarn.lock
+--glob=!package-lock.json
+--glob=!_build
+--glob=!tags
+--glob=!storage
+--glob=!tmp
+--glob=!public
+--glob=!*.cache
+--glob=!.Trash
+--glob=!.licenses
+--glob=!config/zsh/plugins/*

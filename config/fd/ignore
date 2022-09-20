@@ -1,0 +1,15 @@
+.yarn
+.git
+node_modules
+_build
+tags
+storage
+tmp
+coverage
+deps
+public
+.cache
+.Trash
+.licenses
+config/zsh/plugins
+.mypy_cache
