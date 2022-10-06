@@ -71,8 +71,8 @@ return {
     --]]
     -- cmd = { os.getenv "HOME" .. "/.local/bin/rust-analyzer" },
     cmd = { "rustup", "run", "nightly", os.getenv "HOME" .. "/.local/bin/rust-analyzer" },
-    on_attach = require("zenith.lsp.handlers").on_attach,
-    capabilities = require("zenith.lsp.handlers").capabilities,
+    on_attach = require("lsp.handlers").on_attach,
+    capabilities = require("lsp.handlers").capabilities,
 
     settings = {
       ["rust-analyzer"] = {

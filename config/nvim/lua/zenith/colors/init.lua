@@ -1,1 +1,0 @@
-require "zenith.colors.colorscheme"

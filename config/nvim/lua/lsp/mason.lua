@@ -46,34 +46,34 @@ local opts = {}
 
 for _, server in pairs(servers) do
   opts = {
-    on_attach = require("zenith.lsp.handlers").on_attach,
-    capabilities = require("zenith.lsp.handlers").capabilities,
+    on_attach = require("lsp.handlers").on_attach,
+    capabilities = require("lsp.handlers").capabilities,
   }
 
   server = vim.split(server, "@")[1]
 
   if server == "jsonls" then
-    local jsonls_opts = require "zenith.lsp.settings.jsonls"
+    local jsonls_opts = require "lsp.settings.jsonls"
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
   if server == "yamlls" then
-    local yamlls_opts = require "zenith.lsp.settings.yamlls"
+    local yamlls_opts = require "lsp.settings.yamlls"
     opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
   end
 
   if server == "tsserver" then
-    local tsserver_opts = require "zenith.lsp.settings.tsserver"
+    local tsserver_opts = require "lsp.settings.tsserver"
     opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
   end
 
   if server == "pyright" then
-    local pyright_opts = require "zenith.lsp.settings.pyright"
+    local pyright_opts = require "lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
   if server == "rust_analyzer" then
-    local rust_opts = require "zenith.lsp.settings.rust"
+    local rust_opts = require "lsp.settings.rust"
     -- opts = vim.tbl_deep_extend("force", rust_opts, opts)
     local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
     if not rust_tools_status_ok then

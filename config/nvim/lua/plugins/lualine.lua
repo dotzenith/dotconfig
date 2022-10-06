@@ -6,7 +6,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = require("zenith.colors.luacat").theme(),
+    theme = require("colors.luacat").theme(),
     component_separators = '',
     section_separators = '',
     disabled_filetypes = {"alpha"},
