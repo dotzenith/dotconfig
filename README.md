@@ -62,16 +62,16 @@
    <details>
    <summary><strong>WM and Hotkeys</strong></summary>
    
-   > Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
+   Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
 
-   > I also have caps-lock bound as my **hyper** key. On MacOS, you can do the same by using [karabiner](https://karabiner-elements.pqrs.org/).
+   I also have caps-lock bound as my **hyper** key. On MacOS, you can do the same by using [karabiner](https://karabiner-elements.pqrs.org/).
 
    </details>
 
    <details>
    <summary><strong>Nerd Fonts</strong></summary>
    
-   > A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
+   A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
    ```sh
    brew tap homebrew/cask-fonts
    brew install --cask font-jetbrains-mono-nerd-font
@@ -82,29 +82,28 @@
    <details>
    <summary><strong>WezTerm</strong></summary>
    
-   > Window decorations for WezTerm are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
+   Window decorations for WezTerm are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
 
    </details>
    
    <details>
    <summary><strong>Zsh</strong></summary>
 
-   > A zsh directory can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
+   Zsh config files can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
    ```sh
    ZDOTDIR=$HOME/.config/zsh
    ```
    
-   > The zsh config uses starship and fzf
+   The zsh config uses starship and fzf
    ```sh
    brew install starship fzf
    ```
 
-   > The config also assumes that the `.fzf.zsh` file is in `~/.config/fzf/`
+   The config also assumes that the `.fzf.zsh` file is in `~/.config/fzf/`
 
+   The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
 
-   > The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
-
-   > zsh might throw a warning about insecure directories, this can be resolved by running the following command.
+   zsh might throw a warning about insecure directories, this can be resolved by running the following command.
    ```sh
    compaudit | xargs chmod g-w
    ```
@@ -114,7 +113,7 @@
    <details>
    <summary><strong>Replace common *nix commands</strong></summary>
    
-   > I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
+   I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
    ```sh
    brew install bat ripgrep fd sd
    ```
@@ -124,7 +123,7 @@
    <details>
    <summary><strong>Neovim</strong></summary>
    
-   > The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
+   The nvim config is relatively polished, you can be up and running in just a few minutes using the following commands.
    ```sh
    # Remove old nvim data
    rm -rf ~/.local/share/nvim
@@ -137,7 +136,7 @@
    cp -R ~/dotconfig/.config/nvim ~/.config
    ```
   
-   > Get python and node support for nvim
+   Get python and node support for nvim
    ```sh
    # python
    pip3 install pynvim
@@ -146,7 +145,7 @@
    npm i -g neovim
    ```
 
-   > copy/paste support on linux
+   copy/paste support on linux
    ```sh
    # Debian  
    sudo apt install xsel
@@ -155,11 +154,11 @@
    sudo pacman -S xsel
    ```
 
-   > Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
+   Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
-   > Once packer is done installing all the plugins, simply exit nvim and open it again. 
+   Once packer is done installing all the plugins, simply exit nvim and open it again. 
 
-   > update tree-sitter grammars
+   update tree-sitter grammars
    ```
    :TSUpdate
    ```
@@ -177,7 +176,17 @@
    <details>
    <summary><strong>Misc</strong></summary>
    
-   > Everything else should be fairly easy to configure, but feel free to open an issue if that's not the case.
+   # Some MacOS defaults I like to change
+   
+   ### fast dock hiding and unhiding
+   ```sh
+   defaults write com.apple.dock autohide-delay -float 0; defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+   ```
+
+   ### Remove "disc ejected warning"
+   ```sh
+   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
+   ```
 
    </details>
 
