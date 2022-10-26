@@ -18,6 +18,8 @@ export STARSHIP_CONFIG=~/.config/starship/config.toml
 
 # fzf
 export FZF_DEFAULT_OPTS='--color=bg+:-1,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git --exclude Library --exclude __pycache__'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # C
 export LIBRARY_PATH=/usr/local/lib

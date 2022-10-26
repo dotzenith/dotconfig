@@ -137,11 +137,6 @@ local mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", "Get Capabilities" },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
     f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
     j = {
       "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
@@ -151,13 +146,8 @@ local mappings = {
       "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>",
       "Prev Diagnostic",
     },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
   },
 
   -- s = {
@@ -170,43 +160,17 @@ local mappings = {
   --   b = { "<cmd>lua require('surround').toggle_brackets()<cr>", "Brackets" },
   -- },
 
-  -- S = {
-  --   -- name = "Session",
-  --   -- s = { "<cmd>SaveSession<cr>", "Save" },
-  --   -- l = { "<cmd>LoadLastSession!<cr>", "Load Last" },
-  --   -- d = { "<cmd>LoadCurrentDirSession!<cr>", "Load Last Dir" },
-  --   -- f = { "<cmd>Telescope sessions save_current=false<cr>", "Find Session" },
-  --   name = "SnipRun",
-  --   c = { "<cmd>SnipClose<cr>", "Close" },
-  --   f = { "<cmd>%SnipRun<cr>", "Run File" },
-  --   i = { "<cmd>SnipInfo<cr>", "Info" },
-  --   m = { "<cmd>SnipReplMemoryClean<cr>", "Mem Clean" },
-  --   r = { "<cmd>SnipReset<cr>", "Reset" },
-  --   t = { "<cmd>SnipRunToggle<cr>", "Toggle" },
-  --   x = { "<cmd>SnipTerminate<cr>", "Terminate" },
-  -- },
-
   t = {
     name = "Terminal",
     ["1"] = { ":1ToggleTerm<cr>", "1" },
     ["2"] = { ":2ToggleTerm<cr>", "2" },
     ["3"] = { ":3ToggleTerm<cr>", "3" },
     ["4"] = { ":4ToggleTerm<cr>", "4" },
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
 
-  T = {
-    name = "Treesitter",
-    h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
-    p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
-    r = { "<cmd>TSToggle rainbow<cr>", "Rainbow" },
-  },
 }
 
 which_key.setup(setup)

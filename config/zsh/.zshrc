@@ -53,5 +53,8 @@ bindkey "^?" backward-delete-char
 # Spotify
 zsh_add_file "spotify"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Starship
 eval "$(starship init zsh)"
