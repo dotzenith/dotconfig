@@ -33,9 +33,9 @@
    - **Terminal:** [wezterm](https://github.com/wez/wezterm)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
-   - **Greeting:** [lovesay](https://github.com/ZenithDS/lovesay)
+   - **Greeting:** [lovesay](https://github.com/dotzenith/lovesay)
    - **Editor:** [neovim](https://github.com/neovim/neovim/)
-   - **Multiplexer:** [tmux](https://github.com/tmux/tmux) or [kitty](https://github.com/kovidgoyal/kitty/)
+   - **Multiplexer:** [tmux](https://github.com/tmux/tmux)
    - **Top:** [bpytop](https://github.com/aristocratos/bpytop)
    - **Theme:** [catppuccin](https://github.com/catppuccin)
    - **Spotify:** [spicetify](https://github.com/khanhas/spicetify-cli)
@@ -173,23 +173,6 @@
 
    </details>
       
-   <details>
-   <summary><strong>Misc</strong></summary>
-   
-   # Some MacOS defaults I like to change
-   
-   ### fast dock hiding and unhiding
-   ```sh
-   defaults write com.apple.dock autohide-delay -float 0; defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
-   ```
-
-   ### Remove "disc ejected warning"
-   ```sh
-   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
-   ```
-
-   </details>
-
 ---
 ### ❖ A few words
 

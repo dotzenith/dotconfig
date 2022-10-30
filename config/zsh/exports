@@ -14,7 +14,7 @@ unset PYTHONPATH
 unset PYTHONHOME
 
 # For the starship config
-export STARSHIP_CONFIG=~/.config/starship/config.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 
 # fzf
 export FZF_DEFAULT_OPTS='--color=bg+:-1,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD'
@@ -29,3 +29,7 @@ export C_INCLUDE_PATH=/usr/local/include
 export EDITOR='nvim'
 export TERMINAL='wezterm'
 export BROWSER='firefox'
+
+# Brew
+export HOMEBREW_BUNDLE_FILE=$HOME/.config/brew/Brewfile
+export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
