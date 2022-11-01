@@ -54,10 +54,6 @@ catppuccin.setup(
       telescope = true,
       nvimtree = true,
       which_key = false,
-      indent_blankline = {
-        enabled = true,
-        colored_indent_levels = true,
-      },
       dashboard = true,
       markdown = true,
       leap = true,
