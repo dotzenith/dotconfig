@@ -1,14 +1,11 @@
-
 # Some general settings
 
 # open terminal
-cmd - return : open -na /Applications/WezTerm.app
+cmd - return : wezterm start
 
-# open vscode
-cmd - 0x33 : /Applications/kitty.app/Contents/MacOS/kitty --single-instance --hold sh -c "tmux attach-session -t Zenith || tmux new-session -s Zenith"
 # open notion
 cmd + shift - n : open -na /Applications/Notion.app
-# open brave
+# open keycastr
 cmd - 0x2A : open /Applications/KeyCastr.app
 # Restart Yabai
 ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
