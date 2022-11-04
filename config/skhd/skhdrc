@@ -1,7 +1,7 @@
 # Some general settings
 
 # open terminal
-cmd - return : wezterm start
+cmd - return : open -na /Applications/WezTerm.app
 
 # open notion
 cmd + shift - n : open -na /Applications/Notion.app

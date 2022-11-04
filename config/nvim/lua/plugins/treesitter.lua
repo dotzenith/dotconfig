@@ -15,6 +15,7 @@ configs.setup {
                       "python",
                       "json",
                       "dockerfile",
+                      "go",
                       "yaml"},
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
