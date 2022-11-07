@@ -91,7 +91,7 @@
 
    Zsh config files can be stored in `~/.config/zsh/` by adding the following to `~/.zshenv`
    ```sh
-   ZDOTDIR=$HOME/.config/zsh
+   export ZDOTDIR=$HOME/.config/zsh
    ```
    
    The zsh config uses starship and fzf
