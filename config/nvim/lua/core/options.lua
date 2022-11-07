@@ -1,36 +1,39 @@
-local options = {
-  backup = false,                          -- creates a backup file
-  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0,                        -- so that `` is visible in markdown files
-  fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
-  ignorecase = true,                       -- ignore case in search patterns
-  mouse = "a",                             -- allow the mouse to be used in neovim
-  pumheight = 10,                          -- pop up menu height
-  showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
-  showtabline = 2,                         -- always show tabs
-  smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
-  splitbelow = true,                       -- force all horizontal splits to go below current window
-  splitright = true,                       -- force all vertical splits to go to the right of current window
-  swapfile = false,                        -- creates a swapfile
-  termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true,                         -- enable persistent undo
-  updatetime = 300,                        -- faster completion (4000ms default)
-  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  tabstop = 2,                             -- insert 2 spaces for a tab
-  signcolumn = "yes:1",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = false,                            -- display lines as one long line
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  number = true,
-  scrolloff = 8,
-  sidescrolloff = 8,
-  laststatus = 3
-}
+-- Some sane defaults
+vim.opt.backup = false                         
+vim.opt.clipboard = "unnamedplus"              
+vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.conceallevel = 0                       
+vim.opt.fileencoding = "utf-8"                 
+vim.opt.hlsearch = true                        
+vim.opt.ignorecase = true                      
+vim.opt.mouse = "a"                            
+vim.opt.pumheight = 10                         
+vim.opt.showmode = false                       
+vim.opt.showtabline = 2                        
+vim.opt.smartcase = true                       
+vim.opt.smartindent = true                     
+vim.opt.splitbelow = true                      
+vim.opt.splitright = true                      
+vim.opt.swapfile = false                       
+vim.opt.termguicolors = true                   
+vim.opt.timeoutlen = 1000                      
+vim.opt.undofile = true                        
+vim.opt.updatetime = 300                       
+vim.opt.writebackup = false                     
+vim.opt.expandtab = true                       
+vim.opt.shiftwidth = 2                         
+vim.opt.tabstop = 2                            
+vim.opt.signcolumn = "yes:1"                   
+vim.opt.wrap = false                            
+vim.opt.guifont = "monospace:h17"               
+vim.opt.number = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+vim.opt.laststatus = 3
+vim.opt.fillchars.eob=" "                       
+vim.opt.shortmess:append "c"
+vim.opt.whichwrap:append("<,>,[,]")
+vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
 
 -- makes things faster I guess?
 vim.g.loaded_gzip = false
@@ -41,14 +44,3 @@ vim.g.loaded_zipPlugin = false
 vim.g.loaded_man = false
 vim.g.loaded_2html_plugin = false
 vim.g.loaded_remote_plugins = false
-
-vim.opt.shortmess:append "c"
-
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set fillchars+=eob:\ ]]
-vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]

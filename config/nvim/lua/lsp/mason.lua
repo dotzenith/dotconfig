@@ -61,10 +61,5 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
-  if server == "gopls" then
-    local go_opts = require "lsp.settings.go"
-    opts = vim.tbl_deep_extend("force", go_opts, opts)
-  end
-
   lspconfig[server].setup(opts)
 end
