@@ -30,10 +30,10 @@ vim.opt.number = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.laststatus = 3
-vim.opt.fillchars.eob=" "                       
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,]")
 vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
+vim.cmd [[set fillchars+=eob:\ ]]
 
 -- makes things faster I guess?
 vim.g.loaded_gzip = false

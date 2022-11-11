@@ -86,8 +86,12 @@ return packer.startup(function(use)
   use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "tamago324/nlsp-settings.nvim", commit = "66f94bf9c13cacb478837b2834ca25de4cdd554e" } 
-  use { "ray-x/lsp_signature.nvim", commit = "ad1f9b413e27a8cb86893326e7b02982c69fe3f3" }
   use { "b0o/SchemaStore.nvim", commit = "90905bba4c42d089a5adbb07e54777ca0674651f" }
+  use { "ray-x/lsp_signature.nvim", commit = "ad1f9b413e27a8cb86893326e7b02982c69fe3f3",
+        cond = function()
+          return vim.bo.filetype ~= "rust"
+        end,
+  }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }

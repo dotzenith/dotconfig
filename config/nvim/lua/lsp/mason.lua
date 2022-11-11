@@ -61,5 +61,10 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
+  if server == "rust_analyzer" then
+    local rust_opts = require "lsp.settings.rust"
+    opts = vim.tbl_deep_extend("force", rust_opts, opts)
+  end
+
   lspconfig[server].setup(opts)
 end
