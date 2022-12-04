@@ -64,7 +64,9 @@
    
    Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
 
-   I also have caps-lock bound as my **hyper** key. On MacOS, you can do the same by using [karabiner](https://karabiner-elements.pqrs.org/).
+   I also have caps-lock bound as my **hyper** key when held, and **esc** when tapped. 
+
+   If you have a QMK/VIA compatible keyboard binding a key to `ANY` with `MT(MOD_HYPR, KC_ESC)` as the field should do the job. 
 
    </details>
 
