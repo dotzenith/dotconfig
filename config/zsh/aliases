@@ -24,3 +24,5 @@ alias top='bpytop'
 alias s='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
 alias ra='. ranger'
+alias ec='ebook-convert'
+

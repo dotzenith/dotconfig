@@ -25,7 +25,7 @@ yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
 yabai -m config window_border                on
-yabai -m config window_border_width          4
+yabai -m config window_border_width          3
 yabai -m config window_border_radius         14
 yabai -m config window_border_blur           off
 yabai -m config active_window_border_color   0xFFF5E0DC
@@ -63,6 +63,7 @@ yabai -m rule --add app="^System Preferences$" manage=off border=off
 yabai -m rule --add app="QuickTime Player" manage=off border=on layer=below
 yabai -m rule --add app="Quick Camera" manage=off border=on layer=below
 yabai -m rule --add app="Code" opacity=0.95
+yabai -m rule --add app="Zed" opacity=0.98
 yabai -m rule --add app="^Rectangle$" manage=off
 yabai -m rule --add app="Spotify" manage=off border=off 
 yabai -m rule --add app="^VSCodium$" opacity=0.95

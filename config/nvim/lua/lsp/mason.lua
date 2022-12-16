@@ -51,20 +51,10 @@ for _, server in pairs(servers) do
 
   server = vim.split(server, "@")[1]
 
-  if server == "jsonls" then
-    local jsonls_opts = require "lsp.settings.jsonls"
-    opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-  end
-
-  if server == "pyright" then
-    local pyright_opts = require "lsp.settings.pyright"
-    opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-  end
-
-  if server == "rust_analyzer" then
-    local rust_opts = require "lsp.settings.rust"
-    opts = vim.tbl_deep_extend("force", rust_opts, opts)
-  end
+	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
+	if require_ok then
+		opts = vim.tbl_deep_extend("force", conf_opts, opts)
+	end
 
   lspconfig[server].setup(opts)
 end
