@@ -15,6 +15,7 @@ local servers = {
   "clangd",
   "rust_analyzer",
   "gopls",
+  "jdtls",
 }
 
 local settings = {

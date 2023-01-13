@@ -48,7 +48,7 @@ bindkey -v
 bindkey "^?" backward-delete-char
 
 # motd
-[ -f ~/.zshenv ] && lovesay
+[ -f ~/.zshenv ] && sleep 0.01 && lovesay
 
 # Spotify
 zsh_add_file "spotify"

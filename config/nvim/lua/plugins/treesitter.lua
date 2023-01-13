@@ -7,8 +7,10 @@ configs.setup {
   ensure_installed = {"html",
                       "css",
                       "c",
+                      "cpp",
                       "bash",
                       "javascript",
+                      "java",
                       "lua",
                       "regex",
                       "rust",
@@ -27,7 +29,7 @@ configs.setup {
     disable = { "lua" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  indent = { enable = true, disable = { "yaml", "python", "c"} },
+  indent = { enable = true, disable = { "yaml",} },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
