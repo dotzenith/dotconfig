@@ -1,4 +1,4 @@
-if vim.fn.exists('g:vscodium') ~= 0 or vim.fn.exists('g:vscode') ~= 0 then
+if vim.g.vscode or vim.g.vscodium then
   require "core"
 else
   require "core"
