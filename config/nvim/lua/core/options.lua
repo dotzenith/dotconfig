@@ -19,7 +19,9 @@ vim.opt.timeoutlen = 1000
 vim.opt.undofile = true                        
 vim.opt.updatetime = 300                       
 vim.opt.writebackup = false                     
-vim.opt.expandtab = true                       
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
 vim.opt.shiftwidth = 2                         
 vim.opt.tabstop = 2                            
 vim.opt.signcolumn = "yes:1"                   
@@ -33,6 +35,11 @@ vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,]")
 vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
 vim.cmd [[set fillchars+=eob:\ ]]
+
+if vim.fn.executable('rg') == 1 then
+  vim.opt.grepformat = '%f:%l:%c:%m,%f:%l:%m'
+  vim.opt.grepprg = 'rg --vimgrep --no-heading --smart-case'
+end
 
 -- makes things faster I guess?
 vim.g.loaded_gzip = false
