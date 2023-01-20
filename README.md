@@ -68,6 +68,8 @@
 
    If you have a QMK/VIA compatible keyboard binding a key to `ANY` with `MT(MOD_HYPR, KC_ESC)` as the field should do the job. 
 
+   If not, using karabiner for MacOS, or kmonad for other platforms should work as well.
+
    </details>
 
    <details>
