@@ -32,7 +32,7 @@ style = "#f5e0dc"
 [character]
 success_symbol = "[ﬦ](bold green)"
 error_symbol = "[ﬦ](bold red)"
-vicmd_symbol = "[y](green)"
+vicmd_symbol = "[](green)"
 
 [python]
 # disabled = true

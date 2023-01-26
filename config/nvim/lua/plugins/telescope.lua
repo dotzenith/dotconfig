@@ -63,6 +63,8 @@ telescope.setup {
       "%.epub",
       "%.flac",
       "%.tar.gz",
+      "poetry.lock",
+      "README.md",
     },
 
     mappings = {
@@ -181,3 +183,5 @@ telescope.setup {
     },
   },
 }
+
+telescope.load_extension('fzf')
