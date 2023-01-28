@@ -10,13 +10,8 @@ autocmd({ "FileType" }, {
 	end,
 })
 
-autocmd({ "FileType" }, {
-	pattern = { "gitcommit"},
-	callback = function()
-		vim.opt_local.wrap = true
-		vim.opt_local.spell = true
-	end,
-})
+-- Automatically close tab/vim when nvim-tree is the last window in the tab
+vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
 
 -- Highlight yanked text
 autocmd("TextYankPost", {
@@ -29,10 +24,13 @@ autocmd("TextYankPost", {
 autocmd("FileType", {
   pattern = { "gitcommit", "markdown", "text", "tex" },
   callback = function()
+		vim.opt_local.wrap = true
     vim.opt_local.spell = true
   end,
 })
 
+
+-- Relative Numbers
 autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
    pattern = "*",
    callback = function()

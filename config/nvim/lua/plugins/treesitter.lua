@@ -29,7 +29,7 @@ configs.setup {
     disable = { "lua" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  indent = { enable = true, disable = { "yaml",} },
+  indent = { enable = true, disable = { "yaml", "c"} },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
@@ -55,22 +55,6 @@ configs.setup {
         ["it"] = "@class.inner",
         ["ac"] = "@call.outer",
         ["ic"] = "@call.inner",
-        ["aa"] = "@parameter.outer",
-        ["ia"] = "@parameter.inner",
-        ["al"] = "@loop.outer",
-        ["il"] = "@loop.inner",
-        ["ai"] = "@conditional.outer",
-        ["ii"] = "@conditional.inner",
-        ["a/"] = "@comment.outer",
-        ["i/"] = "@comment.inner",
-        ["ab"] = "@block.outer",
-        ["ib"] = "@block.inner",
-        ["as"] = "@statement.outer",
-        ["is"] = "@scopename.inner",
-        ["aA"] = "@attribute.outer",
-        ["iA"] = "@attribute.inner",
-        ["aF"] = "@frame.outer",
-        ["iF"] = "@frame.inner",
       },
     },
     move = {
@@ -96,10 +80,10 @@ configs.setup {
     swap = {
       enable = true,
       swap_next = {
-        ["<leader>."] = "@parameter.inner",
+        ["<leader>a"] = "@parameter.inner",
       },
       swap_previous = {
-        ["<leader>,"] = "@parameter.inner",
+        ["<leader>A"] = "@parameter.inner",
       },
     },
   },
