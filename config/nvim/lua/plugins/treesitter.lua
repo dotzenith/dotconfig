@@ -12,6 +12,7 @@ configs.setup {
                       "javascript",
                       "java",
                       "lua",
+                      "vim",
                       "regex",
                       "rust",
                       "python",
@@ -51,11 +52,8 @@ configs.setup {
         -- You can use the capture groups defined in textobjects.scm
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
-        ["at"] = "@class.outer",
-        ["it"] = "@class.inner",
         ["ac"] = "@call.outer",
         ["ic"] = "@call.inner",
-        ['aC'] = '@comment.outer',
         ['ai'] = '@conditional.outer',
         ['ii'] = '@conditional.inner',
         ['al'] = '@loop.outer',
@@ -66,20 +64,16 @@ configs.setup {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        ["]m"] = "@function.outer",
-        ["]]"] = "@class.outer",
+        ["]]"] = "@function.outer",
       },
       goto_next_end = {
-        ["]M"] = "@function.outer",
-        ["]["] = "@class.outer",
+        ["]["] = "@function.outer",
       },
       goto_previous_start = {
-        ["[m"] = "@function.outer",
-        ["[["] = "@class.outer",
+        ["[["] = "@function.outer",
       },
       goto_previous_end = {
-        ["[M"] = "@function.outer",
-        ["[]"] = "@class.outer",
+        ["[]"] = "@function.outer",
       },
     },
     swap = {

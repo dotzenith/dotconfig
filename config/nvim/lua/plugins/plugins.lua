@@ -94,7 +94,7 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", commit = "c610c78576f372684f42eeaec56d13be2cf304d2"} 
   use { "nvim-treesitter/nvim-treesitter-textobjects", commit = "71cee2f7b1211fe35918ce5fd0f626c48d9c1e3d", after = "nvim-treesitter"}
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08", after = "nvim-treesitter" }
-  use { "p00f/nvim-ts-rainbow", commit = "fad8badcd9baa4deb2cf2a5376ab412a1ba41797", after = "nvim-treesitter" }
+  use { "mrjones2014/nvim-ts-rainbow", commit = "aa83e4967bf78f85ffd9a11e159900c7ea7e423b", after = "nvim-treesitter" }
   
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
