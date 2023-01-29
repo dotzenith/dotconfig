@@ -84,14 +84,15 @@ return packer.startup(function(use)
   use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
   use { "williamboman/mason.nvim", commit = "bfc5997e52fe9e20642704da050c415ea1d4775f"}
   use { "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" }
-  use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
+  use { "jose-elias-alvarez/null-ls.nvim", commit = "7b2b28e207a1df4ebb13c7dc0bd83f69b5403d71" } -- for formatters and linters
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make', commit = "fab3e2212e206f4f8b3bbaa656e129443c9b802e" }
 
   -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac"} 
+  use { "nvim-treesitter/nvim-treesitter", commit = "c610c78576f372684f42eeaec56d13be2cf304d2"} 
+  use { "nvim-treesitter/nvim-treesitter-textobjects", commit = "71cee2f7b1211fe35918ce5fd0f626c48d9c1e3d", after = "nvim-treesitter"}
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08", after = "nvim-treesitter" }
   use { "p00f/nvim-ts-rainbow", commit = "fad8badcd9baa4deb2cf2a5376ab412a1ba41797", after = "nvim-treesitter" }
   

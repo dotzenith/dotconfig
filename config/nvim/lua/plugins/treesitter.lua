@@ -26,8 +26,8 @@ configs.setup {
   },
   highlight = {
     enable = true, -- false will disable the whole extension
-    disable = { "lua" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
+    disable = { }, -- list of language that will be disabled
+    additional_vim_regex_highlighting = false,
   },
   indent = { enable = true, disable = { "yaml", "c"} },
   context_commentstring = {
@@ -55,6 +55,11 @@ configs.setup {
         ["it"] = "@class.inner",
         ["ac"] = "@call.outer",
         ["ic"] = "@call.inner",
+        ['aC'] = '@comment.outer',
+        ['ai'] = '@conditional.outer',
+        ['ii'] = '@conditional.inner',
+        ['al'] = '@loop.outer',
+        ['il'] = '@loop.inner',
       },
     },
     move = {
