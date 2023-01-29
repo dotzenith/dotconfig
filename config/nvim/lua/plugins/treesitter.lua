@@ -3,6 +3,12 @@ if not status_ok then
   return
 end
 
+if vim.g.vscode or vim.g.vscodium then
+  usage = false
+else
+  usage = true
+end
+
 configs.setup {
   ensure_installed = {"html",
                       "css",
@@ -26,7 +32,7 @@ configs.setup {
     enable = true,
   },
   highlight = {
-    enable = true, -- false will disable the whole extension
+    enable = usage, -- false will disable the whole extension
     disable = { }, -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
   },
@@ -36,7 +42,7 @@ configs.setup {
     enable_autocmd = false,
   },
   rainbow = {
-    enable = true;
+    enable = usage;
     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil, -- Do not enable for files with more than n lines, int

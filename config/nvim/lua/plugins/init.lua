@@ -1,3 +1,10 @@
+if vim.g.vscode or vim.g.vscodium then
+  require "plugins.leap"
+  require "plugins.plugins"
+  require "plugins.treesitter"
+  return
+end
+
 require "plugins.plugins"
 require "plugins.colorizer"
 require "plugins.cmp"
