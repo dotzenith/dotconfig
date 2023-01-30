@@ -49,6 +49,15 @@ configs.setup {
     -- colors = {}, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   },
+  textsubjects = {
+      enable = true,
+      prev_selection = ',', -- (Optional) keymap to select the previous selection
+      keymaps = {
+          ['.'] = 'textsubjects-smart',
+          [';'] = 'textsubjects-container-outer',
+          ['i;'] = 'textsubjects-container-inner',
+      },
+  },
   textobjects = {
     select = {
       enable = true,
@@ -64,6 +73,8 @@ configs.setup {
         ['ii'] = '@conditional.inner',
         ['al'] = '@loop.outer',
         ['il'] = '@loop.inner',
+        ['ap'] = '@parameter.outer',
+        ['ip'] = '@parameter.inner',
       },
     },
     move = {

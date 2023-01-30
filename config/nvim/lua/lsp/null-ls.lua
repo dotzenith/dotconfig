@@ -12,8 +12,9 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.black.with { extra_args = { "--fast" } },
-    formatting.rustfmt,
     diagnostics.ruff,
+    formatting.isort,
+    formatting.rustfmt,
   },
 }
 

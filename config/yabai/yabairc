@@ -28,7 +28,7 @@ yabai -m config window_border                on
 yabai -m config window_border_width          3
 yabai -m config window_border_radius         14
 yabai -m config window_border_blur           off
-yabai -m config active_window_border_color   0xFFF5E0DC
+yabai -m config active_window_border_color   0xFFF2D5CF
 yabai -m config normal_window_border_color   0xFF1E1E2E
 yabai -m config insert_feedback_color        ff8474
 yabai -m config split_ratio                  0.50
