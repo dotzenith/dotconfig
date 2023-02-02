@@ -81,10 +81,11 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } 
   
   -- LSP
-  use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
-  use { "williamboman/mason.nvim", commit = "bfc5997e52fe9e20642704da050c415ea1d4775f"}
-  use { "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" }
+  use { "neovim/nvim-lspconfig", commit = "902d6aa31450d26e11bedcbef8af5b6fe2e1ffe8" } -- enable LSP
+  use { "williamboman/mason.nvim", commit = "24846a00941ec020c8addc7f52040a1b2fc12174"}
+  use { "williamboman/mason-lspconfig.nvim", commit = "53f3a8bdcb77d4a95b082fd57e12173f353c6c3e" }
   use { "jose-elias-alvarez/null-ls.nvim", commit = "7b2b28e207a1df4ebb13c7dc0bd83f69b5403d71" } -- for formatters and linters
+  use { "jay-babu/mason-null-ls.nvim", commit = "13c6ab4a4f810cbbb1799a9cf4d4a27fd862d885"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }

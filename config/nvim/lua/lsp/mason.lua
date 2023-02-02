@@ -8,6 +8,17 @@ if not status_ok then
 	return
 end
 
+local status_ok, mason_null_ls = pcall(require, "mason-null-ls")
+if not status_ok then
+	return
+end
+
+mason_null_ls.setup {
+  ensure_installed = {"black", "isort", "ruff"},
+  automatic_installation = false,
+  automatic_setup = false,
+}
+
 local servers = {
   "jsonls",
   "pyright",
