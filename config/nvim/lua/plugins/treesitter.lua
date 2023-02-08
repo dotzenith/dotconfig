@@ -82,12 +82,14 @@ configs.setup {
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
         ["]]"] = "@function.outer",
+        ["="] = "@parameter.inner"
       },
       goto_next_end = {
         ["]["] = "@function.outer",
       },
       goto_previous_start = {
         ["[["] = "@function.outer",
+        ["-"] = "@parameter.inner"
       },
       goto_previous_end = {
         ["[]"] = "@function.outer",

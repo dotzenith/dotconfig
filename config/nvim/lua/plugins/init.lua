@@ -5,8 +5,8 @@ if vim.g.vscode or vim.g.vscodium then
   return
 end
 
-require "plugins.plugins"
 require "plugins.colorizer"
+require "plugins.plugins"
 require "plugins.cmp"
 require "plugins.telescope"
 require "plugins.treesitter"
@@ -24,3 +24,4 @@ require "plugins.lualine"
 require "plugins.cokeline"
 require "plugins.neoscroll"
 require "plugins.leap"
+require "plugins.illuminate"
