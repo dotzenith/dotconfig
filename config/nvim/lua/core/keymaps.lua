@@ -73,3 +73,4 @@ keymap("n", "<Right>", "<Nop>", opts)
 -- Custom
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<leader>fc", ":Format<cr>", opts)
+keymap('n', '<leader>s', '<cmd>SymbolsOutline<CR>', opts)

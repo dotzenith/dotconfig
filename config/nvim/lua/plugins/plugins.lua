@@ -42,7 +42,7 @@ packer.init {
 return packer.startup(function(use)
   
   -- Have packer manage itself
-  use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } 
+  use { "wbthomason/packer.nvim", commit = "1d0cf98a561f7fd654c970c49f917d74fafe1530" } 
 
   -- Misc plugins
   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" }  
@@ -87,6 +87,7 @@ return packer.startup(function(use)
   use { "williamboman/mason-lspconfig.nvim", commit = "53f3a8bdcb77d4a95b082fd57e12173f353c6c3e" }
   use { "jose-elias-alvarez/null-ls.nvim", commit = "7b2b28e207a1df4ebb13c7dc0bd83f69b5403d71" } -- for formatters and linters
   use { "jay-babu/mason-null-ls.nvim", commit = "13c6ab4a4f810cbbb1799a9cf4d4a27fd862d885"}
+  use { "simrat39/symbols-outline.nvim", commit = "512791925d57a61c545bc303356e8a8f7869763c"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
