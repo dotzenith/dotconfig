@@ -50,11 +50,11 @@ bindkey "^?" backward-delete-char
 # motd
 [ -f .zshenv ] && sleep 0.01 && lovesay
 
+# Starship
+eval "$(starship init zsh)"
+
 # Spotify
 zsh_add_file "spotify"
 
 # Zoxide
 eval "$(zoxide init zsh)"
-
-# Starship
-eval "$(starship init zsh)"

@@ -56,16 +56,16 @@ return packer.startup(function(use)
   -- UI
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" } 
-  use { "noib3/nvim-cokeline", commit = "501f93ec84af0d505d95d3827cad470b9c5e86dc" }
   use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
   use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
   use { "folke/which-key.nvim", commit = "1b7f09a38afb48e295109137790c3a3099881c2f" }
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
+  use { "utilyre/barbecue.nvim", requires = "SmiteshP/nvim-navic", commit = "814140c81247dbc701e20950d76f3dbd5fc31612"} 
 
   -- Colorschemes
-  use { "catppuccin/nvim", commit = "98b2b7eb3e743289a674d7255e2557f3a20153ba", as = "catppuccin" }
+  use { "catppuccin/nvim", commit = "c5ed88194ae1d581d3083725a0dc7c90dd3446be", as = "catppuccin" }
   use { "norcalli/nvim-colorizer.lua", commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" }
 
   -- cmp plugins

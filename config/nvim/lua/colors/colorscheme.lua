@@ -51,6 +51,9 @@ catppuccin.setup(
       },
       cmp = true,
       gitsigns = false,
+      barbecue = {
+        dim_dirname = true,
+      },
       telescope = true,
       nvimtree = true,
       which_key = false,
