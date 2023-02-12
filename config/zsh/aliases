@@ -1,4 +1,4 @@
-# vim
+# ls
 alias ls='lsd'
 alias la='lsd -a'
 alias lt='lsd --tree'
