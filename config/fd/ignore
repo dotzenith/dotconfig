@@ -10,6 +10,6 @@ deps
 public
 .cache
 .Trash
-.licenses
-config/zsh/plugins
+.licenses config/zsh/plugins
 .mypy_cache
+random
