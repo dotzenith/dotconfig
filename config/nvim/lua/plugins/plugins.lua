@@ -78,7 +78,7 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-cmdline", commit = "23c51b2a3c00f6abc4e922dbd7c3b9aca6992063" } -- cmdline completions
 
   -- snippets
-  use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }
+  use { "L3MON4D3/LuaSnip", commit = "d33cf7de14eea209b8ed4a7edaed72f0b8cedb30" }
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } 
   
   -- LSP

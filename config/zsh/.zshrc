@@ -50,6 +50,9 @@ bindkey "^?" backward-delete-char
 # motd
 [ -f .zshenv ] && sleep 0.01 && lovesay
 
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
 # Starship
 eval "$(starship init zsh)"
 
