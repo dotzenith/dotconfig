@@ -5,6 +5,6 @@ end
 
 barbecue.setup {
   theme = "catppuccin",
-  exclude_filetypes = { "gitcommit", "toggleterm", "NvimTree", "alpha", "sshconfig", "" },
+  exclude_filetypes = { "gitcommit", "toggleterm", "NvimTree", "alpha", "sshconfig", "exports", "" },
   show_dirname = false,
 }

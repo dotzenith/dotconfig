@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
   use { "utilyre/barbecue.nvim", requires = "SmiteshP/nvim-navic", commit = "814140c81247dbc701e20950d76f3dbd5fc31612"} 
+  use { "nvim-zh/colorful-winsep.nvim", commit = "956d65c9a31ce81b7873bef1682c72eb00d9affb"}
 
   -- Colorschemes
   use { "catppuccin/nvim", commit = "c5ed88194ae1d581d3083725a0dc7c90dd3446be", as = "catppuccin" }

@@ -8,6 +8,7 @@ DISABLE_AUTO_TITLE="true"
 HISTFILE=~/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
+KEYTIMEOUT=1
 setopt appendhistory
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
@@ -46,12 +47,17 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 # vim mode
 bindkey -v
 bindkey "^?" backward-delete-char
+bindkey -M vicmd '^[' undefined-key
+bindkey -rM viins '^X'
 
 # motd
 [ -f .zshenv ] && sleep 0.01 && lovesay
 
-# asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+# rtx
+eval "$(/usr/local/bin/rtx activate zsh)"
+
+# ECEC
+stty tostop
 
 # Starship
 eval "$(starship init zsh)"
