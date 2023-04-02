@@ -18,7 +18,6 @@ alias bathelp='bat --plain --language=help'
 alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
 
 # others
-alias kit='nvim ~/.config/kitty/kitty.conf'
 alias lg='lazygit'
 alias top='bpytop'
 alias s='source ~/.config/zsh/.zshrc'
