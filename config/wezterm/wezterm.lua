@@ -2,21 +2,21 @@ local wezterm = require 'wezterm';
 
 return {
 
-  font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Normal"}),  
+  font = wezterm.font("JetBrainsMono Nerd Font", {weight="Medium", stretch="Normal", style="Normal"}),  
 
   font_rules = {
     {
       italic = true,
-      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Italic"}), 
+      font = wezterm.font("JetBrainsMono Nerd Font", {weight="Medium", stretch="Normal", style="Italic"}), 
     },
     {
       intensity = "Bold",
-      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Normal"}),
+      font = wezterm.font("JetBrainsMono Nerd Font", {weight="Bold", stretch="Normal", style="Normal"}),
     },
     {
       intensity = "Bold",
       italic = true,
-      font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Italic"})
+      font = wezterm.font("JetBrainsMono Nerd Font", {weight="Bold", stretch="Normal", style="Italic"})
     },
   },
   
