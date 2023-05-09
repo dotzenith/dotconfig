@@ -17,19 +17,6 @@ sudo yabai --load-sa
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
-yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
-yabai -m config window_shadow                off
-yabai -m config window_opacity               off
-yabai -m config window_opacity_duration      0.0
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        1.0
-yabai -m config window_border                on
-yabai -m config window_border_width          3
-yabai -m config window_border_radius         14
-yabai -m config window_border_blur           off
-yabai -m config active_window_border_color   0xFFF2D5CF
-yabai -m config normal_window_border_color   0xFF1E1E2E
 yabai -m config insert_feedback_color        ff8474
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
@@ -38,6 +25,22 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 yabai -m config external_bar                 all:35:00
+
+# Window modifications
+yabai -m config window_placement             second_child
+yabai -m config window_topmost               off
+yabai -m config window_shadow                off
+yabai -m config window_opacity               off
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        1.0
+
+# Window border
+yabai -m config window_border                on
+yabai -m config window_border_width          3
+yabai -m config window_border_radius         14
+yabai -m config window_border_blur           off
+yabai -m config active_window_border_color   0xFFF2D5CF
+yabai -m config normal_window_border_color   0xFF1E1E2E
 
 # general space settings
 yabai -m config layout                       bsp

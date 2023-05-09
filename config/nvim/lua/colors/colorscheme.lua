@@ -102,6 +102,7 @@ vim.cmd [[
   hi Pmenu guibg=NONE ctermbg=none
   hi NormalFloat guibg=NONE ctermbg=NONE
   hi TabLine guibg=NONE ctermbg=NONE
+  hi MatchParen guibg=NONE ctermbg=NONE
 ]]
 
 -- Turning off bg for lsp diagnostics

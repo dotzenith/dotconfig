@@ -8,7 +8,7 @@ cmd + shift - n : open -na /Applications/Notion.app
 # open keycastr
 cmd - 0x2A : open /Applications/KeyCastr.app
 # Restart Yabai
-ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+ctrl + alt - r : yabai --restart-service
 
 # Yabai Settings 
 # focus window
