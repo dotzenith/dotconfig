@@ -56,7 +56,6 @@ return packer.startup(function(use)
   -- UI
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" } 
-  use { "willothy/nvim-cokeline", commit = "28b9ed6ef2afe8632557953be920543403965546" }
   use { "kyazdani42/nvim-web-devicons", commit = "0568104bf8d0c3ab16395433fcc5c1638efc25d4" }
   use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
@@ -89,6 +88,7 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", commit = "55d20f0bb4009e1a16d8353832ab3b72c13310a2" } -- for formatters and linters
   use { "jay-babu/mason-null-ls.nvim", commit = "834bb5d6dd72db0a82d4b90a25500fdc14a3bc43"}
   use { "simrat39/symbols-outline.nvim", commit = "512791925d57a61c545bc303356e8a8f7869763c"}
+  use { "utilyre/barbecue.nvim", requires = "SmiteshP/nvim-navic", commit = "814140c81247dbc701e20950d76f3dbd5fc31612"}
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "6258d50b09f9ae087317e392efe7c05a7323492d" }

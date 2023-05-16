@@ -64,13 +64,13 @@ keymap("n", "<Down>", "<Nop>", opts)
 keymap("n", "<Left>", "<Nop>", opts)
 keymap("n", "<Right>", "<Nop>", opts)
 
+-- Custom
+keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
+keymap("n", "<leader>fc", ":Format<cr>", opts)
+keymap('n', '<leader>s', '<cmd>SymbolsOutline<CR>', opts)
+
 -- Terminal -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- Custom
-keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
-keymap("n", "<leader>fc", ":Format<cr>", opts)
-keymap('n', '<leader>s', '<cmd>SymbolsOutline<CR>', opts)
