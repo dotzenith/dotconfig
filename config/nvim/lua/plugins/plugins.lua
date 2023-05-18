@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "RRethy/vim-illuminate", commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298" }
+  use { "ThePrimeagen/harpoon", commit = "8cb54c4003045fe1b690de96638d334de9449546" }
 
   -- UI
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
@@ -82,10 +83,10 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "b1b78a6433268fc172adb5a843e165035e83861e" } 
   
   -- LSP
-  use { "neovim/nvim-lspconfig", commit = "eddaef928c1e1dd79a96f5db45f2fd7f2efe7ea0" } -- enable LSP
-  use { "williamboman/mason.nvim", commit = "ac767592473104dd0cf11725c73470cd47b81b7e"}
-  use { "williamboman/mason-lspconfig.nvim", commit = "fe0d5e6a10d1912974988afc196b79da30f87dba" }
-  use { "jose-elias-alvarez/null-ls.nvim", commit = "55d20f0bb4009e1a16d8353832ab3b72c13310a2" } -- for formatters and linters
+  use { "neovim/nvim-lspconfig", commit = "32a5543fe3a7f108c1488c265052572abbf6f588" } -- enable LSP
+  use { "williamboman/mason.nvim", commit = "08b2fd308e0107eab9f0b59d570b69089fd0b522"}
+  use { "williamboman/mason-lspconfig.nvim", commit = "90a8bbf106b85b76951a34c542058ffa807de2b1" }
+  use { "jose-elias-alvarez/null-ls.nvim", commit = "77e53bc3bac34cc273be8ed9eb9ab78bcf67fa48" } -- for formatters and linters
   use { "jay-babu/mason-null-ls.nvim", commit = "834bb5d6dd72db0a82d4b90a25500fdc14a3bc43"}
   use { "simrat39/symbols-outline.nvim", commit = "512791925d57a61c545bc303356e8a8f7869763c"}
   use { "utilyre/barbecue.nvim", requires = "SmiteshP/nvim-navic", commit = "814140c81247dbc701e20950d76f3dbd5fc31612"}
@@ -96,7 +97,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", commit = "226c1475a46a2ef6d840af9caa0117a439465500"} 
-  use { "nvim-treesitter/nvim-treesitter-textobjects", commit = "71cee2f7b1211fe35918ce5fd0f626c48d9c1e3d", after = "nvim-treesitter"}
+  use { "nvim-treesitter/nvim-treesitter-textobjects", commit = "35a60f093fa15a303874975f963428a5cd24e4a0", after = "nvim-treesitter"}
   use { "RRethy/nvim-treesitter-textsubjects", commit = "bc047b20768845fd54340eb76272b2cf2f6fa3f3", after = "nvim-treesitter"}
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "729d83ecb990dc2b30272833c213cc6d49ed5214", after = "nvim-treesitter" }
   use { "mrjones2014/nvim-ts-rainbow", commit = "aa83e4967bf78f85ffd9a11e159900c7ea7e423b", after = "nvim-treesitter" }
