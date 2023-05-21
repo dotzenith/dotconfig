@@ -20,30 +20,29 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<m-Up>", ":resize -2<CR>", opts)
+keymap("n", "<m-Down>", ":resize +2<CR>", opts)
+keymap("n", "<m-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<m-Right>", ":vertical resize +2<CR>", opts)
 
 -- Movement
-keymap("n", "J", "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, 'true', '200')<cr>", opts)
-keymap("n", "K", "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, 'true', '200')<cr>", opts)
+keymap("n", "<S-j>", "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, 'true', '200')<cr>", opts)
+keymap("n", "<S-k>", "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, 'true', '200')<cr>", opts)
 
 -- Harpoon
-keymap("n", "{", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
-keymap("n", "}", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
+keymap("n", "<m-j>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
+keymap("n", "<m-j>", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
 keymap("n", "<leader>H", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
-keymap("n", "<leader><leader>", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader><tab>", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
 
 -- Navigate buffers
 keymap("n", "<leader><Backspace>", ":Bdelete! %<CR>", opts)
 
 -- Splits
-keymap("n", "<leader><tab>", "<c-w>w", opts)
-
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<Up>", "<c-w>k", opts)
+keymap("n", "<Down>", "<c-w>j", opts)
+keymap("n", "<Left>", "<c-w>h", opts)
+keymap("n", "<Right>", "<c-w>l", opts)
 
 -- Insert --
 -- Press jk fast to enter normal mode

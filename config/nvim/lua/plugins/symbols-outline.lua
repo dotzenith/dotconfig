@@ -24,7 +24,7 @@ symbols.setup {
     goto_location = "<Cr>",
     focus_location = "o",
     hover_symbol = "<C-space>",
-    toggle_preview = "K",
+    toggle_preview = "<c-k>",
     rename_symbol = "r",
     fold = "h",
     unfold = "l",
