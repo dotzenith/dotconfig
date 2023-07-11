@@ -30,7 +30,7 @@ keymap("n", "<S-j>", "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, 'true'
 keymap("n", "<S-k>", "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, 'true', '200')<cr>", opts)
 
 -- Harpoon
-keymap("n", "<m-j>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
+keymap("n", "<m-k>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
 keymap("n", "<m-j>", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
 keymap("n", "<leader>H", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 keymap("n", "<leader><tab>", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
@@ -64,12 +64,6 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- No arrow keys 
-keymap("n", "<Up>", "<Nop>", opts)
-keymap("n", "<Down>", "<Nop>", opts)
-keymap("n", "<Left>", "<Nop>", opts)
-keymap("n", "<Right>", "<Nop>", opts)
 
 -- Custom
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)

@@ -51,16 +51,14 @@ bindkey -M vicmd '^[' undefined-key
 bindkey -rM viins '^X'
 
 # motd
-[ -f .zshenv ] && sleep 0.01 && lovesay
-
-# rtx
-eval "$(/usr/local/bin/rtx activate zsh)"
-
-# ECEC
-stty tostop
+sleep 0.1
+[ -f .zshenv ] && lovesay 
 
 # Starship
 eval "$(starship init zsh)"
+
+# rtx
+eval "$(/usr/local/bin/rtx activate zsh)"
 
 # Spotify
 zsh_add_file "spotify"
