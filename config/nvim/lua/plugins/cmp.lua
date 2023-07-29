@@ -35,7 +35,7 @@ local kind_icons = {
     Struct = "󰙅",
     Event = "",
     Operator = "󰆕",
-    TypeParameter = "",
+    TypeParameter = "",
 }
 
 local has_words_before = function()
