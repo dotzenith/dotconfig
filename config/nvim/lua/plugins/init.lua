@@ -1,12 +1,12 @@
 if vim.g.vscode or vim.g.vscodium then
-  require "plugins.leap"
   require "plugins.plugins"
   require "plugins.treesitter"
+  require "plugins.leap"
   return
 end
 
-require "plugins.colorizer"
 require "plugins.plugins"
+require "plugins.colorizer"
 require "plugins.cmp"
 require "plugins.telescope"
 require "plugins.treesitter"

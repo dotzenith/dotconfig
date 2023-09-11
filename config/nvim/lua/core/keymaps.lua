@@ -70,6 +70,10 @@ keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<leader>fc", ":Format<cr>", opts)
 keymap('n', '<leader>s', '<cmd>SymbolsOutline<CR>', opts)
 
+-- Annoying history mode
+keymap("n", "q:", "<Nop>", opts)
+keymap("n", "Q", "<Nop>", opts)
+
 -- Terminal -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)

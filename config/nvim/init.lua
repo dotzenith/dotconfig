@@ -5,6 +5,6 @@ if vim.g.vscode or vim.g.vscodium then
 end
 
 require "core"
-require "lsp"
 require "plugins"
 require "colors"
+require "lsp"
