@@ -27,7 +27,8 @@ local servers = {
   "rust_analyzer",
   "gopls",
   "jdtls",
-  "tsserver"
+  "tsserver",
+  "sqlls"
 }
 
 local settings = {
