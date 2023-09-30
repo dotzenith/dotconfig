@@ -54,9 +54,9 @@ require("lazy").setup(
     { "rafamadriz/friendly-snippets", commit = "ebf6d6e83494cdd88a54a429340256f4dbb6a052" },
     
     -- LSP
-    { "neovim/nvim-lspconfig", commit = "d177ad277a638f262edb73c75ffe33e377b95dc5" },
-    { "williamboman/mason.nvim", commit = "4546dec8b56bc56bc1d81e717e4a935bc7cd6477", 
-      dependencies = { "williamboman/mason-lspconfig.nvim", commit = "90a8bbf106b85b76951a34c542058ffa807de2b1" },
+    { "neovim/nvim-lspconfig", commit = "50fcf96ec5a6e7bfdcbbea4f905c33e85408f170" },
+    { "williamboman/mason.nvim", commit = "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a", 
+      dependencies = { "williamboman/mason-lspconfig.nvim", commit = "81e30dd629de24cbb26d08073ee938ab40006695" },
       cmd = "Mason",
       event = "BufReadPre",
     },
