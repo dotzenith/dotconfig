@@ -26,4 +26,4 @@ alias ra='. ranger'
 alias ec='ebook-convert'
 
 # Something for c++
-alias cpp='g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion'
+alias cpp='g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion --std=c++17'

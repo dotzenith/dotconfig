@@ -33,3 +33,10 @@ export BROWSER='firefox'
 # Brew
 export HOMEBREW_BUNDLE_FILE=$HOME/.config/brew/Brewfile
 export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
+
+# Avatar
+export QUOTES_PATH="./submodules/AvatarApi/Quotes.csv"
+export DATABASE_URL="sqlite://quotes.db"
+
+# Rust
+export RUSTFLAGS="-Z threads=8"

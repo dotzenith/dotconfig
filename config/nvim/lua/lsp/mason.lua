@@ -16,7 +16,7 @@ end
 mason_null_ls.setup {
   ensure_installed = {"black", "isort", "ruff"},
   automatic_installation = false,
-  automatic_setup = false,
+  handlers = {},
 }
 
 local servers = {
@@ -24,11 +24,14 @@ local servers = {
   "pyright",
   "bashls",
   "clangd",
-  "rust_analyzer",
   "gopls",
   "jdtls",
   "tsserver",
   "sqlls"
+}
+
+local manual = {
+  "rust_analyzer",
 }
 
 local settings = {
@@ -47,7 +50,7 @@ local settings = {
 mason.setup(settings)
 mason_lspconfig.setup {
   ensure_installed = servers,
-  automatic_installation = true,
+  automatic_installation = false,
 }
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
@@ -71,4 +74,22 @@ for _, server in pairs(servers) do
 	end
 
   lspconfig[server].setup(opts)
+end
+
+
+local manual_opts = {}
+for _, manual_server in pairs(manual) do
+  manual_opts = {
+    on_attach = require("lsp.handlers").on_attach,
+    capabilities = require("lsp.handlers").capabilities,
+  }
+
+  manual_server = vim.split(manual_server, "@")[1]
+
+	local require_manual_ok, manual_conf_opts = pcall(require, "lsp.settings." .. manual_server)
+	if require_manual_ok then
+		manual_opts = vim.tbl_deep_extend("force", manual_conf_opts, manual_opts)
+	end
+
+  lspconfig[manual_server].setup(manual_opts)
 end

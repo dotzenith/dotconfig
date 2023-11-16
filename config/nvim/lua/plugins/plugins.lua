@@ -23,7 +23,7 @@ require("lazy").setup(
     { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" },
     { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" },
     { "RRethy/vim-illuminate", commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298" },
-    { "ThePrimeagen/harpoon", commit = "8cb54c4003045fe1b690de96638d334de9449546" },
+    { "ThePrimeagen/harpoon", commit = "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" },
 
     -- UI
     { "goolord/alpha-nvim", commit = "712dc1dccd4fd515ef8bd126b3718f79d3e23b0d", event = "VimEnter"},
@@ -60,8 +60,8 @@ require("lazy").setup(
       cmd = "Mason",
       event = "BufReadPre",
     },
-    { "jose-elias-alvarez/null-ls.nvim", commit = "77e53bc3bac34cc273be8ed9eb9ab78bcf67fa48" },
-    { "jay-babu/mason-null-ls.nvim", commit = "834bb5d6dd72db0a82d4b90a25500fdc14a3bc43"},
+    { "jay-babu/mason-null-ls.nvim", commit = "ae0c5fa57468ac65617f1bf821ba0c3a1e251f0c" },
+    { "nvimtools/none-ls.nvim", commit = "b8fd44ee1616e6a9c995ed5f94ad9f1721d303ef" },
     { "simrat39/symbols-outline.nvim", commit = "512791925d57a61c545bc303356e8a8f7869763c"},
     { "utilyre/barbecue.nvim", dependencies = {"SmiteshP/nvim-navic"}, commit = "814140c81247dbc701e20950d76f3dbd5fc31612"},
 
