@@ -81,6 +81,7 @@ require("lazy").setup(
     --leap
     { "tpope/vim-repeat", commit = "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
     { "ggandor/leap.nvim", commit = "0eb3611593e135150e2f7880ec67568ccb51c17a", dependencies = {"vim-repeat"} },
+    { "ggandor/flit.nvim", commit = "f4e9af572a62c808c8de214da672f2a115a98c35", dependencies = {"vim-repeat", "leap.nvim"} },
   },
   {
     defaults = { lazy = false },
