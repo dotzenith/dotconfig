@@ -28,7 +28,7 @@ require("lazy").setup(
     -- UI
     { "goolord/alpha-nvim", commit = "712dc1dccd4fd515ef8bd126b3718f79d3e23b0d", event = "VimEnter"},
     { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" },
-    { "kyazdani42/nvim-web-devicons", commit = "0568104bf8d0c3ab16395433fcc5c1638efc25d4" },
+    { "nvim-tree/nvim-web-devicons", commit = "cdbcca210cf3655aa9b31ebf2422763ecd85ee5c" },
     { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
     { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" },
     { "folke/which-key.nvim", commit = "7ccf476ebe0445a741b64e36c78a682c1c6118b7" },
