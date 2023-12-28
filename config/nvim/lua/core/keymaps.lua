@@ -70,6 +70,10 @@ keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<leader>fc", ":Format<cr>", opts)
 keymap('n', '<leader>s', '<cmd>SymbolsOutline<CR>', opts)
 
+-- Easier start of line and end of line
+keymap("", "H", "0", opts)
+keymap("", "L", "$", opts)
+
 -- Annoying history mode
 keymap("n", "q:", "<Nop>", opts)
 keymap("n", "Q", "<Nop>", opts)
