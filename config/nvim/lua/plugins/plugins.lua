@@ -62,7 +62,7 @@ require("lazy").setup(
     },
     { "jay-babu/mason-null-ls.nvim", commit = "ae0c5fa57468ac65617f1bf821ba0c3a1e251f0c" },
     { "nvimtools/none-ls.nvim", commit = "b8fd44ee1616e6a9c995ed5f94ad9f1721d303ef" },
-    { "simrat39/symbols-outline.nvim", commit = "512791925d57a61c545bc303356e8a8f7869763c"},
+    { "hedyhli/outline.nvim", commit = "5669c8aa9ea6346ab491646a9a1e73d7f594e2f8"},
     { "utilyre/barbecue.nvim", dependencies = {"SmiteshP/nvim-navic"}, commit = "814140c81247dbc701e20950d76f3dbd5fc31612"},
 
     -- Telescope
