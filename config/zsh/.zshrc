@@ -58,10 +58,11 @@ sleep 0.1
 eval "$(starship init zsh)"
 
 # rtx
-eval "$(/usr/local/bin/rtx activate zsh)"
+eval "$(/usr/local/bin/mise activate zsh)"
 
 # Spotify
 zsh_add_file "spotify"
+zsh_add_file "rspotify"
 
 # Zoxide
 eval "$(zoxide init zsh)"

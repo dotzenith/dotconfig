@@ -42,5 +42,6 @@ return {
   scrollback_lines = 5000,
   enable_scroll_bar = false,
   check_for_updates = false,
+  max_fps = 120,
 }
 
