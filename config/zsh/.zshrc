@@ -54,15 +54,10 @@ bindkey -rM viins '^X'
 sleep 0.1
 [ -f .zshenv ] && lovesay 
 
-# Starship
 eval "$(starship init zsh)"
-
-# rtx
 eval "$(/usr/local/bin/mise activate zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # Spotify
 zsh_add_file "spotify"
 zsh_add_file "rspotify"
-
-# Zoxide
-eval "$(zoxide init zsh)"

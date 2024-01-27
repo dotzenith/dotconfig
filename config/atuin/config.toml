@@ -1,0 +1,31 @@
+dialect = "us"
+auto_sync = false
+update_check = false
+style = "compact"
+inline_height = 10
+
+# Set commands that should be totally stripped and ignored from stats
+common_prefix = ["sudo"]
+
+## Defaults to true. If enabled, upon hitting enter Atuin will immediately execute the command.
+## Press tab to return to the shell and edit.
+enter_accept = true
+
+## prevent commands matching any of these regexes from being written to history.
+## Note that these regular expressions are unanchored, i.e. if they don't start
+## with ^ or end with $, they'll match anywhere in the command.
+## For details on the supported regular expression syntax, see
+## https://docs.rs/regex/latest/regex/#syntax
+# history_filter = [
+#   "^secret-cmd",
+#   "^innocuous-cmd .*--secret=.+"
+# ]
+
+## prevent commands run with cwd matching any of these regexes from being written
+## to history. Note that these regular expressions are unanchored, i.e. if they don't
+## start with ^ or end with $, they'll match anywhere in CWD.
+## For details on the supported regular expression syntax, see
+## https://docs.rs/regex/latest/regex/#syntax
+# cwd_filter = [
+#   "^/very/secret/area"
+# ]
