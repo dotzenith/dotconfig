@@ -58,7 +58,6 @@ require("lazy").setup(
     { "williamboman/mason.nvim", commit = "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a", 
       dependencies = { "williamboman/mason-lspconfig.nvim", commit = "81e30dd629de24cbb26d08073ee938ab40006695" },
       cmd = "Mason",
-      event = "BufReadPre",
     },
     { "jay-babu/mason-null-ls.nvim", commit = "ae0c5fa57468ac65617f1bf821ba0c3a1e251f0c" },
     { "nvimtools/none-ls.nvim", commit = "b8fd44ee1616e6a9c995ed5f94ad9f1721d303ef" },

@@ -3,12 +3,6 @@ if not status_ok then
   return
 end
 
-if vim.g.vscode or vim.g.vscodium then
-  usage = false
-else
-  usage = true
-end
-
 configs.setup {
   ensure_installed = {"html",
                       "css",
@@ -32,7 +26,7 @@ configs.setup {
     enable = true,
   },
   highlight = {
-    enable = usage, -- false will disable the whole extension
+    enable = true, -- false will disable the whole extension
     disable = { }, -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
   },

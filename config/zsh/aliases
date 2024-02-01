@@ -19,7 +19,7 @@ alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
 
 # others
 alias lg='lazygit'
-alias top='bpytop'
+alias top='btm'
 alias s='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
 alias ra='. ranger'
