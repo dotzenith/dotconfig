@@ -1,7 +1,7 @@
 # Some general settings
 
 # open terminal
-cmd - return : open -na /Applications/WezTerm.app
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # open notion
 cmd + shift - n : open -na /Applications/Notion.app

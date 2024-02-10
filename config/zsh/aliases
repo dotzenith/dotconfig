@@ -17,6 +17,9 @@ alias bathelp='bat --plain --language=help'
 # tmux
 alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
 
+# Kitty
+alias ssh="kitten ssh"
+
 # others
 alias lg='lazygit'
 alias top='btm'
