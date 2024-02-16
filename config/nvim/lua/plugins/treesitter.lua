@@ -17,6 +17,7 @@ configs.setup {
                       "rust",
                       "python",
                       "json",
+                      "haskell",
                       "dockerfile",
                       "go",
                       "yaml"},

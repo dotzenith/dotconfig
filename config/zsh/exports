@@ -1,11 +1,12 @@
 # Just the normal path stuff
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
-PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.scripts
 PATH=$PATH:$HOME/.local/bin
 PATH=$HOME/.cargo/bin:$PATH
+PATH=/usr/local/sbin:$PATH
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
+
+[ -f "/Users/sharmadanshu/.ghcup/env" ] && source "/Users/sharmadanshu/.ghcup/env"
 
 # bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

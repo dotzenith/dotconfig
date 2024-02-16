@@ -27,7 +27,8 @@ local servers = {
   "gopls",
   "jdtls",
   "tsserver",
-  "sqlls"
+  "sqlls",
+  "hls"
 }
 
 local manual = {
