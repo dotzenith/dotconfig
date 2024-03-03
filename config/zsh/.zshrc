@@ -55,8 +55,9 @@ sleep 0.1
 [ -f .zshenv ] && lovesay 
 
 eval "$(starship init zsh)"
-eval "$(/usr/local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
+eval "$(zoxide init zsh)"
 
 # Spotify
 zsh_add_file "spotify"

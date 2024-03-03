@@ -35,12 +35,12 @@ yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
 
 # Window border
-yabai -m config window_border                on
-yabai -m config window_border_width          3
-yabai -m config window_border_radius         14
-yabai -m config window_border_blur           off
-yabai -m config active_window_border_color   0xFFF2D5CF
-yabai -m config normal_window_border_color   0xFF1E1E2E
+borders \
+  active_color=0xFFF2D5CF \
+  inactive_color=0xFF1E1E2E \
+  width=5.0 \
+  style=round \
+  blacklist="FaceTime,zoom.us,System Preferences,Spotify,Numi" &
 
 # general space settings
 yabai -m config layout                       bsp
@@ -61,22 +61,21 @@ yabai -m space 6 --label VI
 # Turn off management for certain apps
 # yabai -m rule --add app="Alacritty" 
 # yabai -m rule --add app="^Brave Browser$" opacity=0.98
-yabai -m rule --add app="^FaceTime$" manage=off border=off
-yabai -m rule --add app="^System Preferences$" manage=off border=off
-yabai -m rule --add app="QuickTime Player" manage=off border=on layer=below
-yabai -m rule --add app="Quick Camera" manage=off border=on layer=below
+yabai -m rule --add app="FaceTime" manage=off
+yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="QuickTime Player" manage=off layer=below
+yabai -m rule --add app="Quick Camera" manage=off layer=below
 yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="Zed" opacity=0.98
 yabai -m rule --add app="IntelliJ IDEA" opacity=0.98
-yabai -m rule --add app="^Rectangle$" manage=off
-yabai -m rule --add app="Spotify" manage=off border=off 
-yabai -m rule --add app="^VSCodium$" opacity=0.95
+yabai -m rule --add app="Rectangle" manage=off
+yabai -m rule --add app="Spotify" manage=off
+yabai -m rule --add app="VSCodium" opacity=0.95
 yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="zoom.us" manage=off border=off
-yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^Preview$" manage=off
-# yabai -m rule --add app="Notion" opacity=0.97 
-yabai -m rule --add app="Numi" manage=off border=off 
+yabai -m rule --add app="zoom.us" manage=off
+yabai -m rule --add app="Messages" manage=off
+yabai -m rule --add app="Preview" manage=off
+yabai -m rule --add app="Numi" manage=off
 
 # Sketchybar
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"

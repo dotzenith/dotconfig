@@ -19,13 +19,13 @@ alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
 
 # Kitty
 alias ssh="kitten ssh"
+alias tssh="\ssh"
 
 # others
 alias lg='lazygit'
 alias top='btm'
 alias s='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
-alias ra='. ranger'
 alias ec='ebook-convert'
 
 # Something for c++
