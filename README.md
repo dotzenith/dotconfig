@@ -33,15 +33,15 @@
    - **Terminal:** [kitty](https://sw.kovidgoyal.net/kitty/)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
-   - **Greeting:** [lovesay](https://github.com/dotzenith/lovesay)
+   - **Greeting:** [lovesay.rs](https://github.com/dotzenith/lovesay.rs)
    - **Editor:** [neovim](https://github.com/neovim/neovim/)
    - **Multiplexer:** [tmux](https://github.com/tmux/tmux)
-   - **Top:** [bpytop](https://github.com/aristocratos/bpytop)
+   - **Top:** [bottom](https://github.com/ClementTsang/bottom)
+   - **File Manager:** [yazi](https://github.com/sxyazi/yazi)
    - **Theme:** [catppuccin](https://github.com/catppuccin)
    - **Spotify:** [spicetify](https://github.com/khanhas/spicetify-cli)
    - **Browser:** [firefox](https://www.mozilla.org/en-US/firefox/new/)
    - **Browser Startup:** [nightTab](https://github.com/zombieFox/nightTab)
-   - **PDF Viewer:** [zathura](https://github.com/pwmt/zathura)
    - **Application Launcher:** [Alfred](https://www.alfredapp.com/)
    
 
