@@ -65,8 +65,8 @@ yabai -m rule --add app="FaceTime" manage=off
 yabai -m rule --add app="System Preferences" manage=off
 yabai -m rule --add app="QuickTime Player" manage=off layer=below
 yabai -m rule --add app="Quick Camera" manage=off layer=below
+yabai -m rule --add app="Zed" opacity=0.95
 yabai -m rule --add app="Code" opacity=0.95
-yabai -m rule --add app="Zed" opacity=0.98
 yabai -m rule --add app="IntelliJ IDEA" opacity=0.98
 yabai -m rule --add app="Rectangle" manage=off
 yabai -m rule --add app="Spotify" manage=off

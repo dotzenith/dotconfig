@@ -57,7 +57,6 @@ sleep 0.1
 eval "$(starship init zsh)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
-eval "$(zoxide init zsh)"
 
 # Spotify
 zsh_add_file "spotify"

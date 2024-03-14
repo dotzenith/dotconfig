@@ -22,7 +22,7 @@ require("lazy").setup(
     { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" },
     { "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" },
     { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" },
-    { "RRethy/vim-illuminate", commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298" },
+    { "RRethy/vim-illuminate", commit = "305bf07b919ac526deb5193280379e2f8b599926" },
     { "ThePrimeagen/harpoon", commit = "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" },
 
     -- UI
@@ -69,7 +69,7 @@ require("lazy").setup(
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make", commit = "fab3e2212e206f4f8b3bbaa656e129443c9b802e" },
 
     -- Treesitter
-    { "nvim-treesitter/nvim-treesitter", commit = "226c1475a46a2ef6d840af9caa0117a439465500" },
+    { "nvim-treesitter/nvim-treesitter", commit = "3ae78f376c2e721ce4feb23e9a5e8bc6062a2657" },
     { "nvim-treesitter/nvim-treesitter-textobjects", commit = "bd103502252027434ec42f628d2dbf54821d4ce6", dependencies = {"nvim-treesitter"} },
     { "RRethy/nvim-treesitter-textsubjects", commit = "bc047b20768845fd54340eb76272b2cf2f6fa3f3", dependencies = {"nvim-treesitter"} },
     { "mrjones2014/nvim-ts-rainbow", commit = "aa83e4967bf78f85ffd9a11e159900c7ea7e423b", dependencies = {"nvim-treesitter"} },
