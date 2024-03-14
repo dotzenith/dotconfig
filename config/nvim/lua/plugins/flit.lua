@@ -1,14 +1,15 @@
-local status_ok, flit = pcall(require, "flit")
-if not status_ok then
-	return
+local M = {
+  "ggandor/flit.nvim",
+  commit = "f4e9af572a62c808c8de214da672f2a115a98c35",
+}
+
+function M.config()
+  require("flit").setup {
+    keys = { f = 'f', F = 'F', t = 't', T = 'T' },
+    labeled_modes = "nv",
+    multiline = true,
+    opts = {}
+  }
 end
 
-flit.setup({
-  keys = { f = 'f', F = 'F', t = 't', T = 'T' },
-  -- A string like "nv", "nvo", "o", etc.
-  labeled_modes = "nv",
-  multiline = true,
-  -- Like `leap`s similar argument (call-specific overrides).
-  -- E.g.: opts = { equivalence_classes = {} }
-  opts = {}
-})
+return M

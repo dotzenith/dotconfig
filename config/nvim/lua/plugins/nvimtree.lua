@@ -1,20 +1,23 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
-end
+local M = {
+  "nvim-tree/nvim-tree.lua",
+  commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
+  event = "VeryLazy",
+  dependencies = {
+    { "nvim-tree/nvim-web-devicons", commit = "cdbcca210cf3655aa9b31ebf2422763ecd85ee5c" },
+  },
+}
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
+function M.config()
+  local wk = require "which-key"
+  wk.register {
+    ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
+  }
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
-
-nvim_tree.setup {
+  require("nvim-tree").setup {
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = false,
-  hijack_netrw = true,
+  hijack_netrw = false,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
   open_on_setup = false,
@@ -30,14 +33,6 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
   },
   renderer = {
     indent_markers = {
@@ -146,4 +141,7 @@ nvim_tree.setup {
       profile = false,
     },
   },
-}
+  }
+end
+
+return M
