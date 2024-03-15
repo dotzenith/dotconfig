@@ -14,6 +14,7 @@ function M.config()
       "css",
       "html",
       "astro",
+      "toml",
       "lua",
     },
     user_default_options = {

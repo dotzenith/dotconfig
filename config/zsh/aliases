@@ -5,7 +5,8 @@ alias lt='lsd --tree'
 alias lla='lsd -la'
 
 # vim
-alias vim='nvim'
+alias vim='\nvim'
+alias nvim='NVIM_APPNAME=refactor nvim'
 alias vi='\vim'
 alias v='\vi'
 
