@@ -158,14 +158,9 @@
    sudo pacman -S xsel
    ```
 
-   Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
+   Nvim will install [lazy](https://github.com/folke/lazy.nvim) and all the plugins automatically the first time it is opened.
   
    Once Lazy is done installing all the plugins, simply exit nvim and open it again.
-
-   update tree-sitter grammars
-   ```
-   :TSUpdate
-   ```
 
    Voila! you now have a baller nvim config. 
 
