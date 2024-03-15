@@ -84,9 +84,9 @@
    </details>
    
    <details>
-   <summary><strong>WezTerm</strong></summary>
+   <summary><strong>Kitty</strong></summary>
    
-   Window decorations for WezTerm are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
+   Window decorations for Kitty are turned off since I use a tiling WM. You may want to adjust that setting if you're not using a tiling WM.
 
    </details>
    
@@ -160,7 +160,7 @@
 
    Nvim will install [packer](https://github.com/wbthomason/packer.nvim) and all the plugins automatically the first time it is opened.
   
-   Once packer is done installing all the plugins, simply exit nvim and open it again. 
+   Once Lazy is done installing all the plugins, simply exit nvim and open it again.
 
    update tree-sitter grammars
    ```
