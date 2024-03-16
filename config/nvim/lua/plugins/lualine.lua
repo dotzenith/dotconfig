@@ -1,6 +1,9 @@
 local M = {
   "nvim-lualine/lualine.nvim",
-  commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63"
+  commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
+  dependencies = {
+    { "linrongbin16/lsp-progress.nvim", commit = "1c37b1cd0611563a767f0a340d61f265c4c54ecd" },
+  }
 }
 
 local function theme()
@@ -51,6 +54,51 @@ local function theme()
 end
 
 function M.config()
+  require("lsp-progress").setup({
+    decay = 1200,
+    series_format = function(title, message, percentage, done)
+      local builder = {}
+      local has_title = false
+      if type(title) == "string" and string.len(title) > 0 then
+        local modified_title = string.sub(title, 1, 50)
+        table.insert(builder, modified_title)
+        has_title = true
+      end
+      if percentage and has_title then
+        table.insert(builder, string.format("(%.0f%%)", percentage))
+      end
+      return { msg = table.concat(builder, " "), done = done }
+    end,
+    client_format = function(client_name, spinner, series_messages)
+      if #series_messages == 0 then
+        return nil
+      end
+      local builder = {}
+      local done = true
+      for _, series in ipairs(series_messages) do
+        if not series.done then
+          done = false
+        end
+        table.insert(builder, series.msg)
+      end
+      if done then
+        spinner = "✓" -- replace your check mark
+      end
+      return "["
+        .. client_name
+        .. "] "
+        .. spinner
+        .. " "
+        .. table.concat(builder, ", ")
+    end,
+    format = function(client_messages)
+        if #client_messages > 0 then
+            return table.concat(client_messages, " ")
+        end
+        return ""
+    end,
+    max_size = 80,
+  })
   require("lualine").setup {
     options = {
       icons_enabled = true,
@@ -91,7 +139,7 @@ function M.config()
       },
       lualine_c = { 'filename' },
       lualine_x = { 'filetype' },
-      lualine_y = { '' },
+      lualine_y = { require('lsp-progress').progress },
       lualine_z = { 'location' }
     },
     inactive_sections = {
@@ -105,6 +153,13 @@ function M.config()
     tabline = {},
     extensions = {}
   }
+  -- listen lsp-progress event and refresh lualine
+  vim.api.nvim_create_augroup("lualine_augroup", { clear = true })
+  vim.api.nvim_create_autocmd("User", {
+    group = "lualine_augroup",
+    pattern = "LspProgressStatusUpdated",
+    callback = require("lualine").refresh,
+  })
 end
 
 return M
