@@ -85,17 +85,17 @@ function M.config()
         spinner = "✓" -- replace your check mark
       end
       return "["
-        .. client_name
-        .. "] "
-        .. spinner
-        .. " "
-        .. table.concat(builder, ", ")
+          .. client_name
+          .. "] "
+          .. spinner
+          .. " "
+          .. table.concat(builder, ", ")
     end,
     format = function(client_messages)
-        if #client_messages > 0 then
-            return table.concat(client_messages, " ")
-        end
-        return ""
+      if #client_messages > 0 then
+        return table.concat(client_messages, " ")
+      end
+      return ""
     end,
     max_size = 80,
   })
@@ -137,7 +137,11 @@ function M.config()
           always_visible = false,
         },
       },
-      lualine_c = { 'filename' },
+      lualine_c = { 'filename', '%=', {
+          "harpoon2",
+          separator = " ",
+        },
+      },
       lualine_x = { 'filetype' },
       lualine_y = { require('lsp-progress').progress },
       lualine_z = { 'location' }

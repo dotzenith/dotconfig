@@ -1,7 +1,7 @@
 local M = {
   "ahmedkhalf/project.nvim",
   commit = "628de7e433dd503e782831fe150bb750e56e55d6",
-  event = "VeryLazy",
+  lazy = false
 }
 
 function M.config()

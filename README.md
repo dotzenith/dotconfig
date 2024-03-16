@@ -137,7 +137,7 @@
    mv ~/.config/nvim ~/.config/old_nvim
 
    # Copy new config
-   cp -R ~/dotconfig/.config/nvim ~/.config
+   cp -R ~/dotconfig/config/nvim ~/.config
    ```
   
    Get python and node support for nvim

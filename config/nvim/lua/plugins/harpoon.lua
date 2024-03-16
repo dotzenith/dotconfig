@@ -1,12 +1,27 @@
 local M = {
-  "ThePrimeagen/harpoon",
-  commit = "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a",
-  event = "VeryLazy",
+  "letieu/harpoon-lualine",
+  commit = "4e08b6a41430e2a7be562bcc132d281a299bbfd8",
   dependencies = {
-    "nvim-lua/plenary.nvim",
-    commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7",
+    {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      commit = "a38be6e0dd4c6db66997deab71fc4453ace97f9c",
+    }
   },
   opts = {}
 }
+
+M.config = function()
+  local harpoon = require("harpoon")
+  ---@diagnostic disable-next-line: missing-parameter
+  harpoon:setup()
+
+  vim.keymap.set("n", "<leader><tab>", function() harpoon:list():append() end)
+  vim.keymap.set("n", "<leader>H", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+  -- Toggle previous & next buffers stored within Harpoon list
+  vim.keymap.set("n", "<m-j>", function() harpoon:list():next() end)
+  vim.keymap.set("n", "<m-k>", function() harpoon:list():prev() end)
+end
 
 return M
