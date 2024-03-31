@@ -10,9 +10,6 @@ autocmd({ "FileType" }, {
 	end,
 })
 
--- Automatically close tab/vim when nvim-tree is the last window in the tab
-vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
-
 -- Highlight yanked text
 autocmd("TextYankPost", {
   callback = function()
@@ -29,6 +26,14 @@ autocmd("FileType", {
   end,
 })
 
+-- Typst
+autocmd({ "BufNewFile", "BufRead" }, {
+   pattern = "*.typ",
+   callback = function()
+    vim.opt.filetype = "typst"
+   end,
+})
+
 
 -- Relative Numbers
 autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
@@ -42,7 +47,6 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }
 
 autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
    pattern = "*",
-   group = augroup,
    callback = function()
       if vim.o.nu then
          vim.opt.relativenumber = false

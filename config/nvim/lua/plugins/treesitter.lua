@@ -28,6 +28,7 @@ function M.config()
       "haskell",
       "dockerfile",
       "go",
+      "typst",
       "yaml" },
     sync_install = false,    -- install languages synchronously (only applied to `ensure_installed`)
     ignore_install = { "" }, -- List of parsers to ignore installing
