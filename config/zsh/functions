@@ -44,9 +44,14 @@ function yy() {
 }
 
 function mux() {
-  tmpfile=$(mktemp -t "mux.XXXXXX")
+  local tmpfile=$(mktemp -t "mux.XXXXXX")
   if tmux list-sessions > $tmpfile 2>&1; then
-    tmux attach -t "$(cat $tmpfile | awk '{print $1}' | rev | cut -c 2- | rev | fzf --height 40% --reverse)"
+    local fzf_selection="$(cat $tmpfile | awk '{print $1}' | rev | cut -c 2- | rev | fzf --height 40% --reverse)"
+    if [ -z "$fzf_selection" ]; then
+      return
+    else
+      tmux attach -t $fzf_selection
+    fi
   else
     echo "No Sessions"
   fi
