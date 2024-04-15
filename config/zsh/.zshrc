@@ -19,6 +19,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)
+fpath=( ~/.zfunc "${fpath[@]}" )
 autoload -U compinit && compinit
 
 # Colors

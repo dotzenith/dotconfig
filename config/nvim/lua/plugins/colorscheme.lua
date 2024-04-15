@@ -1,6 +1,6 @@
 local M = {
   "catppuccin/nvim",
-  commit = "939be5f7fcbc15abeaad9214bb253a4551f6f6e6",
+  commit = "a1439ad7c584efb3d0ce14ccb835967f030450fe",
   name = "catppuccin",
   lazy = false,
   priority = 1000,
@@ -63,7 +63,7 @@ function M.config()
         dashboard = true,
         markdown = true,
         leap = true,
-        ts_rainbow = true,
+        rainbow_delimiters = true,
         lualine = false,
       },
       color_overrides = {

@@ -9,5 +9,6 @@ return {
   "sqlls",
   "rust_analyzer",
   "lua_ls",
+  "typst_lsp",
   "hls"
 }

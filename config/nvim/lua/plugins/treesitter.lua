@@ -1,16 +1,17 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
-  commit = "3ae78f376c2e721ce4feb23e9a5e8bc6062a2657",
+  commit = "2a95ff14764af20d32ec1edb27e11c38a84b9478",
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "bd103502252027434ec42f628d2dbf54821d4ce6", after = "nvim-treesitter/nvim-treesitter" },
-    { "RRethy/nvim-treesitter-textsubjects",         commit = "bc047b20768845fd54340eb76272b2cf2f6fa3f3", after = "nvim-treesitter/nvim-treesitter" },
-    { "mrjones2014/nvim-ts-rainbow",                 commit = "aa83e4967bf78f85ffd9a11e159900c7ea7e423b", after = "nvim-treesitter/nvim-treesitter" },
+    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "23b820146956b3b681c19e10d3a8bc0cbd9a1d4c", after = "nvim-treesitter/nvim-treesitter" },
+    { "RRethy/nvim-treesitter-textsubjects",         commit = "9f9a6b307fb122f13708f78483222abd43b7bb3a", after = "nvim-treesitter/nvim-treesitter" },
+    { "HiPhish/rainbow-delimiters.nvim",             commit = "0563a31b1f46a911865cb85df3ddde2eff9fdada", after = "nvim-treesitter/nvim-treesitter" },
   },
 }
 
 function M.config()
+  ---@diagnostic disable-next-line: missing-fields
   require("nvim-treesitter.configs").setup {
     ensure_installed = { "html",
       "css",
@@ -18,6 +19,7 @@ function M.config()
       "cpp",
       "bash",
       "javascript",
+      "typescript",
       "java",
       "lua",
       "vim",
@@ -29,7 +31,7 @@ function M.config()
       "dockerfile",
       "go",
       "typst",
-      "yaml" },
+    },
     sync_install = false,    -- install languages synchronously (only applied to `ensure_installed`)
     ignore_install = { "" }, -- List of parsers to ignore installing
     autopairs = {
