@@ -29,7 +29,7 @@ export C_INCLUDE_PATH=/usr/local/include
 
 # Defaults
 export EDITOR='nvim'
-export TERMINAL='wezterm'
+export TERMINAL='kitty'
 export BROWSER='firefox'
 
 # Brew

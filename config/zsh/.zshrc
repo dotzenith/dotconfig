@@ -42,9 +42,6 @@ zsh_add_file "secrets"
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# fzf
-[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
-
 # vim mode
 bindkey -v
 bindkey "^?" backward-delete-char
@@ -55,6 +52,7 @@ bindkey -rM viins '^X'
 sleep 0.1
 [ -f .zshenv ] && lovesay 
 
+eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
