@@ -16,22 +16,22 @@ cache_dir  = ""
 
 [opener]
 edit = [
-	{ exec = '$EDITOR "$@"', block = true,  for = "unix" },
+	{ run = '$EDITOR "$@"', block = true,  for = "unix" },
 ]
 open = [
-	{ exec = 'xdg-open "$@"', desc = "Open", for = "linux" },
-	{ exec = 'open "$@"', desc = "Open", for = "macos" },
+	{ run = 'xdg-open "$@"', desc = "Open", for = "linux" },
+	{ run = 'open "$@"', desc = "Open", for = "macos" },
 ]
 reveal = [
-	{ exec = 'open -R "$1"', desc = "Reveal", for = "macos" },
-	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
+	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
+	{ run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
-	{ exec = 'unar "$1"', desc = "Extract here", for = "unix" },
+	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
 ]
 play = [
-	{ exec = 'mpv "$@"', orphan = true, for = "unix" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
 ]
 
 [open]
