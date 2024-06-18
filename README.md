@@ -75,7 +75,7 @@
    <details>
    <summary><strong>Nerd Fonts</strong></summary>
    
-   A lot of the programs mentioned earlier make use of nerd fonts, so here's how to install the one I use on MacOS.
+   A lot of the programs mentioned earlier make use of nerd fonts. I use a paid font with patched symbols, but you can download and use any other nerd font and just update the terminal config.
    ```sh
    brew tap homebrew/cask-fonts
    brew install --cask font-jetbrains-mono-nerd-font
@@ -102,8 +102,6 @@
    ```sh
    brew install starship fzf
    ```
-
-   The config also assumes that the `.fzf.zsh` file is in `~/.config/fzf/`
 
    The zsh-functions file is used for plugins, so it's important to keep it in your `zsh` directory.
 
