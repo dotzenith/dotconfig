@@ -1,6 +1,6 @@
 local M = {
   "ggandor/leap.nvim",
-  commit = "0eb3611593e135150e2f7880ec67568ccb51c17a",
+  commit = "24935d06c7e06bf8929feb24a3525cd128fc0cc4",
   dependencies = {
     { "tpope/vim-repeat", commit = "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   },

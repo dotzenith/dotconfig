@@ -1,12 +1,12 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
-  commit = "2a95ff14764af20d32ec1edb27e11c38a84b9478",
+  commit = "c29989f5d735a30b6d2350b54d5cd50be811f8b2",
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "23b820146956b3b681c19e10d3a8bc0cbd9a1d4c", after = "nvim-treesitter/nvim-treesitter" },
-    { "RRethy/nvim-treesitter-textsubjects",         commit = "9f9a6b307fb122f13708f78483222abd43b7bb3a", after = "nvim-treesitter/nvim-treesitter" },
-    { "HiPhish/rainbow-delimiters.nvim",             commit = "0563a31b1f46a911865cb85df3ddde2eff9fdada", after = "nvim-treesitter/nvim-treesitter" },
+    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "fd41b7ccc5490a3a99c734d1ee418b68d06c48a9" },
+    { "RRethy/nvim-treesitter-textsubjects",         commit = "9f9a6b307fb122f13708f78483222abd43b7bb3a" },
+    { "HiPhish/rainbow-delimiters.nvim",             commit = "5c9660801ce345cd3835e1947c12b54290ab7e71" },
   },
 }
 
@@ -28,7 +28,6 @@ function M.config()
       "python",
       "json",
       "haskell",
-      "dockerfile",
       "go",
       "typst",
     },

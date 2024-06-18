@@ -1,12 +1,12 @@
 local M = {
   "hrsh7th/nvim-cmp",
-  commit = "5dce1b778b85c717f6614e3f4da45e9f19f54435",
+  commit = "5260e5e8ecadaf13e6b82cf867a909f54e15fd07",
   event = "InsertEnter",
   dependencies = {
     {
       "hrsh7th/cmp-nvim-lsp",
       event = "InsertEnter",
-      commit = "44b16d11215dce86f253ce0c30949813c0a90765",
+      commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d",
     },
     {
       "hrsh7th/cmp-buffer",
