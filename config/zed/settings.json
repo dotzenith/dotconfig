@@ -1,0 +1,102 @@
+{
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "theme": "Catppuccin Mocha",
+    "buffer_font_family": "BerkeleyMono Nerd Font Mono",
+    "buffer_font_size": 16,
+    "vim_mode": true,
+    "hover_popover_enabled": true,
+    "cursor_blink": true,
+    "show_completions_on_input": true,
+    "enable_language_server": true,
+    "projects_online_by_default": false,
+    "autosave": "off",
+    "default_dock_anchor": "bottom",
+    "format_on_save": "off",
+    "formatter": "language_server",
+    "soft_wrap": "none",
+    "preferred_line_length": 80,
+    "hard_tabs": false,
+    "tab_size": 4,
+    "relative_line_numbers": true,
+    "git": {
+        "git_gutter": "tracked_files"
+    },
+    // Settings specific to journaling
+    "journal": {
+        "path": "~",
+        "hour_format": "hour12"
+    },
+    // Settings specific to the terminal
+    "terminal": {
+        "shell": "system",
+        "working_directory": "current_project_directory",
+        "blinking": "terminal_controlled",
+        "alternate_scroll": "off",
+        "option_as_meta": false,
+        "copy_on_select": false,
+        // Any key-value pairs added to this list will be added to the terminal's
+        // enviroment. Use `:` to seperate multiple values.
+        "env": {
+            // "KEY": "value1:value2"
+        }
+    },
+    "vim": {
+        "use_system_clipboard": "always",
+        "use_multiline_find": true
+    },
+    // Different settings for specific languages.
+    "languages": {
+        "Plain Text": {
+            "soft_wrap": "preferred_line_length"
+        },
+        "C": {
+            "tab_size": 2
+        },
+        "C++": {
+            "tab_size": 2
+        },
+        "Elixir": {
+            "tab_size": 2
+        },
+        "Go": {
+            "tab_size": 4,
+            "hard_tabs": true
+        },
+        "Markdown": {
+            "soft_wrap": "preferred_line_length"
+        },
+        "Rust": {
+            "tab_size": 4
+        },
+        "JavaScript": {
+            "tab_size": 2
+        },
+        "TypeScript": {
+            "tab_size": 2
+        },
+        "TSX": {
+            "tab_size": 2
+        }
+    },
+    // LSP Specific settings.
+    "lsp": {
+        // Specify the LSP name as a key here.
+        // As of 8/10/22, supported LSPs are:
+        // pyright
+        // gopls
+        // rust-analyzer
+        // typescript-language-server
+        // vscode-json-languageserver
+        // "rust_analyzer": {
+        //     //These initialization options are merged into Zed's defaults
+        //     "initialization_options": {
+        //         "checkOnSave": {
+        //             "command": "clippy"
+        //         }
+        //     }
+        // }
+    }
+}

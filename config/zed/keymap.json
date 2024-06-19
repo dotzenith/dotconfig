@@ -1,0 +1,116 @@
+[
+    {
+        "bindings": {
+            "ctrl-j": "menu::SelectNext",
+            "ctrl-k": "menu::SelectPrev"
+        }
+    },
+    {
+        "context": "Editor && VimControl && !VimWaiting && !menu",
+        "bindings": {
+            "g ]": "editor::GoToDiagnostic",
+            "g [": "editor::GoToPrevDiagnostic",
+            "g r": "editor::FindAllReferences",
+            "space z": "workspace::ToggleZoom",
+            "ctrl-t": "workspace::ToggleBottomDock",
+            "space l a": "editor::ToggleCodeActions",
+            "space l r": "editor::Rename",
+            "space l f": "editor::Format",
+            "space f": "file_finder::Toggle",
+            "space t": "tab_switcher::Toggle",
+            "space e": "workspace::ToggleLeftDock",
+            "space p": "outline::Toggle",
+            "space v": "editor::GoToDefinitionSplit",
+            "space d": "editor::Hover"
+        }
+    },
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+        "bindings": {
+            // put key-bindings here if you want them to work in normal & visual mode
+            "left": [
+                "workspace::ActivatePaneInDirection",
+                "Left"
+            ],
+            "right": [
+                "workspace::ActivatePaneInDirection",
+                "Right"
+            ],
+            "up": [
+                "workspace::ActivatePaneInDirection",
+                "Up"
+            ],
+            "down": [
+                "workspace::ActivatePaneInDirection",
+                "Down"
+            ]
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            // put key-bindings here if you want them to work only in normal mode
+            "shift-j": [
+                "workspace::SendKeystrokes",
+                "1 0 j"
+            ],
+            "shift-k": [
+                "workspace::SendKeystrokes",
+                "1 0 k"
+            ],
+            "shift-h": [
+                "workspace::SendKeystrokes",
+                "0"
+            ],
+            "shift-l": [
+                "workspace::SendKeystrokes",
+                "$"
+            ]
+        }
+    },
+    {
+        "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject && !menu",
+        "bindings": {
+            // visual, visual line & visual block modes
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp",
+            ">": "editor::Indent",
+            "<": "editor::Outdent"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            // put key-bindings here if you want them to work in insert mode
+            // e.g.
+            // "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-t": "workspace::ToggleBottomDock",
+            "up": [
+                "workspace::ActivatePaneInDirection",
+                "Up"
+            ]
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "space e": "workspace::ToggleLeftDock",
+            "right": [
+                "workspace::ActivatePaneInDirection",
+                "Right"
+            ]
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert && menu",
+        "bindings": {
+            "ctrl-j": "editor::ContextMenuNext",
+            "ctrl-k": "editor::ContextMenuPrev"
+        }
+    }
+]
