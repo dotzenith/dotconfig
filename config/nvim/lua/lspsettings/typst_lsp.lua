@@ -1,5 +1,5 @@
 return {
 	settings = {
-		exportPdf = "onSave" -- Choose onType, onSave or never.
+		exportPdf = "never" -- Choose onType, onSave or never.
 	}
 }

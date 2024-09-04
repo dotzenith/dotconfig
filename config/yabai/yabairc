@@ -69,12 +69,8 @@ yabai -m rule --add app="Zed" opacity=0.95
 yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="IntelliJ IDEA" opacity=0.98
 yabai -m rule --add app="Rectangle" manage=off
-yabai -m rule --add app="Spotify" manage=off
 yabai -m rule --add app="VSCodium" opacity=0.95
-yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="zoom.us" manage=off
 yabai -m rule --add app="Messages" manage=off
-yabai -m rule --add app="Preview" manage=off
 yabai -m rule --add app="Numi" manage=off
 
 # Some Settings For Simple-Bar
@@ -85,4 +81,3 @@ yabai -m signal --add event=window_resized action="osascript -e 'tell applicatio
 yabai -m signal --add event=application_front_switched action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when front application switched application changes"
 yabai -m signal --add event=window_destroyed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when an application window is closed"
 yabai -m signal --add event=window_title_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when current window title changes"
-echo "yabai configuration loaded.."

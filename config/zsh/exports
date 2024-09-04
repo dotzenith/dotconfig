@@ -39,3 +39,6 @@ export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
 # Avatar
 export QUOTES_PATH="./submodules/AvatarApi/Quotes.csv"
 export DATABASE_URL="sqlite://quotes.db"
+
+# tst
+export SeptaPlusPlusURL="https://septa.jawn.website/api"

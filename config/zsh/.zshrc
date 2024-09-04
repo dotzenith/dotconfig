@@ -53,10 +53,15 @@ sleep 0.1
 [ -f .zshenv ] && lovesay 
 
 eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
 
+# Check that the function `starship_zle-keymap-select()` is defined.
+# xref: https://github.com/starship/starship/issues/3418
+type starship_zle-keymap-select >/dev/null || \
+{
+  eval "$(starship init zsh)"
+}
+
 # Spotify
-zsh_add_file "spotify"
 zsh_add_file "rspotify"

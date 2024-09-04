@@ -28,6 +28,7 @@ alias top='btm'
 alias s='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
 alias ec='ebook-convert'
+alias uvs='source .venv/bin/activate'
 
 # Something for c++
 alias cpp='g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion --std=c++17'
