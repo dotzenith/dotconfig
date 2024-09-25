@@ -11,10 +11,6 @@ export PATH
 # bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# Python bug
-unset PYTHONPATH
-unset PYTHONHOME
-
 # For the starship config
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 
@@ -30,15 +26,14 @@ export C_INCLUDE_PATH=/usr/local/include
 # Defaults
 export EDITOR='nvim'
 export TERMINAL='kitty'
-export BROWSER='firefox'
+export BROWSER='zen'
 
 # Brew
 export HOMEBREW_BUNDLE_FILE=$HOME/.config/brew/Brewfile
 export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
 
-# Avatar
-export QUOTES_PATH="./submodules/AvatarApi/Quotes.csv"
-export DATABASE_URL="sqlite://quotes.db"
-
 # tst
-export SeptaPlusPlusURL="https://septa.jawn.website/api"
+export SeptumURL="https://septum.jawn.website/api"
+
+# avatar
+export DATABASE_URL="sqlite://quotes.db"
