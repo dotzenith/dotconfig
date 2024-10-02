@@ -42,10 +42,6 @@ keymap("n", "<Down>", "<c-w>j", opts)
 keymap("n", "<Left>", "<c-w>h", opts)
 keymap("n", "<Right>", "<c-w>l", opts)
 
--- Insert --
--- Press jk fast to enter normal mode
-keymap("i", "jk", "<ESC>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

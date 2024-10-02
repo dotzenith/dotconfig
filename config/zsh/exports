@@ -37,3 +37,4 @@ export SeptumURL="https://septum.jawn.website/api"
 
 # avatar
 export DATABASE_URL="sqlite://quotes.db"
+export AvatarAPIBaseURL="http://avatarquotes.xyz/api"
