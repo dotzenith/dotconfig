@@ -26,6 +26,9 @@ disabled = true
 [nodejs]
 disabled = true
 
+[docker_context]
+disabled = true
+
 [c]
 style = "#f5e0dc"
 

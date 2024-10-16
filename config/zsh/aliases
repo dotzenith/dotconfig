@@ -8,7 +8,6 @@ alias lla='lsd -la'
 alias vim='\nvim'
 alias nvim='NVIM_APPNAME=refactor nvim'
 alias vi='\vim'
-alias v='\vi'
 
 # bat
 alias batview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
@@ -25,7 +24,7 @@ alias tssh="\ssh"
 # others
 alias lg='lazygit'
 alias top='btm'
-alias s='source ~/.config/zsh/.zshrc'
+alias sconfig='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
 alias ec='ebook-convert'
 alias uvs='source .venv/bin/activate'
