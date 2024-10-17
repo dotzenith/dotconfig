@@ -46,13 +46,6 @@ function M.config()
     ["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
   }
 
-  wk.register {
-    ["<leader>la"] = {
-      name = "LSP",
-      a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", mode = "v" },
-    },
-  }
-
   local lspconfig = require "lspconfig"
 
   local servers = require "lspsettings.servers"

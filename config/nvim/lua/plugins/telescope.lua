@@ -16,6 +16,7 @@ function M.config()
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
     ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+    ["<leader>lrr"] = { "<cmd>Telescope lsp_references<cr>", "References" },
   }
 
   local actions = require "telescope.actions"
