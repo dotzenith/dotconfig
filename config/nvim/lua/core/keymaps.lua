@@ -62,7 +62,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Custom
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<leader>fc", ":Format<cr>", opts)
-keymap('n', '<leader>s', '<cmd>Outline<CR>', opts)
+keymap('n', '<leader>o', '<cmd>Outline<CR>', opts)
 
 -- Easier start of line and end of line
 keymap("", "H", "0", opts)
