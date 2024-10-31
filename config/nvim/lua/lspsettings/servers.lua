@@ -10,4 +10,5 @@ return {
   "lua_ls",
   "typst_lsp",
   "harper_ls",
+  "denols",
 }

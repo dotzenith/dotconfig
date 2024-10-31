@@ -36,5 +36,4 @@ export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
 export SeptumURL="https://septum.jawn.website/api"
 
 # avatar
-export DATABASE_URL="sqlite://quotes.db"
 export AvatarAPIBaseURL="http://avatarquotes.xyz/api"

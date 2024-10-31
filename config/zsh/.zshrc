@@ -48,10 +48,6 @@ bindkey "^?" backward-delete-char
 bindkey -M vicmd '^[' undefined-key
 bindkey -rM viins '^X'
 
-# motd
-sleep 0.1
-[ -f .zshenv ] && lovesay 
-
 eval "$(fzf --zsh)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
@@ -62,6 +58,9 @@ type starship_zle-keymap-select >/dev/null || \
 {
   eval "$(starship init zsh)"
 }
+
+# motd
+[ -f .zshenv ] && lovesay 
 
 # Spotify
 zsh_add_file "rspotify"

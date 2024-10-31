@@ -20,6 +20,9 @@ return {
       -- Trigger completion at 2 chars.
       min_chars = 2,
     },
+    ui = {
+      enable = false,
+    },
     mappings = {
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ["gf"] = {

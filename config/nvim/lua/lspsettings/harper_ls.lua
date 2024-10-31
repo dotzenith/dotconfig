@@ -4,6 +4,9 @@ return {
       userDictPath = "~/.config/harper-ls/dict.txt",
       codeActions = {
         forceStable = true
+      },
+      linters = {
+        long_sentences = false,
       }
     }
   }

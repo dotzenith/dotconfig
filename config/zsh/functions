@@ -57,3 +57,17 @@ function mux() {
   fi
   rm $tmpfile
 }
+
+gc() {
+    local repo="$1"
+    if [[ -z "$repo" ]]; then
+        echo "Usage: gc repository-name"
+        return 1
+    fi
+    
+    if [[ $repo == *"/"* ]]; then
+        git clone "https://github.com/${repo}.git"
+    else
+        git clone "git@github.com:dotzenith/${repo}.git"
+    fi
+}

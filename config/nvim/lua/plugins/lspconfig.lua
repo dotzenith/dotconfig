@@ -52,9 +52,9 @@ function M.config()
 
   local signs = {
     { name = "DiagnosticSignError", hl = "DiagnosticError" },
-    { name = "DiagnosticSignWarn", hl = "DiagnosticWarn" },
-    { name = "DiagnosticSignHint", hl = "DiagnosticHint" },
-    { name = "DiagnosticSignInfo", hl = "DiagnosticInfo" },
+    { name = "DiagnosticSignWarn",  hl = "DiagnosticWarn" },
+    { name = "DiagnosticSignHint",  hl = "DiagnosticHint" },
+    { name = "DiagnosticSignInfo",  hl = "DiagnosticInfo" },
   }
 
   for _, sign in ipairs(signs) do
@@ -98,6 +98,28 @@ function M.config()
 
     if server == "lua_ls" then
       require("neodev").setup {}
+    end
+
+    if server == "denols" then
+      local custom_opts = {
+        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+      }
+      opts = vim.tbl_deep_extend("force", custom_opts, opts)
+    end
+
+    if server == "tsserver" then
+      local custom_opts = {
+        root_dir = function(filename, bufnr)
+          local denoRootDir = lspconfig.util.root_pattern("deno.json", "deno.json")(filename);
+          if denoRootDir then
+            return nil;
+          end
+
+          return lspconfig.util.root_pattern("package.json")(filename);
+        end,
+        single_file_support = false,
+      }
+      opts = vim.tbl_deep_extend("force", custom_opts, opts)
     end
 
     lspconfig[server].setup(opts)
