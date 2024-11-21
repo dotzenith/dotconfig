@@ -60,7 +60,7 @@ type starship_zle-keymap-select >/dev/null || \
 }
 
 # motd
-[ -f .zshenv ] && lovesay 
+[ -f .zshenv ] && LOVESAY_COLORSCHEME="catppuccin mocha" lovesay
 
 # Spotify
 zsh_add_file "rspotify"

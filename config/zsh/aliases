@@ -31,3 +31,6 @@ alias uvs='source .venv/bin/activate'
 
 # Something for c++
 alias cpp='g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion --std=c++17'
+
+# n-link
+alias nlink='/Applications/n-link_0.1.6_x64.app/Contents/MacOS/n-link'
