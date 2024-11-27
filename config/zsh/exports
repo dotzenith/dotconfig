@@ -2,6 +2,7 @@
 PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/.local/bin
 PATH=$HOME/.cargo/bin:$PATH
+PATH=$HOME/.bun/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
