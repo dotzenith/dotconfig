@@ -7,6 +7,10 @@ local M = {
       "folke/neodev.nvim",
       commit = "84e0290f5600e8b89c0dfcafc864f45496a53400",
     },
+    {
+      "saghen/blink.cmp",
+      version = "v0.6.2"
+    },
   },
 }
 
@@ -88,7 +92,7 @@ function M.config()
   for _, server in pairs(servers) do
     local opts = {
       on_attach = M.on_attach,
-      capabilities = M.common_capabilities(),
+      capabilities = require('blink.cmp').get_lsp_capabilities()
     }
 
     local require_ok, settings = pcall(require, "lspsettings." .. server)

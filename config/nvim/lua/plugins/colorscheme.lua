@@ -1,6 +1,6 @@
 local M = {
   "catppuccin/nvim",
-  commit = "a1439ad7c584efb3d0ce14ccb835967f030450fe",
+  commit = "faf15ab0201b564b6368ffa47b56feefc92ce3f4",
   name = "catppuccin",
   lazy = false,
   priority = 1000,
@@ -52,7 +52,7 @@ function M.config()
             information = { "underline" },
           },
         },
-        cmp = true,
+				blink_cmp = true,
         gitsigns = false,
         barbecue = {
           dim_dirname = true,
