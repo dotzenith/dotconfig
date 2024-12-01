@@ -19,8 +19,8 @@ function M.config()
 			['<C-space>'] = { 'hide', 'fallback' },
 			['<CR>'] = { 'accept', 'fallback' },
 
-			['<Left>'] = { 'snippet_backward', 'fallback' },
-			['<Right>'] = { 'snippet_forward', 'fallback' },
+			['<M-Right>'] = { 'snippet_forward', 'fallback' },
+			['<M-Left>'] = { 'snippet_backward', 'fallback' },
 
 			['<Tab>'] = { 'select_next', 'fallback' },
 			['<S-Tab>'] = { 'select_prev', 'fallback' },
@@ -33,7 +33,7 @@ function M.config()
 		windows = {
 			autocomplete = {
 				border = 'rounded',
-				selection = 'manual',
+				selection = 'auto_insert',
 			},
 			documentation = {
 				auto_show = true,
