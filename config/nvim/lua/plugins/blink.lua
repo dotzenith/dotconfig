@@ -1,14 +1,11 @@
 local M = {
 	'saghen/blink.cmp',
+	version = 'v0.7.1',
 	lazy = false,
-
 	dependencies = {
 		{ "rafamadriz/friendly-snippets", commit = "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
 	},
-
-	version = 'v0.6.2',
 }
-
 
 function M.config()
 	local blink = require "blink.cmp"
@@ -30,21 +27,23 @@ function M.config()
 			['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
 			['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
 		},
-		windows = {
-			autocomplete = {
-				border = 'rounded',
+
+		completion = {
+			list = {
 				selection = 'auto_insert',
+			},
+			menu = {
+				border = 'rounded',
 			},
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 500,
 				update_delay_ms = 50,
 				treesitter_highlighting = true,
-				border = "rounded"
+				window = {
+					border = "rounded",
+				},
 			},
-			signature_help = {
-				border = "rounded",
-			}
 		},
 		sources = {
 			completion = {
@@ -52,6 +51,8 @@ function M.config()
 			},
 		},
 	}
+
+
 end
 
 return M

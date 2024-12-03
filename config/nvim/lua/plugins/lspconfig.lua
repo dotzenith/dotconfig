@@ -9,7 +9,7 @@ local M = {
     },
     {
       "saghen/blink.cmp",
-      version = "v0.6.2"
+      version = "v0.7.1"
     },
   },
 }
