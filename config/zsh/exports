@@ -1,6 +1,5 @@
 # Just the normal path stuff
 PATH=$PATH:$HOME/.bin
-PATH=$PATH:$HOME/.local/bin
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$HOME/.bun/bin:$PATH
 PATH=/usr/local/sbin:$PATH

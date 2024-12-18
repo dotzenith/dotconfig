@@ -25,9 +25,6 @@ autoload -U compinit && compinit
 # Colors
 autoload -Uz colors && colors
 
-# User configuration
-bindkey -s '^c' 'clear ^M'
-
 # Sourcing plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -41,12 +38,6 @@ zsh_add_file "secrets"
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-# vim mode
-bindkey -v
-bindkey "^?" backward-delete-char
-bindkey -M vicmd '^[' undefined-key
-bindkey -rM viins '^X'
 
 eval "$(fzf --zsh)"
 eval "$(mise activate zsh)"
