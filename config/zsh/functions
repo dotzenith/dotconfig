@@ -71,3 +71,11 @@ gc() {
         git clone "git@github.com:dotzenith/${repo}.git"
     fi
 }
+
+function ssh() {
+    if [ -n "$TMUX" ]; then
+        command ssh "$@"
+    else
+        kitten ssh "$@"
+    fi
+}

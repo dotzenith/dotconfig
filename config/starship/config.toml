@@ -29,6 +29,12 @@ disabled = true
 [docker_context]
 disabled = true
 
+[package]
+disabled = true
+
+[rust]
+disabled = true
+
 [c]
 style = "#f5e0dc"
 
