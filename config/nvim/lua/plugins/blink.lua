@@ -1,6 +1,6 @@
 local M = {
 	'saghen/blink.cmp',
-	version = 'v0.7.6',
+	version = 'v0.8.2',
 	lazy = false,
 	dependencies = {
 		{ "rafamadriz/friendly-snippets", commit = "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
@@ -46,9 +46,7 @@ function M.config()
 			},
 		},
 		sources = {
-			completion = {
-				enabled_providers = { 'lsp', 'path', 'snippets', 'buffer' },
-			},
+			default = { 'lsp', 'path', 'snippets', 'buffer' },
 		},
 	}
 
