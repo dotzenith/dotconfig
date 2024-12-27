@@ -5,9 +5,6 @@ command_timeout = 10000
 [directory]
 style = "#F8BD96"
 
-[cmd_duration]
-style = "#F2CECF"
-
 [git_branch]
 style = "#C6AAE8"
 
@@ -15,6 +12,9 @@ style = "#C6AAE8"
 style = "#EBDDAA"
 
 [username]
+disabled = true
+
+[cmd_duration]
 disabled = true
 
 [hostname]
@@ -33,6 +33,9 @@ disabled = true
 disabled = true
 
 [rust]
+disabled = true
+
+[battery]
 disabled = true
 
 [c]

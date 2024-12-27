@@ -1,0 +1,10 @@
+font-family = "BerkeleyMono Nerd Font Mono"
+theme = "catppuccin-mocha"
+shell-integration-features = no-cursor
+cursor-style = "block"
+background-opacity = 0.92
+font-size = 18
+macos-titlebar-style = hidden
+window-padding-x = 5
+window-padding-y = 10
+cursor-style-blink = false
