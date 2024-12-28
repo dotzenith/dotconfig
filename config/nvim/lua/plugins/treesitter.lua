@@ -42,10 +42,6 @@ function M.config()
       additional_vim_regex_highlighting = false,
     },
     indent = { enable = true, disable = { "yaml", "c" } },
-    context_commentstring = {
-      enable = true,
-      enable_autocmd = false,
-    },
     rainbow = {
       enable = true,
       -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for

@@ -9,14 +9,13 @@ function M.config()
   wk.register {
     ["<leader>bb"] = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
     ["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    ["<leader>fc"] = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
     ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
     ["<leader>ft"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
-    ["<leader>fl"] = { "<cmd>Telescope resume<cr>", "Last Search" },
-    ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
-    ["<leader>lrr"] = { "<cmd>Telescope lsp_references<cr>", "References" },
+    ["<leader>fo"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+    ["<leader>fr"] = { "<cmd>Telescope lsp_references<cr>", "References" },
+    ["<leader>fd"] = { "<cmd>Telescope diagnostics<cr>", "References" },
   }
 
   local actions = require "telescope.actions"
@@ -86,32 +85,15 @@ function M.config()
         },
       },
 
-      planets = {
-        show_pluto = true,
-        show_moon = true,
-      },
-
       colorscheme = {
         enable_preview = true,
       },
 
       lsp_references = {
-        theme = "dropdown",
         initial_mode = "normal",
       },
 
       lsp_definitions = {
-        theme = "dropdown",
-        initial_mode = "normal",
-      },
-
-      lsp_declarations = {
-        theme = "dropdown",
-        initial_mode = "normal",
-      },
-
-      lsp_implementations = {
-        theme = "dropdown",
         initial_mode = "normal",
       },
     },
