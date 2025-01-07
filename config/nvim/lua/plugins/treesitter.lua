@@ -5,7 +5,6 @@ local M = {
   build = ":TSUpdate",
   dependencies = {
     { "nvim-treesitter/nvim-treesitter-textobjects", commit = "fd41b7ccc5490a3a99c734d1ee418b68d06c48a9" },
-    { "RRethy/nvim-treesitter-textsubjects",         commit = "9f9a6b307fb122f13708f78483222abd43b7bb3a" },
     { "HiPhish/rainbow-delimiters.nvim",             commit = "5c9660801ce345cd3835e1947c12b54290ab7e71" },
   },
 }
@@ -13,14 +12,14 @@ local M = {
 function M.config()
   ---@diagnostic disable-next-line: missing-fields
   require("nvim-treesitter.configs").setup {
-    ensure_installed = { "html",
+    ensure_installed = {
+			"html",
       "css",
       "c",
       "cpp",
       "bash",
       "javascript",
       "typescript",
-      "java",
       "lua",
       "vim",
       "regex",
@@ -49,15 +48,6 @@ function M.config()
       max_file_lines = nil, -- Do not enable for files with more than n lines, int
       -- colors = {}, -- table of hex strings
       -- termcolors = {} -- table of colour name strings
-    },
-    textsubjects = {
-      enable = true,
-      prev_selection = ',', -- (Optional) keymap to select the previous selection
-      keymaps = {
-        ['.'] = 'textsubjects-smart',
-        [';'] = 'textsubjects-container-outer',
-        ['i;'] = 'textsubjects-container-inner',
-      },
     },
     textobjects = {
       select = {
