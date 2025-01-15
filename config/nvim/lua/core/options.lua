@@ -40,10 +40,8 @@ vim.opt.updatetime = 100
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
-vim.opt.linebreak = true
-vim.opt.whichwrap = 'h,l,<,>,[,],~'
-vim.opt.breakindentopt = 'shift:2,min:20'
-vim.wo.showbreak = 'NONE'
+vim.opt.textwidth = 0
+vim.opt.wrapmargin = 0
 
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,]")
