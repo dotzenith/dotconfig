@@ -43,6 +43,10 @@ vim.opt.sidescrolloff = 8
 vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
 
+-- Dots
+vim.opt.list = true
+vim.opt.listchars = { lead = "·", trail = " ", tab = "  " }
+
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,]")
 vim.cmd [[set fillchars-=vert:\| | set fillchars+=vert:\ ]]
