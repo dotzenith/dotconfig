@@ -1,4 +1,15 @@
-font-family = "BerkeleyMono Nerd Font Mono"
+font-family = "Berkeley Mono Variable"
+font-family = "JetBrainsMono Nerd Font Mono"
+
+font-variation = wght=500
+font-variation-bold = wght=700
+font-variation-italic = wght=400
+font-variation-italic = wdth=90
+font-variation-italic = slnt=-8
+font-variation-bold-italic = wght=700
+font-variation-bold-italic = wdth=90
+font-variation-bold-italic = slnt=-8
+
 theme = "catppuccin-mocha"
 shell-integration-features = no-cursor
 cursor-style = "block"
@@ -6,5 +17,5 @@ background-opacity = 0.92
 font-size = 18
 macos-titlebar-style = hidden
 window-padding-x = 5
-window-padding-y = 10
+window-padding-y = 5
 cursor-style-blink = false
