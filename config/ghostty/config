@@ -5,10 +5,10 @@ font-variation = wght=500
 font-variation-bold = wght=700
 font-variation-italic = wght=400
 font-variation-italic = wdth=90
-font-variation-italic = slnt=-8
+font-variation-italic = slnt=-6
 font-variation-bold-italic = wght=700
 font-variation-bold-italic = wdth=90
-font-variation-bold-italic = slnt=-8
+font-variation-bold-italic = slnt=-6
 
 theme = "catppuccin-mocha"
 shell-integration-features = no-cursor
