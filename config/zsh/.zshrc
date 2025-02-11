@@ -29,6 +29,7 @@ autoload -Uz colors && colors
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
+zsh_add_plugin "jeffreytse/zsh-vi-mode"
 
 # Sourcing aliases 
 zsh_add_file "aliases"
@@ -43,11 +44,15 @@ eval "$(fzf --zsh)"
 eval "$(mise activate zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
 
+# Vim stuff
 # https://github.com/starship/starship/issues/3418
 if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
       "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
     zle -N zle-keymap-select "";
 fi
+bindkey -v '^?' backward-delete-char
+ZVM_CURSOR_STYLE_ENABLED=false
+# End Vim stuff
 
 eval "$(starship init zsh)"
 
