@@ -31,18 +31,15 @@ zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "jeffreytse/zsh-vi-mode"
 
-# Sourcing aliases 
+# Sourcing aliases and other things
 zsh_add_file "aliases"
 zsh_add_file "secrets"
+zsh_add_file "rspotify"
 
 # removing underlines from zsh-syntax-highlighting
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-eval "$(fzf --zsh)"
-eval "$(mise activate zsh)"
-eval "$(atuin init zsh --disable-up-arrow)"
 
 # Vim stuff
 # https://github.com/starship/starship/issues/3418
@@ -54,10 +51,14 @@ bindkey -v '^?' backward-delete-char
 ZVM_CURSOR_STYLE_ENABLED=false
 # End Vim stuff
 
-eval "$(starship init zsh)"
+# So zsh-vi-mode doesn't clobber other keymaps
+function init_shell_addons() {
+    eval "$(fzf --zsh)"
+    eval "$(mise activate zsh)"
+    eval "$(atuin init zsh --disable-up-arrow)"
+    eval "$(starship init zsh)"
+}
+zvm_after_init_commands+=(init_shell_addons)
 
 # motd
 [ -f .zshenv ] && LOVESAY_COLORSCHEME="catppuccin mocha" lovesay
-
-# Spotify
-zsh_add_file "rspotify"
