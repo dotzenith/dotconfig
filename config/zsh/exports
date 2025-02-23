@@ -26,7 +26,7 @@ export C_INCLUDE_PATH=/usr/local/include
 # Defaults
 export EDITOR='nvim'
 export TERMINAL='kitty'
-export BROWSER='zen'
+export BROWSER='firefox'
 
 # Brew
 export HOMEBREW_BUNDLE_FILE=$HOME/.config/brew/Brewfile
