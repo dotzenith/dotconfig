@@ -46,14 +46,23 @@ function y() {
 function mux() {
   local tmpfile=$(mktemp -t "mux.XXXXXX")
   if tmux list-sessions > $tmpfile 2>&1; then
-    local fzf_selection="$(cat $tmpfile | awk '{print $1}' | rev | cut -c 2- | rev | fzf --height 40% --reverse)"
-    if [ -z "$fzf_selection" ]; then
+    local fzf_selection="$(cat $tmpfile | awk '{print $1}' | rev | cut -c 2- | rev | fzf --height 40% --reverse --print-query)"
+
+    local query=$(echo "$fzf_selection" | head -1)
+    local selection=$(echo "$fzf_selection" | sed -n '2p')
+
+    if [ -z "$query" ] && [ -z "$selection" ]; then
+      rm $tmpfile
       return
+    elif [ -z "$selection" ]; then
+      tmux new -s "$query"
     else
-      tmux attach -t $fzf_selection
+      tmux attach -t "$selection"
     fi
   else
-    echo "No Sessions"
+    echo -n "Enter new session name: "
+    read session_name
+    tmux new -s "$session_name"
   fi
   rm $tmpfile
 }
