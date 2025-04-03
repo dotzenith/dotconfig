@@ -1,19 +1,9 @@
 local M = {
   "folke/which-key.nvim",
-  commit = "7ccf476ebe0445a741b64e36c78a682c1c6118b7",
+  commit = "370ec46f710e058c9c1646273e6b225acf47cbed",
 }
 
 function M.config()
-  local mappings = {
-    q = { "<cmd>confirm q<CR>", "Quit" },
-    h = { "<cmd>nohlsearch<CR>", "NOHL" },
-    v = { "<cmd>vsplit<CR>", "Split" },
-    b = { name = "Buffers" },
-    f = { name = "Find" },
-    g = { name = "Git" },
-    l = { name = "LSP" },
-  }
-
   local which_key = require "which-key"
   which_key.setup {
     plugins = {
@@ -33,12 +23,12 @@ function M.config()
         g = false,
       },
     },
-    window = {
-      border = "rounded",
-      position = "bottom",
-      padding = { 2, 2, 2, 2 },
-    },
-    ignore_missing = true,
+    filter = function(mapping)
+      -- I don't know how to make which-key ignore properly
+      return mapping.desc and mapping.desc ~= "" 
+        and not string.match(mapping.desc, "surround")
+        and not string.match(mapping.desc, "@parameter")
+    end,
     show_help = false,
     show_keys = false,
     disable = {
@@ -47,15 +37,29 @@ function M.config()
     },
   }
 
-  local opts = {
-    mode = "n",
-    prefix = "<leader>",
-    silent = true,
-    noremap = true,
-    nowait = true,
+  -- LSP Mappings
+  which_key.add {
+    {"<leader>l", group = "LSP" },
+    {"<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Action" },
+    {"<leader>lf", '<cmd>lua vim.lsp.buf.format({ async = true })<cr>', desc = "Format"},
+    {"<leader>li", "<cmd>LspInfo<cr>", desc = "Info" },
+    {"<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<cr>", desc = "Next Diagnostic" },
+    {"<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<cr>", desc = "Prev Diagnostic" },
+    {"<leader>ll", "<cmd>lua vim.lsp.codelens.run()<cr>", desc = "CodeLens Action" },
+    {"<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Quickfix" },
+    {"<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename" },
   }
 
-  which_key.register(mappings, opts)
+  which_key.add {
+    {"<leader>s", group = "Surround" },
+    {"<leader>sa", desc = "Add Surrounding" },
+    {"<leader>sd", desc = "Delete Surrounding" },
+    {"<leader>sf", desc = "Find Surrounding Right" },
+    {"<leader>sF", desc = "Find Surrounding left" },
+    {"<leader>sh", desc = "Highlight Surrounding" },
+    {"<leader>sr", desc = "Replace Surrounding" },
+  }
+
 end
 
 return M

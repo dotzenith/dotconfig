@@ -1,8 +1,8 @@
 local M = {
   "nvim-lualine/lualine.nvim",
-  commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
+  commit = "1517caa8fff05e4b4999857319d3b0609a7f57fa",
   dependencies = {
-    { "linrongbin16/lsp-progress.nvim", commit = "1c37b1cd0611563a767f0a340d61f265c4c54ecd" },
+    { "linrongbin16/lsp-progress.nvim", commit = "f3df1df8f5ea33d082db047b5d2d2b83cc01cd8a" },
   }
 }
 

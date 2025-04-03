@@ -5,7 +5,7 @@ local M = {
     {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
-      commit = "a38be6e0dd4c6db66997deab71fc4453ace97f9c",
+      commit = "ed1f853847ffd04b2b61c314865665e1dadf22c7",
     }
   },
   opts = {}

@@ -1,6 +1,6 @@
 local M = {
   "windwp/nvim-autopairs",
-  commit = "c6139ca0d5ad7af129ea6c89cb4c56093f2c034a"
+  commit = "84a81a7d1f28b381b32acf1e8fe5ff5bef4f7968"
 }
 
 M.config = function()

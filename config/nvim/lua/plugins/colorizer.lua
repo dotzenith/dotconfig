@@ -1,7 +1,7 @@
 local M = {
-  "NvChad/nvim-colorizer.lua",
+  "catgoose/nvim-colorizer.lua",
   event = { "BufReadPost", "BufNewFile" },
-  commit = "85855b38011114929f4058efc97af1059ab3e41d"
+  commit = "517df88cf2afb36652830df2c655df2da416a0ae"
 }
 
 function M.config()

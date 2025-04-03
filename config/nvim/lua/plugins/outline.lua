@@ -1,6 +1,6 @@
 local M = {
   "hedyhli/outline.nvim",
-  commit = "5669c8aa9ea6346ab491646a9a1e73d7f594e2f8"
+  commit = "ae473fb51b7b6086de0876328c81a63f9c3ecfef"
 }
 
 function M.config()

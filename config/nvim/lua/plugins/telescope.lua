@@ -1,21 +1,22 @@
 local M = {
   "nvim-telescope/telescope.nvim",
-  commit = "67c598fdd4fca113224281c85721c4d8a6df055e",
-  dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true, commit = "9ef21b2e6bb6ebeaf349a0781745549bbb870d27"} },
+  commit = "a4ed82509cecc56df1c7138920a1aeaf246c0ac5",
+  dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true, commit = "1f08ed60cafc8f6168b72b80be2b2ea149813e55"} },
 }
 
 function M.config()
   local wk = require "which-key"
-  wk.register {
-    ["<leader>bb"] = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
-    ["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find files" },
-    ["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-    ["<leader>ft"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-    ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "Help" },
-    ["<leader>fo"] = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
-    ["<leader>fr"] = { "<cmd>Telescope lsp_references<cr>", "References" },
-    ["<leader>fd"] = { "<cmd>Telescope diagnostics<cr>", "References" },
+  wk.add {
+    { "<leader>f", group = "Find" },
+    { "<leader>fb", "<cmd>Telescope buffers previewer=false<cr>", desc = "Find" },
+    { "<leader>fgb", "<cmd>Telescope git_branches<cr>", desc = "Checkout branch" },
+    { "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "References" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+    { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
+    { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Recent File" },
+    { "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<cr>", desc = "Projects" },
+    { "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
+    { "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
   }
 
   local actions = require "telescope.actions"

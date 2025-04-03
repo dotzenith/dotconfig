@@ -1,11 +1,11 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
-  commit = "c29989f5d735a30b6d2350b54d5cd50be811f8b2",
+  commit = "30654ee72a69e7c76a54b66d748dae088429e863",
   event = { "BufReadPost", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "fd41b7ccc5490a3a99c734d1ee418b68d06c48a9" },
-    { "HiPhish/rainbow-delimiters.nvim",             commit = "5c9660801ce345cd3835e1947c12b54290ab7e71" },
+    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4" },
+    { "HiPhish/rainbow-delimiters.nvim",             commit = "de39919a57e1a40a4c7dc5bae0de276f9c616ef3" },
   },
 }
 

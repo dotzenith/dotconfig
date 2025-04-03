@@ -1,9 +1,9 @@
 local M = {
   "nvimtools/none-ls.nvim",
-  commit = "b8fd44ee1616e6a9c995ed5f94ad9f1721d303ef",
+  commit = "a117163db44c256d53c3be8717f3e1a2a28e6299",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7",
+    commit = "857c5ac632080dba10aae49dba902ce3abf91b35",
   }
 }
 
@@ -14,12 +14,10 @@ function M.config()
   local diagnostics =  null_ls.builtins.diagnostics
 
   null_ls.setup {
-    debug = false,
+    debug = true,
     sources = {
       formatting.black.with { extra_args = { "--fast" } },
-      diagnostics.ruff,
       formatting.isort,
-      formatting.rustfmt,
     }
   }
 end

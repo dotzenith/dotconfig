@@ -1,6 +1,6 @@
 local M = {
   "ahmedkhalf/project.nvim",
-  commit = "628de7e433dd503e782831fe150bb750e56e55d6",
+  commit = "8c6bad7d22eef1b71144b401c9f74ed01526a4fb",
   lazy = false
 }
 

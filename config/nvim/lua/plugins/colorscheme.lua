@@ -1,6 +1,6 @@
 local M = {
   "catppuccin/nvim",
-  commit = "faf15ab0201b564b6368ffa47b56feefc92ce3f4",
+  commit = "5b5e3aef9ad7af84f463d17b5479f06b87d5c429",
   name = "catppuccin",
   lazy = false,
   priority = 1000,

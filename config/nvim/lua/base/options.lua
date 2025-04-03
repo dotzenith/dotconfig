@@ -17,6 +17,7 @@ vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.laststatus = 3
 
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.infercase = true
@@ -43,9 +44,7 @@ vim.opt.sidescrolloff = 8
 vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
 
--- Dots
-vim.opt.list = true
-vim.opt.listchars = { lead = "·", trail = " ", tab = "  " }
+vim.o.winborder = 'rounded'
 
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,]")

@@ -1,6 +1,6 @@
 local M = {
   "nvim-zh/colorful-winsep.nvim",
-  commit = "956d65c9a31ce81b7873bef1682c72eb00d9affb"
+  commit = "0070484536ea55ec64a8453d41e3badace04a61a"
 }
 
 function M.config()

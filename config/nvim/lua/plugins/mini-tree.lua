@@ -1,6 +1,6 @@
 local M = {
   "echasnovski/mini.files",
-  version = "0.14.0",
+  version = "0.15.0",
   event = "VeryLazy",
 }
 

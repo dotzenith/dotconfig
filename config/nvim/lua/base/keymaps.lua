@@ -24,8 +24,8 @@ keymap("n", "<m-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<m-Right>", ":vertical resize +2<CR>", opts)
 
 -- Movement
-keymap("n", "<S-j>", "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, 'true', '200')<cr>", opts)
-keymap("n", "<S-k>", "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, 'true', '200')<cr>", opts)
+keymap("n", "<S-j>", "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, {move_cursor = true, duration = 200})<cr>", opts)
+keymap("n", "<S-k>", "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, {move_cursor = true, duration = 200})<cr>", opts)
 
 -- Harpoon
 keymap("n", "<m-k>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
@@ -71,3 +71,11 @@ keymap("", "L", "$", opts)
 -- Annoying history mode
 keymap("n", "q:", "<Nop>", opts)
 keymap("n", "Q", "<Nop>", opts)
+
+-- LSP
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "<c-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)

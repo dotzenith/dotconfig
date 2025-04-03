@@ -1,6 +1,6 @@
 local M = {
   "ggandor/flit.nvim",
-  commit = "f4e9af572a62c808c8de214da672f2a115a98c35",
+  commit = "1ef72de6a02458d31b10039372c8a15ab8989e0d",
 }
 
 function M.config()
