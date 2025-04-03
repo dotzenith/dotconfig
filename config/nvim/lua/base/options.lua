@@ -56,11 +56,6 @@ if vim.fn.executable('rg') == 1 then
   vim.opt.grepprg = 'rg --vimgrep --no-heading --smart-case'
 end
 
--- Deno
-vim.g.markdown_fenced_languages = {
-  "ts=typescript"
-}
-
 -- makes things faster I guess?
 vim.g.loaded_gzip = false
 vim.g.loaded_matchit = false
