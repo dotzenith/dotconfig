@@ -34,6 +34,7 @@ vim.lsp.enable({
   "clangd",
   "rust-analyzer",
 	"tinymist",
+  "gopls",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
