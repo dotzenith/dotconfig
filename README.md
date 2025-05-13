@@ -20,7 +20,7 @@
 
 <!-- INFORMATION -->
 ### ❖ Information 
-   <img src="https://github.com/dotzenith/dotzenith/blob/main/assets/dotconfig/rice.png" alt="Repo Preview" align="right" width="400px">
+   <img src="https://assets.danshu.co/dotconfig/rice.png" alt="Repo Preview" align="right" width="400px">
 
    Hello gamers and gamern'ts! Looks like you've stumbled upon my dotfiles, have fun exploring!.
 
