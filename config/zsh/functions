@@ -64,7 +64,8 @@ function mux() {
     read session_name
     tmux new -s "$session_name"
   fi
-  rm $tmpfile
+
+  [ -f $tmpfile ] && rm $tmpfile
 }
 
 gc() {
@@ -87,4 +88,9 @@ function ssh() {
     else
         kitten ssh "$@"
     fi
+}
+
+function forge() {
+  local dir=${PWD:t}
+  git remote add forge ssh://git@git.danshu.co/dotzenith/$dir.git
 }
