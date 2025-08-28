@@ -1,5 +1,5 @@
 local M = {
-  "echasnovski/mini.files",
+  "nvim-mini/mini.files",
   version = "0.15.0",
   event = "VeryLazy",
 }

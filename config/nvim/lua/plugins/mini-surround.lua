@@ -1,5 +1,5 @@
 local M = {
-  "echasnovski/mini.surround",
+  "nvim-mini/mini.surround",
   version = "0.15.0",
   event = "VeryLazy",
 }

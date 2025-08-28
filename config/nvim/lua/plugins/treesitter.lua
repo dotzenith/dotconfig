@@ -5,7 +5,7 @@ local M = {
   build = ":TSUpdate",
   dependencies = {
     { "nvim-treesitter/nvim-treesitter-textobjects", commit = "9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4" },
-    { "HiPhish/rainbow-delimiters.nvim",             commit = "55ad4fb76ab68460f700599b7449385f0c4e858e" },
+    { "HiPhish/rainbow-delimiters.nvim",             commit = "97bf4b8ef9298644a29fcd9dd41a0210cf08cac7" },
   },
 }
 
