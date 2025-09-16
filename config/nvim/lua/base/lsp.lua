@@ -35,6 +35,7 @@ vim.lsp.enable({
   "rust-analyzer",
 	"tinymist",
   "gopls",
+  "openscad_lsp",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
