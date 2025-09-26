@@ -1,0 +1,153 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "hyper - a/d for space switching",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_option", "right_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Up Button on Mouse to cmd + h",
+                        "manipulators": [
+                            {
+                                "from": { "pointing_button": "button5" },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "CapsLock to Hyper",
+                        "manipulators": [
+                            {
+                                "description": "capslock = esc(click) | hyper(hold)",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": ["right_command", "right_control", "right_option"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "escape = capslock switch",
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": ["right_command", "right_control", "right_shift", "right_option"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "caps_lock",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "spacebar = language switch",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "command + spacebar = emoji",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control", "left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 45108,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "mouse_flip_vertical_wheel": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50504,
+                        "vendor_id": 1133
+                    },
+                    "ignore": true
+                }
+            ],
+            "name": "Hyper",
+            "selected": true,
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "keyboard_type_v2": "ansi"
+            }
+        },
+        {
+            "name": "Normal",
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "keyboard_type_v2": "ansi"
+            }
+        }
+    ]
+}
