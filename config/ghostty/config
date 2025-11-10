@@ -1,16 +1,15 @@
 font-family = "Berkeley Mono Variable"
-font-family = "JetBrainsMono Nerd Font Mono"
 
 font-variation = wght=500
 font-variation-bold = wght=700
 font-variation-italic = wght=400
-font-variation-italic = wdth=90
-font-variation-italic = slnt=-6
+font-variation-italic = wdth=100
+font-variation-italic = slnt=-16
 font-variation-bold-italic = wght=700
-font-variation-bold-italic = wdth=90
-font-variation-bold-italic = slnt=-6
+font-variation-bold-italic = wdth=100
+font-variation-bold-italic = slnt=-16
 
-theme = "catppuccin-mocha"
+theme = Catppuccin Mocha
 shell-integration-features = no-cursor
 cursor-style = "block"
 background-opacity = 0.92

@@ -17,7 +17,6 @@ sudo yabai --load-sa
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
-yabai -m config insert_feedback_color        ff8474
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               cmd
@@ -28,19 +27,18 @@ yabai -m config external_bar                 all:35:00
 
 # Window modifications
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
 yabai -m config window_shadow                off
 yabai -m config window_opacity               off
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
 
 # Window border
-borders \
-  active_color=0xFFF2D5CF \
-  inactive_color=0xFF1E1E2E \
-  width=5.0 \
-  style=round \
-  blacklist="FaceTime,zoom.us,System Preferences,Spotify,Numi" &
+# borders \
+#   active_color=0xFFF2D5CF \
+#   inactive_color=0xFF1E1E2E \
+#   width=5.0 \
+#   style=round \
+#   blacklist="FaceTime,zoom.us,System Preferences,Spotify,Numi" &
 
 # general space settings
 yabai -m config layout                       bsp
@@ -62,9 +60,10 @@ yabai -m space 6 --label VI
 # yabai -m rule --add app="Alacritty" 
 # yabai -m rule --add app="^Brave Browser$" opacity=0.98
 yabai -m rule --add app="FaceTime" manage=off
+yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="System Preferences" manage=off
-yabai -m rule --add app="QuickTime Player" manage=off layer=below
-yabai -m rule --add app="Quick Camera" manage=off layer=below
+yabai -m rule --add app="QuickTime Player" manage=off
+yabai -m rule --add app="Quick Camera" manage=off
 yabai -m rule --add app="Zed" opacity=0.95
 yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="IntelliJ IDEA" opacity=0.98
@@ -72,6 +71,7 @@ yabai -m rule --add app="Rectangle" manage=off
 yabai -m rule --add app="VSCodium" opacity=0.95
 yabai -m rule --add app="Messages" manage=off
 yabai -m rule --add app="Numi" manage=off
+yabai -m rule --add app="VMware Remote Console" manage=off
 
 # Some Settings For Simple-Bar
 yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar on space change"

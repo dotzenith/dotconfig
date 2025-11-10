@@ -2,6 +2,17 @@
 add_newline = false
 command_timeout = 10000
 
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+\n\
+$character
+"""
+
 [directory]
 style = "#F8BD96"
 
@@ -11,35 +22,6 @@ style = "#C6AAE8"
 [git_state]
 style = "#EBDDAA"
 
-[username]
-disabled = true
-
-[cmd_duration]
-disabled = true
-
-[hostname]
-disabled = true
-
-[lua]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[battery]
-disabled = true
-
-[c]
-style = "#f5e0dc"
-
 [character]
 success_symbol = "[󰘧](bold green)"
 error_symbol = "[󰘧](bold red)"
-vimcmd_symbol = "[](bold green)"
-
-[python]
-# disabled = true
-python_binary = "python3"
