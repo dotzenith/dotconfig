@@ -4,10 +4,13 @@ local M = {
   dependencies = {
     { "tpope/vim-repeat", commit = "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   },
+  lazy = false,
 }
 
 function M.config()
-  require("leap").set_default_keymaps()
+  local opts = { noremap = true, silent = true }
+  vim.keymap.set({'n', 'o'}, 's',  '<Plug>(leap-forward)', opts)
+  vim.keymap.set({'n', 'o'}, 'S',  '<Plug>(leap-backward)', opts)
 end
 
 return M
