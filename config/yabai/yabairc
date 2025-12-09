@@ -13,6 +13,7 @@
 #
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
+brew services restart felixkratz/formulae/sketchybar
 
 # global settings
 yabai -m config mouse_follows_focus          off
@@ -72,12 +73,3 @@ yabai -m rule --add app="VSCodium" opacity=0.95
 yabai -m rule --add app="Messages" manage=off
 yabai -m rule --add app="Numi" manage=off
 yabai -m rule --add app="VMware Remote Console" manage=off
-
-# Some Settings For Simple-Bar
-yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar on space change"
-yabai -m signal --add event=display_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar on display focus change"
-yabai -m signal --add event=window_focused action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when focused application changes"
-yabai -m signal --add event=window_resized action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when a window is resized"
-yabai -m signal --add event=application_front_switched action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when front application switched application changes"
-yabai -m signal --add event=window_destroyed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when an application window is closed"
-yabai -m signal --add event=window_title_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'" label="Refresh simple-bar when current window title changes"
