@@ -1,0 +1,69 @@
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+sketchybar --bar position=top height=30 color=0x00000000 margin=-10 y_offset=7
+
+default=(
+  padding_left=6
+  padding_right=6
+  icon.font="Hack Nerd Font:Bold:17.0"
+  label.font="Berkeley Mono:Bold:14.0"
+  icon.padding_left=6
+  icon.padding_right=6
+  label.padding_left=6
+  label.padding_right=6
+  background.height=20
+)
+sketchybar --default "${default[@]}"
+
+SPACE_ICONS=("I" "II" "III" "IV" "V" "VI")
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid="$(($i+1))"
+  space=(
+    space="$sid"
+    icon="${SPACE_ICONS[i]}"
+    icon.color=0xffcdd6f4
+    icon.padding_left=7
+    icon.padding_right=8
+    background.color=0xfffab387
+    background.corner_radius=4
+    background.height=20
+    label.drawing=off
+    script="$PLUGIN_DIR/space.sh"
+    click_script="yabai -m space --focus $sid"
+  )
+  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+done
+
+sketchybar --add bracket spaces '/space\..*/'     \
+           --set         spaces background.color=0xff282839 \
+                                background.corner_radius=4  \
+                                background.height=30 \
+
+sketchybar --add item clock right \
+           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
+           --set clock background.color=0xfff9e2af background.corner_radius=4 icon.padding_right=0 background.padding_left=0 \
+           --set clock icon.color=0xff11111b label.color=0xff11111b \
+           \
+           --add item date right \
+           --set date update_freq=120 icon=  script="$PLUGIN_DIR/date.sh" \
+           --set date background.color=0xffa6e3a1 background.corner_radius=4 icon.padding_right=0 background.padding_left=0 \
+           --set date icon.color=0xff11111b label.color=0xff11111b \
+           \
+           --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --set battery background.color=0xffcba6f7 background.corner_radius=4 icon.padding_right=0 background.padding_left=0 \
+           --set battery icon.color=0xff11111b label.color=0xff11111b \
+           --subscribe battery system_woke power_source_change \
+           \
+           --add item ip right \
+           --set ip update_freq=240 icon=  script="$PLUGIN_DIR/ip.sh" \
+           --set ip background.color=0xfffab387 background.corner_radius=4 icon.padding_right=0 \
+           --set ip icon.color=0xff11111b label.color=0xff11111b \
+
+sketchybar --add bracket info clock date battery ip    \
+           --set         info background.color=0xff282839 \
+                              background.corner_radius=4  \
+                              background.height=30 \
+
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
