@@ -43,31 +43,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-function mux() {
-  local tmpfile=$(mktemp -t "mux.XXXXXX")
-  if tmux list-sessions > $tmpfile 2>&1; then
-    local fzf_selection="$(cat $tmpfile | awk '{print $1}' | rev | cut -c 2- | rev | fzf --height 40% --reverse --print-query)"
-
-    local query=$(echo "$fzf_selection" | head -1)
-    local selection=$(echo "$fzf_selection" | sed -n '2p')
-
-    if [ -z "$query" ] && [ -z "$selection" ]; then
-      rm $tmpfile
-      return
-    elif [ -z "$selection" ]; then
-      tmux new -s "$query"
-    else
-      tmux attach -t "$selection"
-    fi
-  else
-    echo -n "Enter new session name: "
-    read session_name
-    tmux new -s "$session_name"
-  fi
-
-  [ -f $tmpfile ] && rm $tmpfile
-}
-
 gc() {
     local repo="$1"
     if [[ -z "$repo" ]]; then

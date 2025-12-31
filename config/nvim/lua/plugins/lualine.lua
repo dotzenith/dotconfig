@@ -137,11 +137,7 @@ function M.config()
           always_visible = false,
         },
       },
-      lualine_c = { 'filename', '%=', {
-          "harpoon2",
-          separator = " ",
-        },
-      },
+      lualine_c = { 'filename', '%=' },
       lualine_x = { 'filetype' },
       lualine_y = { require('lsp-progress').progress },
       lualine_z = { 'location' }

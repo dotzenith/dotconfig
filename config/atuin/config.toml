@@ -9,7 +9,7 @@ common_prefix = ["sudo"]
 
 ## Defaults to true. If enabled, upon hitting enter Atuin will immediately execute the command.
 ## Press tab to return to the shell and edit.
-enter_accept = true
+enter_accept = false
 
 ## prevent commands matching any of these regexes from being written to history.
 ## Note that these regular expressions are unanchored, i.e. if they don't start
