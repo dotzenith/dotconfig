@@ -30,7 +30,7 @@
    - **WM:** [yabai](https://github.com/koekeishiya/yabai)
    - **Hotkeys:** [skhd](https://github.com/koekeishiya/skhd)
    - **Status Bar:** [SketchyBar](https://github.com/FelixKratz/SketchyBar)
-   - **Terminal:** [kitty](https://sw.kovidgoyal.net/kitty/)
+   - **Terminal:** [Ghostty](https://ghostty.org/)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
    - **Greeting:** [lovesay.rs](https://github.com/dotzenith/lovesay.rs)
