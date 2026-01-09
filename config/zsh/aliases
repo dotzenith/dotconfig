@@ -6,7 +6,6 @@ alias lla='lsd -la'
 
 # vim
 alias vim='\nvim'
-alias nvim='NVIM_APPNAME=refactor nvim'
 alias vi='\vim'
 
 # bat
@@ -14,19 +13,10 @@ alias batview="fzf --preview 'bat --color=always --style=numbers --line-range=:5
 alias batdiff="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
 alias bathelp='bat --plain --language=help'
 
-# tmux
-alias tux='tmux attach-session -t Zenith || tmux new-session -s Zenith'
-
 # others
 alias lg='lazygit'
 alias top='btm'
-alias sconfig='source ~/.config/zsh/.zshrc'
 alias sync='rsync -uvrP --delete-after'
 alias ec='ebook-convert'
 alias uvs='source .venv/bin/activate'
-
-# Something for c++
-alias cpp='g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion --std=c++17'
-
-# n-link
-alias nlink='/Applications/n-link_0.1.6_x64.app/Contents/MacOS/n-link'
+alias oscad='/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD'

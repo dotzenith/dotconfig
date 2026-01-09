@@ -1,14 +1,9 @@
-font-family = "Berkeley Mono Variable"
-
-font-variation = wght=500
-font-variation-bold = wght=700
-font-variation-italic = wght=400
-font-variation-italic = wdth=100
-font-variation-italic = slnt=-16
-font-variation-bold-italic = wght=700
-font-variation-bold-italic = wdth=100
-font-variation-bold-italic = slnt=-16
-
+font-family = "Berkeley Mono Medium"
+font-family-bold = "Berkeley Mono Bold"
+font-family-italic = "Berkeley Mono Medium Oblique"
+font-family-bold-italic = "Berkeley Mono Bold Oblique"
+font-family = "JetBrainsMono Nerd Font Mono"
+font-thicken = true
 theme = Catppuccin Mocha
 shell-integration-features = no-cursor
 cursor-style = "block"
@@ -16,5 +11,8 @@ background-opacity = 0.92
 font-size = 18
 macos-titlebar-style = hidden
 window-padding-x = 5
-window-padding-y = 5
+window-padding-y = 5,2
 cursor-style-blink = false
+scrollback-limit = 10000000
+custom-shader = shaders/cursor.glsl
+gtk-single-instance = true

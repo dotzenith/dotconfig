@@ -34,7 +34,7 @@ help() {
     "$@" --help 2>&1 | bathelp
 }
 
-function y() {
+function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -54,14 +54,6 @@ gc() {
         git clone "https://github.com/${repo}.git"
     else
         git clone "git@github.com:dotzenith/${repo}.git"
-    fi
-}
-
-function ssh() {
-    if [ -n "$TMUX" ]; then
-        command ssh "$@"
-    else
-        kitten ssh "$@"
     fi
 }
 

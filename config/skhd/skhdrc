@@ -1,12 +1,8 @@
 # Some general settings
 
 # open terminal
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+cmd - return : open -na Ghostty.app --args --quit-after-last-window-closed=true
 
-# open notion
-cmd + shift - n : open -na /Applications/Notion.app
-# open keycastr
-cmd - 0x2A : open /Applications/KeyCastr.app
 # Restart Yabai
 ctrl + alt - r : yabai --restart-service
 

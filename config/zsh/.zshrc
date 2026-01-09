@@ -54,7 +54,6 @@ ZVM_CURSOR_STYLE_ENABLED=false
 # So zsh-vi-mode doesn't clobber other keymaps
 function init_shell_addons() {
     eval "$(fzf --zsh)"
-    eval "$(mise activate zsh)"
     eval "$(atuin init zsh --disable-up-arrow)"
     eval "$(starship init zsh)"
 }
