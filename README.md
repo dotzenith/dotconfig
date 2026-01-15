@@ -1,24 +1,5 @@
 <h2 align="center"> ━━━━━━  ❖  ━━━━━━ </h2>
 
-<!-- BADGES -->
-<div align="center">
-   <p></p>
-   
-   <img src="https://img.shields.io/github/stars/dotzenith/dotconfig?color=F8BD96&labelColor=302D41&style=for-the-badge">   
-
-   <img src="https://img.shields.io/github/forks/dotzenith/dotconfig?color=DDB6F2&labelColor=302D41&style=for-the-badge">   
-
-   <img src="https://img.shields.io/github/repo-size/dotzenith/dotconfig?color=ABE9B3&labelColor=302D41&style=for-the-badge">
-   
-   <img src="https://img.shields.io/github/commit-activity/y/dotzenith/dotconfig?color=96CDFB&labelColor=302D41&style=for-the-badge&label=COMMITS"/>
-   <br>
-</div>
-
-</p>
-
----
-
-<!-- INFORMATION -->
 ### ❖ Information 
    <img src="https://assets.danshu.co/dotconfig/rice.png" alt="Repo Preview" align="right" width="400px">
 
