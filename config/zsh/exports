@@ -6,8 +6,6 @@ PATH=/usr/local/sbin:$PATH
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
 
-[ -f "/Users/sharmadanshu/.ghcup/env" ] && source "/Users/sharmadanshu/.ghcup/env"
-
 # bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
@@ -34,6 +32,4 @@ export HOMEBREW_BUNDLE_BREW_SKIP="koekeishiya/formulae/yabai"
 
 # tst
 export SeptumURL="https://septum.jawn.website/api"
-
-# avatar
-export AvatarAPIBaseURL="http://avatarquotes.xyz/api"
+# export SeptumURL="http://127.0.0.1:8000/api"
