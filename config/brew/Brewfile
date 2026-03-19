@@ -1,7 +1,9 @@
+tap "asmvik/formulae"
 tap "axodotdev/tap"
 tap "charmbracelet/tap"
 tap "dotzenith/tap"
 tap "felixkratz/formulae"
+tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "jdxcode/tap"
@@ -11,129 +13,368 @@ tap "majd/repo"
 tap "pkgxdev/made"
 tap "spicetify/tap"
 tap "wez/wezterm"
+# Run your GitHub Actions locally
+brew "act"
+# General-purpose data compression with high compression ratio
 brew "xz"
+# New file format for still image compression
+brew "jpeg-xl"
+# Portable library for importing many well-known 3D model formats
 brew "assimp"
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
-brew "oniguruma"
-brew "bat"
-brew "bottom"
+# Automatic configure script builder
+brew "autoconf"
+# Collection of over 500 reusable autoconf macros
+brew "autoconf-archive"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Command-line interface for SQLite
 brew "sqlite"
+# B2 Cloud Storage Command-Line Tools
+brew "b2-tools"
+# Regular expressions library
+brew "oniguruma"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# ISP tool & library for Bouffalo Labs RISC-V Microcontrollers and SoCs
+brew "blisp"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy"
+# Core application library for C
 brew "glib"
+# X.Org: Core X11 protocol client library
 brew "libx11"
+# X.Org: Library for the Render Extension to the X11 protocol
 brew "libxrender"
+# Object-file caching compiler wrapper
+brew "ccache"
+# C library for the arithmetic of high precision complex numbers
 brew "libmpc"
+# GNU compiler collection
 brew "gcc"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+# Cross-platform make
+brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Message bus system, providing inter-application communication
+brew "dbus", restart_service: :changed
+# Generate documentation for several programming languages
+brew "doxygen"
+# More intuitive version of du in rust
 brew "dust"
+# Easiest way to build and release mobile apps
+brew "fastlane"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
-brew "libass"
-brew "mbedtls"
-brew "librist"
-brew "libsndfile"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-brew "numpy"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# Reliable Internet Stream Transport (RIST)
+brew "librist"
+# C library for files containing sampled sound
+brew "libsndfile"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Create thumbnails for your video files
 brew "ffmpegthumbnailer"
+# Command-line outline and bitmap font editor/converter
 brew "fontforge"
+# Library for manipulating fonts
+brew "fonttools"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU debugger
 brew "gdb"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Render markdown on the CLI
 brew "glow"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
+# Post-modern modal text editor
 brew "helix"
+# Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
 brew "hugo"
+# Command-line benchmarking tool
 brew "hyperfine"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Postgres C API library
+brew "libpq", link: true
+# Next-gen compiler infrastructure
+brew "llvm"
+# Rainbows and unicorns in your console!
 brew "lolcat"
+# Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
-brew "mise"
+# Cryptographic & SSL/TLS library
+brew "mbedtls"
+# Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Media player based on MPlayer and mplayer2
 brew "mpv"
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
+# Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Port scanning utility for large networks
+brew "nmap"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Libraries for security-enabled client and server applications
 brew "nss"
+# Package for scientific computing with Python
+brew "numpy"
+# Open Visual Inference And Optimization toolkit for AI inference
+brew "openvino"
+# Open source computer vision library
 brew "opencv"
+# Development kit for the Java programming language
 brew "openjdk"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Pretty system information tool written in POSIX sh
 brew "pfetch"
+# Animated pipes terminal screensaver
 brew "pipes-sh"
+# Your Gateway to Embedded Software Development Excellence
+brew "platformio"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Generic machine emulator and virtualizer
 brew "qemu"
+# Cross-platform application and UI framework
+brew "qt"
+# File browser
 brew "ranger"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Fast, efficient and secure backup program
+brew "restic"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Command-line tool for the Amazon S3 service
+brew "s3cmd"
+# Used as a compiler wrapper and avoids compilation when possible
 brew "sccache"
+# Intuitive find & replace CLI
 brew "sd"
+# Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Command-line tool to customize Spotify client
 brew "spicetify-cli"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Official tldr client written in Rust
 brew "tlrc"
+# Terminal multiplexer
 brew "tmux"
+# Command-line tool for sharing terminal over the web
 brew "ttyd", args: ["HEAD"]
+# Markup-based typesetting system
 brew "typst"
+# Command-line unarchiving tools supporting multiple formats
 brew "unar"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Simple terminal image viewer written in Rust
+brew "viu"
+# Watch files and take action when they change
+brew "watchman"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# UNIX shell (command interpreter)
 brew "zsh"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "asmvik/formulae/yabai", args: ["HEAD"]
+# Shippable application packaging for Rust
 brew "axodotdev/tap/cargo-dist"
+# Generate images of code and terminal output.
 brew "charmbracelet/tap/freeze"
-brew "charmbracelet/tap/vhs"
+# Beautiful quotes from Avatar: The Last Airbender
+brew "dotzenith/tap/avatarsay"
+# lovesay but rusty
 brew "dotzenith/tap/lovesay"
+# A simple and beautiful fetch tool for spotify, now rusty :) 
 brew "dotzenith/tap/spotifetch"
+# A simple CLI for Real Debrid 
+brew "dotzenith/tap/surgery"
+# Create and Join tmux sessions with ease
+brew "dotzenith/tap/teamux"
+# A SEPTA app for the terminal
 brew "dotzenith/tap/the-septa-times"
+# Manage Dynamic DNS with serenity
+brew "dotzenith/tap/zendns"
+# A window border system for macOS
 brew "felixkratz/formulae/borders"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
+# Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+# Application launcher and productivity software
 cask "alfred"
+# iOS App Store alternative
+cask "altserver"
+# Android SDK component
 cask "android-platform-tools"
+# Webcam & audio device software
+cask "ankerwork"
+# Application uninstaller
 cask "appcleaner"
-cask "autodesk-fusion"
+# Electronics prototyping platform
+cask "arduino-ide"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# 3D model slicing software for 3D printers, maintained by Bambu Lab
+cask "bambu-studio"
+# E-books management software
 cask "calibre"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Tool to show live information about the batteries in various devices
+cask "coconutbattery"
+# Download and manage your addons and mods
+cask "curseforge"
+# Voice and text chat software
 cask "discord"
-cask "docker"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Web browser
 cask "firefox"
 cask "font-fontawesome"
+cask "font-hack-nerd-font"
 cask "font-iosevka"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-space-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
 cask "google-chrome"
+# Release engineering, simplified
+cask "goreleaser/tap/goreleaser"
+# Free and open-source media player
 cask "iina"
-cask "joplin"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Keyboard customiser
 cask "karabiner-elements"
-cask "keycastr"
+# Electronics design automation suite
+cask "kicad"
+# GPU-based terminal emulator
 cask "kitty"
-cask "linearmouse"
+# Open-source cross-platform alternative to AirDrop
 cask "localsend"
+# Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
+# Sandbox construction video game
+cask "minecraft"
+# Untraceable cryptocurrency wallet
 cask "monero-wallet"
-cask "mullvadvpn"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Desktop sync client for Nextcloud software products
 cask "nextcloud"
-cask "notion"
+# Calculator and converter application
 cask "numi"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Programmable solid 3D CAD modeller
+cask "openscad@snapshot"
+# Desktop syncing client for ownCloud
+cask "owncloud"
+# Minecraft launcher
+cask "prismlauncher"
+# Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Music streaming service
 cask "spotify"
+# Open-source media center
 cask "stremio"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Web browser focusing on security
 cask "tor-browser"
-cask "ubersicht"
-cask "ultimaker-cura"
-cask "utm"
+# Keyboard configurator
 cask "via"
+# Virtualiser for x86 hardware
 cask "virtualbox"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
-cask "wireshark"
+# Network protocol analyzer
+cask "wireshark-app"
+# Open-source version of the X.Org X Window System
+cask "xquartz"
+# REST, GraphQL and gRPC client
+cask "yaak"
+# Multiplayer code editor
 cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
+go "golang.org/x/tools/gopls"
+cargo "aoc-cli"
+cargo "cargo-binstall"
+cargo "cargo-update"
+cargo "cargo-zigbuild"
+cargo "cross"
+cargo "harper-ls"
+cargo "loc"
+cargo "mdbook"
+cargo "ouch"
+cargo "prmt"
+cargo "samply"
+cargo "termimage"
+cargo "tinymist"
