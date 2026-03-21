@@ -56,10 +56,11 @@
    <details>
    <summary><strong>Nerd Fonts</strong></summary>
    
-   A lot of the programs mentioned earlier make use of nerd fonts. I use a paid font with patched symbols, but you can download and use any other nerd font and just update the terminal config.
+   A lot of the programs mentioned earlier make use of nerd fonts. I use a paid font with a Nerd Font as backup for symbols, but you can download and use any other nerd font and just update the terminal config.
    ```sh
    brew tap homebrew/cask-fonts
-   brew install --cask font-jetbrains-mono-nerd-font
+   brew install font-hack-nerd-font
+   brew install font-jetbrains-mono-nerd-font
    ```
 
    </details>
