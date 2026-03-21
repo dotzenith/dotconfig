@@ -57,6 +57,14 @@ gc() {
     fi
 }
 
+function ssh() {
+    if [ -n "$TMUX" ]; then
+        command ssh "$@"
+    else
+        kitten ssh "$@"
+    fi
+}
+
 function forge() {
   local dir=${PWD:t}
   git remote add forge ssh://git@git.danshu.co/dotzenith/$dir.git

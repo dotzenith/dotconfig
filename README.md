@@ -11,7 +11,7 @@
    - **WM:** [yabai](https://github.com/koekeishiya/yabai)
    - **Hotkeys:** [skhd](https://github.com/koekeishiya/skhd)
    - **Status Bar:** [SketchyBar](https://github.com/FelixKratz/SketchyBar)
-   - **Terminal:** [Ghostty](https://ghostty.org/)
+   - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
    - **Shell:** [zsh](https://www.zsh.org/)
    - **Prompt:** [starship](https://starship.rs/)
    - **Greeting:** [lovesay.rs](https://github.com/dotzenith/lovesay.rs)
