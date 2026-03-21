@@ -2,27 +2,30 @@ local wezterm = require 'wezterm';
 
 return {
 
-  font = wezterm.font("BerkeleyMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Normal"}),
+  font = wezterm.font_with_fallback {
+    {family = "Berkeley Mono", weight="Medium", style="Normal"},
+    {family = "Hack Nerd Font Mono"}
+  },
 
   font_rules = {
     {
       italic = true,
-      font = wezterm.font("BerkeleyMono Nerd Font Mono", {weight="Medium", stretch="Normal", style="Italic"}),
+      font = wezterm.font("Berkeley Mono", {weight="Medium", style="Oblique"}),
     },
     {
       intensity = "Bold",
-      font = wezterm.font("BerkeleyMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Normal"}),
+      font = wezterm.font("Berkeley Mono", {weight="ExtraBold", style="Normal"}),
     },
     {
       intensity = "Bold",
       italic = true,
-      font = wezterm.font("BerkeleyMono Nerd Font Mono", {weight="Bold", stretch="Normal", style="Italic"})
+      font = wezterm.font("Berkeley Mono", {weight="ExtraBold", style="Oblique"})
     },
   },
   
   font_size = 18.0,
   
-  color_scheme = "Catppuccin",
+  color_scheme = "Catppuccin Mocha",
  
   colors = {
 		indexed = {[16] = "#F8BD96", [17] = "#F5E0DC"},
