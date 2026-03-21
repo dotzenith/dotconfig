@@ -1,7 +1,7 @@
 # Some general settings
 
 # open terminal
-cmd - return : open -na Ghostty.app --args --quit-after-last-window-closed=true
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # Restart Yabai
 ctrl + alt - r : yabai --restart-service
