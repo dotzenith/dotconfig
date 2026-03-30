@@ -1,9 +1,9 @@
 local M = {
   "nvimtools/none-ls.nvim",
-  commit = "a117163db44c256d53c3be8717f3e1a2a28e6299",
+  commit = "c9317c2a8629d4e39e7cf47be74cb67f3ab37cda",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    commit = "857c5ac632080dba10aae49dba902ce3abf91b35",
+    commit = "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
   }
 }
 

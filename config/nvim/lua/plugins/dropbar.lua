@@ -1,6 +1,6 @@
 local M = {
   "Bekaboo/dropbar.nvim",
-  version = "12.0.2",
+  version = "14.2.1",
 }
 
 function M.config()

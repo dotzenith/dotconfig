@@ -1,101 +1,129 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
-  branch = "master",
-  commit = "30654ee72a69e7c76a54b66d748dae088429e863",
-  event = { "BufReadPost", "BufNewFile" },
+  commit = "7caec274fd19c12b55902a5b795100d21531391f",
+  lazy = false,
   build = ":TSUpdate",
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4" },
-    { "HiPhish/rainbow-delimiters.nvim",             commit = "97bf4b8ef9298644a29fcd9dd41a0210cf08cac7" },
+    { "nvim-treesitter/nvim-treesitter-textobjects", commit = "93d60a475f0b08a8eceb99255863977d3a25f310" },
+    { "HiPhish/rainbow-delimiters.nvim",             commit = "50080ed0f44dbc18ae13b81278a01b951a06127a" },
   },
 }
 
 function M.config()
-  ---@diagnostic disable-next-line: missing-fields
-  require("nvim-treesitter.configs").setup {
-    ensure_installed = {
-			"html",
-      "css",
-      "c",
-      "cpp",
-      "bash",
-      "javascript",
-      "typescript",
-      "lua",
-      "vim",
-      "regex",
-      "rust",
-      "python",
-      "json",
-      "haskell",
-      "go",
-      "typst",
+  require("nvim-treesitter").setup {
+    install_dir = vim.fn.stdpath("data") .. "/site",
+  }
+
+  require("nvim-treesitter").install {
+    "html",
+    "css",
+    "c",
+    "cpp",
+    "bash",
+    "javascript",
+    "typescript",
+    "lua",
+    "vim",
+    "regex",
+    "rust",
+    "python",
+    "json",
+    "haskell",
+    "go",
+    "typst",
+  }
+
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+      "html", "css", "c", "cpp", "bash", "javascript", "typescript",
+      "lua", "vim", "regex", "rust", "python", "json", "haskell", "go", "typst",
     },
-    sync_install = false,    -- install languages synchronously (only applied to `ensure_installed`)
-    ignore_install = { "" }, -- List of parsers to ignore installing
-    autopairs = {
-      enable = true,
+    callback = function()
+      vim.treesitter.start()
+    end,
+  })
+
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+      "html", "css", "cpp", "bash", "javascript", "typescript",
+      "lua", "vim", "regex", "rust", "python", "json", "haskell", "go", "typst",
+    },
+    callback = function()
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  require("nvim-treesitter-textobjects").setup {
+    select = {
+      lookahead = true,
+    },
+    move = {
+      set_jumps = true,
+    },
+  }
+
+  local select_textobject = require("nvim-treesitter-textobjects.select").select_textobject
+  local select_maps = {
+    ["af"] = "@function.outer",
+    ["if"] = "@function.inner",
+    ["ac"] = "@call.outer",
+    ["ic"] = "@call.inner",
+    ["ai"] = "@conditional.outer",
+    ["ii"] = "@conditional.inner",
+    ["al"] = "@loop.outer",
+    ["il"] = "@loop.inner",
+    ["ap"] = "@parameter.outer",
+    ["ip"] = "@parameter.inner",
+  }
+  for key, capture in pairs(select_maps) do
+    vim.keymap.set({ "x", "o" }, key, function()
+      select_textobject(capture, "textobjects")
+    end)
+  end
+
+  local move = require("nvim-treesitter-textobjects.move")
+  vim.keymap.set({ "n", "x", "o" }, "]]", function()
+    move.goto_next_start("@function.outer", "textobjects")
+  end)
+  vim.keymap.set({ "n", "x", "o" }, "][", function()
+    move.goto_next_end("@function.outer", "textobjects")
+  end)
+  vim.keymap.set({ "n", "x", "o" }, "[[", function()
+    move.goto_previous_start("@function.outer", "textobjects")
+  end)
+  vim.keymap.set({ "n", "x", "o" }, "[]", function()
+    move.goto_previous_end("@function.outer", "textobjects")
+  end)
+  vim.keymap.set({ "n", "x", "o" }, "=", function()
+    move.goto_next_start("@parameter.inner", "textobjects")
+  end)
+  vim.keymap.set({ "n", "x", "o" }, "-", function()
+    move.goto_previous_start("@parameter.inner", "textobjects")
+  end)
+
+  local swap = require("nvim-treesitter-textobjects.swap")
+  vim.keymap.set("n", "<leader>a", function()
+    swap.swap_next("@parameter.inner")
+  end)
+  vim.keymap.set("n", "<leader>A", function()
+    swap.swap_previous("@parameter.inner")
+  end)
+
+  vim.g.rainbow_delimiters = {
+    strategy = {
+      [""] = "rainbow-delimiters.strategy.global",
+    },
+    query = {
+      [""] = "rainbow-delimiters",
     },
     highlight = {
-      enable = true, -- false will disable the whole extension
-      disable = {},  -- list of language that will be disabled
-      additional_vim_regex_highlighting = false,
-    },
-    indent = { enable = true, disable = { "yaml", "c" } },
-    rainbow = {
-      enable = true,
-      -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-      extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-      max_file_lines = nil, -- Do not enable for files with more than n lines, int
-      -- colors = {}, -- table of hex strings
-      -- termcolors = {} -- table of colour name strings
-    },
-    textobjects = {
-      select = {
-        enable = true,
-        -- Automatically jump forward to textobj, similar to targets.vim
-        lookahead = true,
-        keymaps = {
-          -- You can use the capture groups defined in textobjects.scm
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["ac"] = "@call.outer",
-          ["ic"] = "@call.inner",
-          ['ai'] = '@conditional.outer',
-          ['ii'] = '@conditional.inner',
-          ['al'] = '@loop.outer',
-          ['il'] = '@loop.inner',
-          ['ap'] = '@parameter.outer',
-          ['ip'] = '@parameter.inner',
-        },
-      },
-      move = {
-        enable = true,
-        set_jumps = true, -- whether to set jumps in the jumplist
-        goto_next_start = {
-          ["]]"] = "@function.outer",
-          ["="] = "@parameter.inner"
-        },
-        goto_next_end = {
-          ["]["] = "@function.outer",
-        },
-        goto_previous_start = {
-          ["[["] = "@function.outer",
-          ["-"] = "@parameter.inner"
-        },
-        goto_previous_end = {
-          ["[]"] = "@function.outer",
-        },
-      },
-      swap = {
-        enable = true,
-        swap_next = {
-          ["<leader>a"] = "@parameter.inner",
-        },
-        swap_previous = {
-          ["<leader>A"] = "@parameter.inner",
-        },
-      },
+      "RainbowDelimiterRed",
+      "RainbowDelimiterYellow",
+      "RainbowDelimiterBlue",
+      "RainbowDelimiterOrange",
+      "RainbowDelimiterGreen",
+      "RainbowDelimiterViolet",
+      "RainbowDelimiterCyan",
     },
   }
 end
