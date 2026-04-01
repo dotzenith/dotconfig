@@ -1,10 +1,8 @@
-local M = {
-  "lewis6991/gitsigns.nvim",
-  commit = "3c76f7fabac723aa682365ef782f88a83ccdb4ac",
-  event = "BufEnter",
-  cmd = "Gitsigns",
-}
-M.config = function()
+vim.api.nvim_create_autocmd('BufEnter', { once = true, callback = function()
+  vim.pack.add({
+    { src = 'https://github.com/lewis6991/gitsigns.nvim', version = '3c76f7fabac723aa682365ef782f88a83ccdb4ac' },
+  })
+
   local wk = require "which-key"
   wk.add {
     { "<leader>g", group = "Git" },
@@ -55,6 +53,4 @@ M.config = function()
       col = 1,
     },
   }
-end
-
-return M
+end })
