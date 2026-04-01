@@ -45,9 +45,9 @@
    
    Installing yabai and skhd tends to be a little bit more involved than just installing them from brew. Follow the instructions [here](https://github.com/koekeishiya/yabai/wiki).
 
-   I also have caps-lock bound as my **hyper** key when held, and **esc** when tapped. 
+   I also have caps-lock bound as my **hyper** key when held, and **esc** when tapped.
 
-   If you have a QMK/VIA compatible keyboard binding a key to `ANY` with `MT(MOD_HYPR, KC_ESC)` as the field should do the job. 
+   If you have a QMK/VIA compatible keyboard binding a key to `ANY` with `MT(MOD_HYPR, KC_ESC)` as the field should do the job.
 
    If not, using karabiner for MacOS, or kmonad for other platforms should work as well.
 
@@ -95,9 +95,9 @@
    </details>
    
    <details>
-   <summary><strong>Replace common *nix commands</strong></summary>
+   <summary><strong>Replace common unix commands</strong></summary>
    
-   I tend to favor "neo" versions of common *nix commands. Here are the ones I use 
+   I tend to favor "neo" versions of common unix commands. Here are the ones I use
    ```sh
    brew install bat ripgrep fd sd
    ```
@@ -118,36 +118,22 @@
 
    # Copy new config
    cp -R ~/dotconfig/config/nvim ~/.config
-   ```
   
-   Get python and node support for nvim
-   ```sh
-   # python
-   pip3 install pynvim
-    
-   # node 
-   npm i -g neovim
+   # Start nvim without a file
+   nvim
    ```
 
-   copy/paste support on linux
-   ```sh
-   # Debian  
-   sudo apt install xsel
+   Nvim will prompt you to install all off the plugins automatically the first time it is opened.
 
-   # Arch 
-   sudo pacman -S xsel
-   ```
-
-   Nvim will install [lazy](https://github.com/folke/lazy.nvim) and all the plugins automatically the first time it is opened.
+   Once all of the plugins are installed, you are free to use it however you'd like. The recommendation
+   to launch neovim without a file the first time is to ensure it can install all off the treesitter parsers.
+   Launching it on a file where treesitter is enabled may cause issues the first time, but will be fixed on
+   subsequent launches.
   
-   Once Lazy is done installing all the plugins, simply exit nvim and open it again.
-
-   Voila! you now have a baller nvim config. 
-
    > if you're using the vscode-neovim plugin for vscodium/vscode, the key repeat can be turned on by using the following command on MacOS
    ```sh
    defaults write -app VSCodium ApplePressAndHoldEnabled -bool false # VSCodium
-   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false # VSCode 
+   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false # VSCode
    ```
 
    </details>
@@ -156,7 +142,7 @@
 ### ❖ A few words
 
 - I fell down the rabbit hole of customization when I was first introduced to vim in my intro to CS class. I've come a long way since then, and my taste continues to evolve as I progress through college. This repo is almost a way for me to document my growth. In hopes that maybe one day, I'll run through the commit history and laugh at all the mistakes I made and maybe even be impressed.
-- To anyone that stumbles across this repo in their journey to making their computer feel like home, **Happy Ricing :)** 
+- To anyone that stumbles across this repo in their journey to making their computer feel like home, **Happy Ricing :)**
 
 ---
 
@@ -165,5 +151,3 @@
    - **Inspiration**
       - [janleigh](https://github.com/janleigh/dotfiles) for the README style.
       - [catppuccin](https://github.com/catppuccin) for the colors and the badge style.
-
-
