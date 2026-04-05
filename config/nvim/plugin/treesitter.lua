@@ -7,9 +7,9 @@ vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
 end })
 
 vim.pack.add({
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects', version = '93d60a475f0b08a8eceb99255863977d3a25f310' },
+  { src = 'https://github.com/dotzenith/nvim-treesitter-textobjects',       version = '93d60a475f0b08a8eceb99255863977d3a25f310' },
   { src = 'https://github.com/HiPhish/rainbow-delimiters.nvim',             version = '50080ed0f44dbc18ae13b81278a01b951a06127a' },
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter',             version = '7caec274fd19c12b55902a5b795100d21531391f' },
+  { src = 'https://github.com/dotzenith/nvim-treesitter',                   version = '4916d6592ede8c07973490d9322f187e07dfefac' },
 })
 
 require("nvim-treesitter").setup {

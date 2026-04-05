@@ -65,7 +65,9 @@ function ssh() {
     fi
 }
 
-function forge() {
-  local dir=${PWD:t}
-  git remote add forge ssh://git@git.danshu.co/dotzenith/$dir.git
+function gaf() {
+  local repo=$(basename $(git rev-parse --show-toplevel))
+  git remote set-url --add --push origin "ssh://git@git.danshu.co/dotzenith/${repo}.git"
+  git remote set-url --add --push origin "git@github.com:dotzenith/${repo}.git"
+  git remote -v
 }

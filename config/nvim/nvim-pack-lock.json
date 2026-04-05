@@ -93,7 +93,7 @@
     "nvim-treesitter": {
       "rev": "7caec274fd19c12b55902a5b795100d21531391f",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
-      "version": "'7caec274fd19c12b55902a5b795100d21531391f'"
+      "version": "'4916d6592ede8c07973490d9322f187e07dfefac'"
     },
     "nvim-treesitter-textobjects": {
       "rev": "93d60a475f0b08a8eceb99255863977d3a25f310",
