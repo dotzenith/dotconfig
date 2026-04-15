@@ -37,6 +37,9 @@ hyper - e : yabai -m window --toggle split
 hyper - t : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
+# sticky window
+hyper - s: yabai -m window --toggle sticky
+
 # Resize the window to a set size
 hyper - return : yabai -m window --resize abs:1000:600
 
