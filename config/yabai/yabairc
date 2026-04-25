@@ -15,8 +15,8 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # global settings
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          on
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               cmd
@@ -31,14 +31,6 @@ yabai -m config window_shadow                off
 yabai -m config window_opacity               off
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
-
-# Window border
-# borders \
-#   active_color=0xFFF2D5CF \
-#   inactive_color=0xFF1E1E2E \
-#   width=5.0 \
-#   style=round \
-#   blacklist="FaceTime,zoom.us,System Preferences,Spotify,Numi" &
 
 # general space settings
 yabai -m config layout                       bsp

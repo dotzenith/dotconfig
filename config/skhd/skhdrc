@@ -1,15 +1,23 @@
-# Some general settings
-
 # open terminal
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # Restart Yabai
 ctrl + alt - r : yabai --restart-service
 
-# Yabai Settings 
 # focus window
-hyper - j : yabai -m window --focus prev
-hyper - k : yabai -m window --focus next
+hyper - h : yabai -m window --focus west
+hyper - j : yabai -m window --focus south
+hyper - k : yabai -m window --focus north
+hyper - l : yabai -m window --focus east
+
+# swap window
+:: swap_mode
+hyper - w ; swap_mode
+swap_mode < escape ; default
+swap_mode < h : yabai -m window --swap west ; skhd --key "escape"
+swap_mode < j : yabai -m window --swap south ; skhd --key "escape"
+swap_mode < k : yabai -m window --swap north ; skhd --key "escape"
+swap_mode < l : yabai -m window --swap east ; skhd --key "escape"
 
 # Rotate Window Tree
 hyper - space : yabai -m space --rotate 90
@@ -19,16 +27,12 @@ hyper - a : yabai -m space --focus prev
 hyper - d : yabai -m space --focus next
 
 # send window to desktop and follow focus
-hyper - h : yabai -m window --space  prev; yabai -m space --focus prev
-hyper - l : yabai -m window --space next; yabai -m space --focus next
+hyper - left : yabai -m window --space  prev; yabai -m space --focus prev
+hyper - right : yabai -m window --space next; yabai -m space --focus next
 
 # focus monitor using left and right arrow keys, respectively
 hyper - 1 : yabai -m display --focus prev
 hyper - 2 : yabai -m display --focus next
-
-# send window to monitor and follow focus
-hyper - right : yabai -m window --display prev; yabai -m display --focus prev
-hyper - left : yabai -m window --display next; yabai -m display --focus next
 
 # toggle window split type
 hyper - e : yabai -m window --toggle split
@@ -45,15 +49,6 @@ hyper - return : yabai -m window --resize abs:1000:600
 
 # Center a floating window
 hyper - c : yabai -m window --grid 4:4:1:1:2:2
-
-# Switch to floating without turning off borders
-hyper - w: yabai -m config layout float
-
-# Switch to floating systemwide and disable borders
-hyper - f: yabai -m config layout float; yabai -m config window_border off
-
-# Switch back to bsp and turn on window borders again
-hyper - b: yabai -m config layout bsp; yabai -m config window_border on
 
 #### Some settings I don't use but might need later ####
 
