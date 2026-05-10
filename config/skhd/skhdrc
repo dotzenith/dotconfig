@@ -4,6 +4,9 @@ cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d
 # Restart Yabai
 ctrl + alt - r : yabai --restart-service
 
+# Clean links
+hyper - u : ~/.cargo/bin/hl "$(pbpaste)" | tr -d '\n' | pbcopy
+
 # focus window
 hyper - h : yabai -m window --focus west
 hyper - j : yabai -m window --focus south
