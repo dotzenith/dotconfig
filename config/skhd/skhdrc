@@ -5,7 +5,10 @@ cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d
 ctrl + alt - r : yabai --restart-service
 
 # Clean links
-hyper - u : ~/.cargo/bin/hl "$(pbpaste)" | tr -d '\n' | pbcopy
+hyper - u : ~/.cargo/bin/hl "$(pbpaste)" --clipboard
+
+# Hide FT
+hyper - m : ~/.bin/hide-ft
 
 # focus window
 hyper - h : yabai -m window --focus west

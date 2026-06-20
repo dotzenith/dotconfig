@@ -14,7 +14,6 @@ marker_selected = { fg = "#fab387", bg = "#fab387" }
 
 tab_active   = { fg = "#1e1e2e", bg = "#cdd6f4" }
 tab_inactive = { fg = "#cdd6f4", bg = "#45475a" }
-tab_width    = 1
 
 count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
 count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
@@ -108,10 +107,6 @@ rules = [
 
 	# Documents
 	{ mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },
-
-	# Fallback
-	{ name = "*", fg = "#cdd6f4" },
-	{ name = "*/", fg = "#fab387" }
 ]
 
 [icon]

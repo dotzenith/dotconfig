@@ -1,5 +1,6 @@
 # Just the normal path stuff
 PATH=$PATH:$HOME/.bin
+PATH=$PATH:$HOME/.local/bin
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$HOME/go/bin:$PATH
 export PATH

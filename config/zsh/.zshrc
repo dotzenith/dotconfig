@@ -60,4 +60,4 @@ function init_shell_addons() {
 zvm_after_init_commands+=(init_shell_addons)
 
 # motd
-[ -f .zshenv ] && LOVESAY_COLORSCHEME="catppuccin mocha" lovesay
+[ -f .zshenv ] && pfetch

@@ -135,6 +135,11 @@
       "src": "https://github.com/folke/ts-comments.nvim",
       "version": "'123a9fb12e7229342f807ec9e6de478b1102b041'"
     },
+    "typst-preview.nvim": {
+      "rev": "325036ee145ca51d9efb145c09ac16bce3bc8b7d",
+      "src": "https://github.com/chomosuke/typst-preview.nvim",
+      "version": "'325036ee145ca51d9efb145c09ac16bce3bc8b7d'"
+    },
     "vim-repeat": {
       "rev": "65846025c15494983dafe5e3b46c8f88ab2e9635",
       "src": "https://github.com/tpope/vim-repeat",

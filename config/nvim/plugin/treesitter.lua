@@ -33,6 +33,7 @@ require("nvim-treesitter").install {
   "haskell",
   "go",
   "typst",
+  "gleam",
 }
 
 vim.api.nvim_create_autocmd("FileType", {

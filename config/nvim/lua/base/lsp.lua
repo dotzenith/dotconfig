@@ -36,6 +36,7 @@ vim.lsp.enable({
 	"tinymist",
   "gopls",
   "openscad_lsp",
+  "gleam",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
