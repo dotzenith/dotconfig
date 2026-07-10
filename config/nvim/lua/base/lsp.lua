@@ -30,13 +30,14 @@ local diagnostic_config = {
 vim.diagnostic.config(diagnostic_config)
 
 vim.lsp.enable({
-  "pyright",
+  "ty",
   "clangd",
   "rust-analyzer",
 	"tinymist",
   "gopls",
   "openscad_lsp",
   "gleam",
+  "ruff",
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
